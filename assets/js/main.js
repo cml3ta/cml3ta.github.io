@@ -84,7 +84,7 @@ const addProjectsItems = [
     {
         employer:"GeekOut Technology Training at Deloitte",
         position:"Firm Initiative Lead",
-        date:"Sep. 2018 – Pres.",
+        date:"Feb. 2019 – Pres.",
         bullets:[
             "Lead a team of 4 in a firm initiative sponsored by the Deloitte Consulting CTO of the Government and Public Sector (GPS)",
             "Plan and execute five series of training events each year for 40+ fellow Deloitte practitioners to provide with hands-on training on emerging technologies such as Blockchain, IoT, AR/VR etc"
@@ -96,8 +96,7 @@ const addProjectsItems = [
         date:"Sep. 2018 – Pres.",
         bullets:[
             "Founded a data analytics and visualization effort that analyzes the performance of past proposal efforts to (1) discover drivers of successful proposals and (2) diagnose financial variance between expected and actual project results",
-            "Received a charge code and internal sponsorship from Deloitte Leadership, including the Lead Financial Partner, Lead Client Services Partner, and Lead Analytics Partner of the Military Health Systems Account",
-            "Briefed findings to the Deloitte Consulting Chief Operating and Chief Financial Officers of the Gov. and Public Sector"
+            "Received internal sponsorship from Deloitte Leadership and briefed findings to the Consulting Chief Operating and Chief Financial Officers of the GPS Sector of Deloitte Consulting"
         ]
     },
     {
