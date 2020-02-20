@@ -1,0 +1,2 @@
+https://www.rdocumentation.org/packages/nflscrapR/versions/1.4.0 
+https://gist.github.com/guga31bb/5634562c5a2a7b1e9961ac9b6c568701 

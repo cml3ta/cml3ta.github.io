@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+      <!-- Our CSS -->
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+      <link rel="icon" type="image/png" href="assets/images/logo.png">
+      <title>Chris Long</title>
+
+      <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+   </head>
+   <body id="body">
+      <div class="full-height">
+         <!-- Start of Nav Bar -->
+		 <nav class="navbar navbar-expand-lg navbar-light fixed-top"">
+            <a class="nav-link" onclick="setHash('Home')"><img class="navImage pointer" src="assets/images/logo.png" alt="Christopher Long"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                     <div class="nav-link pointer" onclick="setHash('Resume')">Resume</div>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="https://www.linkedin.com/in/christopher-long-039b77b6/" target="_blank">LinkedIn</a>
+                  </li>
+               </ul>
+               <div class="contactInfoText nav-link" data-toggle="modal" data-target="#contactInfoModal">Contact Me At...</div>
+            </div>
+         </nav>
+
+
+         <!-- Main Content -->
+         <main id="primaryContainer" class="mainContent full-height">
+           
+         </main>
+
+
+         <!-- Contact Me Modal -->
+         <div class="modal fade" id="contactInfoModal" tabindex="-1" role="dialog" aria-labelledby="contactInfoModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+               <div class="modal-content">
+                  <div class="modal-header">
+                     <h3 class="modal-title" id="contactInfoModalLabel">
+                     Contact Information</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <div class="modal-body">
+                     <!-- Content -->
+                     <h5>Email Address</h5>
+                     <p>cml3ta@gmail.com</p>
+                     <br>
+                     <h5>Phone Number</h5>
+                     <p>(540) 808-3354</p>
+                     <br>
+                     <h5>Area of Residence</h5>
+                     <p>Washington DC</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <div class="modal fade bd-example-modal-lg" id="sendEmailModal" tabindex="-1" role="dialog" aria-labelledby="sendEmailModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                  <div class="modal-header">
+                     <h3 class="modal-title" id="sendEmailModalLabel">
+                        Email Me</h5>
+                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                     </button>
+                  </div>
+                  <div class="modal-body">
+                     <!-- Content -->
+                     <label for="subject">Subject:</label>
+                     <input class="form-control" id="subject" type="text" placeholder="Subject">
+                     <br>
+                     <label for="emailBody">Message:</label>
+                     <textarea class="form-control" id="emailBody" rows="10" placeholder="Message"></textarea>
+                  </div>
+                  <div class="modal-footer">
+                     <div class="button" id="button-4" onclick="sendEmail()"><div id="underline"></div>Send</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+        <!-- my script connection -->
+        <script = src="./assets/js/main.js"></script>
+
+      </div>   
+   </body>
+</html>
