@@ -18,20 +18,27 @@
       <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+      
 
    </head>
    <body id="body">
       <div class="full-height">
          <!-- Start of Nav Bar -->
 		 <nav class="navbar navbar-expand-lg navbar-light fixed-top"">
-            <a class="nav-link" onclick="setHash('Home')"><img class="navImage pointer" src="assets/images/logo.png" alt="Christopher Long"></a>
+            <a class="nav-link" onclick="setHash('Home')"><img class="navImage pointer" src="assets/images/logo.png" alt="Christopher Long" data-toggle="collapse" data-target=".navbar-collapse.show"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                     <div class="nav-link pointer" onclick="setHash('Resume')">Resume</div>
+                     <div class="nav-link pointer" onclick="setHash('Resume')" data-toggle="collapse" data-target=".navbar-collapse.show">Resume</div>
+                  </li>
+                  <li class="nav-item">
+                     <div class="nav-link pointer"  onclick="setHash('Projects')" data-toggle="collapse" data-target=".navbar-collapse.show">Projects</div>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="https://www.linkedin.com/in/christopher-long-039b77b6/" target="_blank">LinkedIn</a>
@@ -44,7 +51,8 @@
 
          <!-- Main Content -->
          <main id="primaryContainer" class="mainContent full-height">
-           
+
+
          </main>
 
 

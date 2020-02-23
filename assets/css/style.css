@@ -5,6 +5,8 @@ html, body
 {
 	background-color: #F5F5F5;
 	padding-top: 25px;
+	position: relative;
+	height: 100%;
 }
 
 .mainContent{
@@ -22,6 +24,10 @@ html, body
 
 .full-height{
 	height: 100%;
+}
+
+.links{
+	color: #6f94d9;
 }
 
 /* end of primary main content */
@@ -89,9 +95,7 @@ html, body
 	vertical-align: middle;
 	color: rgba(218,224,230,1);
 	padding-top: 5px;
-	padding-bottom: 20px;
-	overflow: hidden;
-	white-space: nowrap;
+	padding-bottom: 20px;	
 }
 
 .contactCardImage{
@@ -353,3 +357,37 @@ th{
 }
 
 /* end of resume section */
+
+/* --------------------------- */
+/* projects page */
+.projectsHeaderText{
+	text-align: center;
+	padding-left: 10%;
+	padding-right: 10%;
+	color: rgba(0,0,0,0.5);
+	padding-top: 10px;
+	padding-bottom: 40px;
+}
+
+.projectCard{
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.projectCard:hover{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	background-color: white;
+}
+
+.projectCardText{
+	width: 90%;
+	padding-left: 10%;
+}
+
+.grey{
+	background-color: #F5F5F5;
+}
+
+.projectCardImage{
+	padding-top: 10px;
+}

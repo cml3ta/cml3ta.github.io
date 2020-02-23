@@ -20,7 +20,7 @@ const bioCardDeets = [
     },
     {
         bolded: "Work as",
-        regular: "Consultant at Deloitte Consulting LLP",
+        regular: "Businenss Technology Analyst at Deloitte Consulting LLP",
         image: "assets/images/briefcase.png"
     },
     {
@@ -34,11 +34,11 @@ const bioCardDeets = [
 const homePageParagraphs = [
     {
         sectionheader: "Mission Statement",
-        paragraph: "I am passionate about using the intersection of technology and business to improve the lives of all people. I use my technical proficiencies and business studies at UVA to serve as a liason between the users and development team. I have worked as a Back End Software Developer, have led the delivery of client applications using the Agile framework, have advanced the growth of <a href=\"https://play.semoss.org\" target=\"_blank\">SEMOSS</a> from a product management perspective, and even developed this website from ground-up! Ultimately, I hope to use my strong client management skills, technology fluency, and business instincts to advance consumer facing products and applications."
+        paragraph: "I am passionate about using the intersection of technology and business to improve the lives of all people. I use my technical proficiencies and business studies at UVA to serve as a liason between the users and development team. I have worked as a Back End Software Developer, have led the delivery of client applications, have advanced the growth of an analytics playform called SEMOSS (<a class=\"links\" href=\"https://play.semoss.org\" target=\"_blank\">Try it out!</a>) from a product management perspective, and even developed this website from ground-up! Ultimately, I hope to use my strong client management skills, technology fluency, and business instincts to advance consumer facing products and applications."
     },
     {
         sectionheader: "Background",
-        paragraph: "I chose to attend the University of Virginia (UVA) to study Computer Science, but quickly found myself much more passionate about using technology to solve problems, rather than solely developing it. Therefore, I pursed a business degree from the McIntire School of Commerce with concentrations in Finance and Information Technology, with a focus in Business Analytics. Upon graduation, I began working as a Business Technology Analyst at Deloitte Consulting LLP to continue pushing the envelope of technology and business. At Deloitte, I have been heavily involved with an end-to-end data analytics platform called Semantic Open Source Software (SEMOSS). I have performed 50+ external SEMOSS demos, attended multiple national conferences such as the Strata O'Reilly Data and AI Conference, and even was chosen to represent SEMOSS in a Deloitte-Wide video promoting its innovative capabilities. Along with these product management efforts, I have also used my finance and programming backgrounds to lead the development of an award-winning financial model in R, SQL, and SEMOSS to calculate and visualize the cost savings associated with retiring 12 legacy IT systems."
+        paragraph: "I chose to attend the University of Virginia (UVA) to study Computer Science, but quickly found myself much more passionate about using technology to solve problems, rather than developing the technology itself. Therefore, I pursued a business degree from the McIntire School of Commerce with concentrations in Finance and Information Technology, with a focus in Business Analytics. Upon graduation, I began working as a Business Technology Analyst at Deloitte Consulting LLP to continue pushing the envelope of technology and business. At Deloitte, I have been heavily involved with an end-to-end data analytics platform called Semantic Open Source Software (SEMOSS). I have performed 50+ external SEMOSS demos, attended multiple national conferences such as the Strata O'Reilly Data and AI Conference, and even was chosen to represent SEMOSS in a Deloitte-Wide video promoting its innovative capabilities. Along with these product management efforts, I have also used my finance and programming backgrounds to lead the development of an award-winning financial model in R, SQL, and SEMOSS to calculate and visualize the cost savings associated with retiring legacy IT systems."
     },
     {
         sectionheader: "Get to Know Me",
@@ -49,11 +49,11 @@ const homePageParagraphs = [
 const workExpItems = [
     {
         employer:"Deloitte Consulting LLP",
-        position:"Business Technology Analyst | Primary Client: Public Healthcare Agency",
+        position:"Business Technology Analyst | Primary Client: Public Healthcare Provider",
         date:"July 2018 – Pres.",
         bullets:[
-            "Develop analyses and custom visualizations within an end-to-end data analytics platform called Semantic Open Source Software (SEMOSS) that helps leadership and 250+ users within the agency drive decision making surrounding the transition to a new electronic health record",
-            "Lead the development of an internally award-winning financial model in R, SQL, and SEMOSS to calculate and visualize the cost savings associated with retiring 12 legacy IT systems, resulting in the discovery of $500M+ in savings which was directly inputted into the agency’s 5-year budget",
+            "Develop analyses and custom visualizations within an end-to-end data analytics platform called Semantic Open Source Software (SEMOSS) that helps the provider's leadership and 250+ users drive decision making surrounding the transition to a new electronic health record",
+            "Lead the development of an internally award-winning financial model in R, SQL, and SEMOSS to calculate and visualize the cost savings associated with retiring legacy IT systems, resulting in the discovery of $500M+ in savings which was directly inputted into the provider’s 5-year budget",
             "Designed and developed user-friendly website showing an “Executive View” of all SEMOSS reports to ensure high traffic, page views, and user experience",
             "Awarded an Applause Award and Outstanding Performance Award for my individual contribution"
         ]
@@ -65,7 +65,7 @@ const workExpItems = [
         bullets:[
             "Accelerated the business development and product growth of SEMOSS by performing to 50+ product demos to a range of potential clients, including federal agencies, non-profit organizations, and commercial businesses",
             "Lead the development of marketing content, having produced 10+ user videos with over 1500+ views on YouTube, standardized style guides for videos, presentations, and documentation",
-            "Advance usability of SEMOSS by facilitating feature ideation discussions with frequent product users, guiding UI design with front end developers, and establishing user tracking analytics to refine the user experience",
+            "Advance usability of SEMOSS by holding feature ideation discussions with frequent product users, guiding UI design with front end developers, and establishing user tracking analytics to refine the user experience",
             "Selected to represent SEMOSS on at three national conferences including the Strata O’Reilly Data & AI Conference in New York in September 2019"
         ]
     },
@@ -110,6 +110,14 @@ const addProjectsItems = [
     }
 ];
 
+const projects = [
+    {
+        title:"More to Come",
+        text:"These are my projects so far, but I'm always looking for more ideas. If you have a cool idea of what I could be working on, contact me via email!",
+        image:"assets/images/comingsoon.png"
+    }
+];
+
 window.onload = function(){
     if(window.location.hash){
         loadPage();
@@ -127,6 +135,8 @@ function loadPage(){
         loadHomePage();
     } else if(window.location.hash == "#Resume"){
         loadResumePage();
+    } else if(window.location.hash == "#Projects"){
+        loadProjectsPage();
     } else {
         loadHomePage();
     }
@@ -168,8 +178,8 @@ function loadHomePage(){
 
     // top right side
     pageHTML += "<div class=\"" + rightClass + "\"> ";
-    pageHTML += "<h1 class=\"nameText "+ addDisplay + "\">Hi, I am Chris Long.</h1>";
-    pageHTML += " <h5 class=\"titleText\"><b>Consultant</b> | Deloitte Consulting LLP</h5> </div> ";
+    pageHTML += "<h1 class=\"nameText "+ addDisplay + "\">Hi, I'm Chris.</h1>";
+    pageHTML += " <h5 class=\"titleText\"><b>Business Analyst</b> | Deloitte Consulting LLP</h5> </div> ";
 
     if(isMobile){
          // email me button
@@ -199,12 +209,12 @@ function loadHomePage(){
     if(!isMobile){
         pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"><p class=\"quote\">\"If I had asked people what they wanted, they would have said faster horses.\"</p><p class=\"quote\">- Henry Ford</p></li>";
     }
-    pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"> <div><img class=\"cardIcons\" src=\"assets/images/capandgown.png\"> <b>Studied at</b> The University of Virginia</div> </li> ";
-    pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"> <div><img class=\"cardIcons\" src=\"assets/images/books.png\"> <b>Degree in</b> Commerce (Finance and Business Analytics) and Computer Science</div> </li> ";
-    pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"> <div><img class=\"cardIcons\" src=\"assets/images/briefcase.png\"> <b>Work as</b> Consultant at Deloitte Consulting LLP</div> </li> ";
-    pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"> <div><img class=\"cardIcons\" src=\"assets/images/skills.png\"> <b>Proficient in</b> Java, JavaScript, HTML/CSS, R, SQL, Tableau, C++, VBA</div> </li> </ul> <br> </div> ";
 
-    pageHTML += "</ul></div>"; 
+    for (var i = 0; i < bioCardDeets.length; i++){
+        pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"> <div><img class=\"cardIcons\" src=\"" + bioCardDeets[i]['image'] +"\"> <b>" + bioCardDeets[i]['bolded'] + "</b> " + bioCardDeets[i]['regular'] + "</div> </li> ";
+    }
+
+    pageHTML += "</ul><br></div>"; 
 
     primaryContainer.innerHTML = pageHTML;
 }
@@ -264,6 +274,44 @@ function loadResumePage(){
 
     // wrap it up
     pageHTML += "</div><br><br><br><br>";
+
+    // return
+    primaryContainer.innerHTML = pageHTML;
+}
+
+function loadProjectsPage(){
+    // load top page
+    pageHTML = "";
+    pageHTML += "<div class = \"topHomePage\">";
+    pageHTML += "<h1 class=\"nameText display-3\">Projects</h1>";
+    pageHTML += "<h5 class=\"projectsHeaderText\">I bring an analytical and fact-focused approach to all my stances when it comes to sports, movies, and everything else. Here are a few of my projects that I have developed that look deeper into those topics.</h5></div>";
+    pageHTML += "</div>";
+
+    // load project cards
+    pageHTML += "<div class=\"container-fluid grey full-height\">";
+    for(var i = 0; i < projects.length; i++){
+        // check if starting a new row
+        if(i % 4 == 0){
+            pageHTML += "<div class=\"row\">"
+        }
+
+        // otherwise loop through the cards
+        pageHTML += "<div class=\"col-md-3 text-center projectCard\">"
+        pageHTML += "<img class=\"projectCardImage\" src=\""+ projects[i]['image'] + "\" style=\"width:80%\">";
+        pageHTML += "<h3><b>" + projects[i]['title'] + "</b></h3>";
+        pageHTML += "<p class=\"projectCardText\">" + projects[i]['text'] + "</p>";
+        pageHTML += "</div>";
+
+        // close up the new row if you have to
+        if(i % 4 == 3 || i == (projects.length-1)){
+            pageHTML += "</div>";
+        }
+
+    }
+    
+    
+    // wrap the whole thing up
+    pageHTML += "</div>";
 
     // return
     primaryContainer.innerHTML = pageHTML;
