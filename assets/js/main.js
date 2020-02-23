@@ -229,6 +229,8 @@ function sendEmail(){
 }
 
 function loadResumePage(){
+    downloadButton = "<center><a class=\"button\" id=\"button-4\" style=\"width:90%;color: #F0F8FF;background-color:#6f94d9;\" href=\"assets/Resume_ChrisLong.pdf\" download><div id=\"underline\" style=\"background:#F0F8FF;\"></div>Download Resume</a></center> ";
+
     // if its not mobile, then show left side
     if(!isMobile){
         // get the left column html
@@ -237,7 +239,7 @@ function loadResumePage(){
         pageHTML += "<center><h3 class=\"resumeName\">Chris Long</h3></center> <div class=\"resumeBio\"><hr> <h6>Email Address</h5> <p>cml3ta@gmail.com</p> <hr> <h6>Phone Number</h5> <p>(540) 808-3354</p> <hr> <h6>Area of Residence</h5> <p>Washington DC</p><hr> </div>";
         
         // download button
-        pageHTML += "<center><a class=\"button\" id=\"button-4\" style=\"width:90%;color: #F0F8FF;background-color:#6f94d9;\" href=\"assets/Resume_ChrisLong.pdf\" download><div id=\"underline\" style=\"background:#F0F8FF;\"></div>Download Resume</a></center> ";
+        pageHTML += downloadButton;
         pageHTML += "</div>";
 
         // start the right column html
@@ -270,10 +272,15 @@ function loadResumePage(){
     pageHTML += "<span class=\"resumeSkillDeets\">Department of Defense Public Trust Clearance</span></div>";
     pageHTML += "<div class=\"resumeEmployer\">Interests: ";
     pageHTML += "<span class=\"resumeSkillDeets\">Golf, Running, Data Analytics (esp. Sports Analytics), UI/UX, Data Visualization, Product Demos</span>";
-
+    pageHTML += "<br><br><br><br>";
+    // add download button on bottom if mobile
+    if(isMobile){
+        // download button
+        pageHTML += downloadButton;  
+    }
 
     // wrap it up
-    pageHTML += "</div><br><br><br><br>";
+    pageHTML += "</div>";
 
     // return
     primaryContainer.innerHTML = pageHTML;
