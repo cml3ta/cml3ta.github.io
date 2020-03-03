@@ -112,9 +112,37 @@ const addProjectsItems = [
 
 const projects = [
     {
+        title:"NBA 1st Quarter Leads",
+        description:"I always wondered how \"critical\" it was to get off to an early start in the NBA given the profilic offenses in today's NBA. Do first quarter leads actually hold? In this report, I look into the final score impact of having a first quarter lead.",
+        image:"assets/images/nbalogo.png",
+        hash: "NBALeads",
+        iFrameEmbed: "<iframe class = \"dashboardFrame\" src=\"https://play.semoss.org/SemossWeb/#!/insight?type=multi&engine=38beddd1-f9e3-4736-9754-272180ccc6e0&id=e4b84a89-5098-4dac-a8f7-d376447ea232\"></iframe>",
+        dashboardImage:"assets/images/nbaleadhelddashboard.PNG",
+        dashboardLink: "https://play.semoss.org/SemossWeb/#!/insight?type=multi&engine=38beddd1-f9e3-4736-9754-272180ccc6e0&id=e4b84a89-5098-4dac-a8f7-d376447ea232",
+        projectParagraphs: [
+            {
+                sectionheader: "Do teams with 10+ point first quarter leads end up winning the game?",
+                paragraph: "It seems that with the prolific offenses that we see in the NBA today, that huge early leads are very often lost. So I decided to put this to the test. First, I collected quarter-by-quarter scores of all games in the first half the 2019-2020 season (i.e. until the All-Star Break). Then, I filtered to only games where there was at least a 10 point deficit at the end of the first quarter. This resulted in a sample size of 195 games. Lets start with the obvious question to ask: Did those teams win? Yes, teams with a <b>10+ point first quarter ended up winning the game about 80% of the time</b>.<br><br>It is very inconsistent among different teams, however. League leading teams like the Bucks or the Lakers have held 100% of their 10-point first quarter leads. Other teams such as the Pacers and Warriors have only a 50-50 chance of winning when holding a 10+ point first quarter lead. In either case, however, we find that <b>the early first quarter lead will also probably be the largest lead of the game</b>. This prompts further questions though on how it varies between individual teams and their strengths. Are some teams just built better to hold their leads? "
+            },
+            {
+                sectionheader: "Do offensive or defensive teams do better with a lead?",
+                paragraph: "Next, I decided to look into whether the ability to hold a lead varies between teams that prioritize offensive or defensive schemes. So, I federated the previous game data with the Offensive and Defensive ranking of each leading team - with the ranking based on points scored per game and points allowed per game. If a team was in the top half of the league offensively and top half defensively then they are listed as <b>Both</b>. As you might expect, these teams are often the best teams in the league such as the Bucks, Clippers, Celtics, etc. If a team was in the upper half of the league in only one of the offensive or defensive rankings, they are listed as <b>Offensive</b> or <b>Defensive</b>. On the offensive side, a few examples of of teams in this category are the Rockets, Mavericks, and Suns. On the defensive side, a few examples of these teams are the Jazz, Nuggets, and Pacers. Finally, we have the teams in the bottom half offensively and defensively listed as <b>Neither</b> such as the Cavaliers, Warriors, and Knicks.<br><br>When looking at the results, we see that teams with a defensive focus and offensive focus tend to have the same success holding their leads - winning about 75% of the games where they have a first quarter lead. Teams in the Both category see extreme success in holding the leads, with a success of about 92%. And finally, teams in the Neither category hold their lead only 69% of the time. In conclusion, <b>neither offensively and defensively aligned teams hold an advantage over the other. But well-rounded teams hold their leads <u>significantly</u> better than all others</b>. With this, I wondered whether there was a difference in how offensive or defensive held their leads."
+            },
+            {
+                sectionheader: "When do teams lose their lead?",
+                paragraph: "Lets take this one step further and see if we can predict when teams will start to lose their lead or when we know <i>\"Okay, I'd say this lead is safe\"</i>. This is good to know if you want to make an informed wager with your friends, start to feel secure about your team's success, or know that maybe you still have a chance when you're trailing. By maintaining the same groups as in the previous section (Both, Offensive, Defensive, or Neither), I can now track how teams lose their lead by category. Here is what I found:<br><br> <b>Both</b>: These teams tend to steadily hold this 10 point lead throughout the game. You can bet on these teams holding (but maybe not expanding upon) a large first quarter lead.<br><b>Offensive</b>: These teams are volatile when it comes to holding leads. As you can see from the curve in the bottom right of the above dashboard, you can expect this lead to quickly decrease in one quarter, but then quickly reappear in the next.<br><b>Defensive</b>: These teams take a much steadier approach to holding their lead, where it (on average) slowly decreases throughout the game. Therefore, if a defensive team is able to hold this lead deep into the second quarter you can feel secure about an ultimate victory. On the other hand, defensive teams seem to let their opponents reduce their lead throughout the game, where their first quarter 10+ point lead will probably be one of the largest leads of the night.<br><b>Neither</b>: These teams are unpredictable, with the largest loss of their leads occuring in the 3rd quarter. Tough to discern any major insights from these teams, but I would be skeptical of the security of any early lead with these teams.<br><br>"
+            },
+            {
+                sectionheader: "Conclusion: The ability to hold an early lead varies team to team, and is heavily based on their relative strengths",
+                paragraph: "Despite an overall 80% win-rate for teams with a 10+ point first quarter lead, many teams will struggle to (1) build upon that lead or (2) even hold the lead at all. On average, that 10 point lead will be the largest lead of the game. We find that <b>score differentials are not linear, but rather seem to plateau or slowly decrease after the first quarter.</b> So when making a decision on how you feel about an early lead in the NBA, think about the leading team's strengths (offensive vs. defensive) and decide when you feel that the lead has begun to plateau."
+            }
+        ]
+        
+    },
+    {
         title:"More to Come",
-        text:"These are my projects so far, but I'm always looking for more ideas. If you have a cool idea of what I could be working on, contact me via email!",
-        image:"assets/images/comingsoon.png"
+        description:"These are my projects so far, but I'm always looking for more ideas. If you have a cool idea of what I could be working on, contact me via email!",
+        image:"assets/images/comingsoon.png",
     }
 ];
 
@@ -122,7 +150,7 @@ window.onload = function(){
     if(window.location.hash){
         loadPage();
     } else {
-        loadHomePage();
+        setHash("Home");
     }
 }
 
@@ -137,6 +165,9 @@ function loadPage(){
         loadResumePage();
     } else if(window.location.hash == "#Projects"){
         loadProjectsPage();
+    } else if (window.location.hash.startsWith("#Projects/")){
+        urlKey = window.location.hash.split("/")[1];
+        loadProjectResultPage(urlKey);
     } else {
         loadHomePage();
     }
@@ -147,6 +178,9 @@ function loadHomePage(){
     leftClass = "";
     rightClass = "";
     addDisplay = "";
+    birthday = new Date("11/13/1995"); 
+    present_date = new Date(); 
+    age = (present_date.getTime() - birthday.getTime())/(1000 * 3600 * 24 *365);  
 
     // start top page
     pageHTML = " <div class = \"topHomePage\">";
@@ -167,7 +201,7 @@ function loadHomePage(){
         // start cc table
         pageHTML += "<div class=\"contactCardTable\" style=\"overflow-x:auto;\"> ";
         pageHTML += "<table> <tr> <th>Age</th> <th>Area of Specialty</th> <th>Ask Me About</th> </tr> ";
-        pageHTML += "<tr> <td>24</td> <td>Product Management</td> <td>Sports Analytics</td> </tr> </table>";
+        pageHTML += "<tr> <td>" + Math.floor(age) + "</td> <td>Product Management</td> <td>Sports Analytics</td> </tr> </table>";
         
         // email me button
         pageHTML += emailMeButton;
@@ -303,10 +337,10 @@ function loadProjectsPage(){
         }
 
         // otherwise loop through the cards
-        pageHTML += "<div class=\"col-md-3 text-center projectCard\">"
+        pageHTML += "<div class=\"col-md-3 text-center projectCard\" onclick=\"setHash('Projects/" + projects[i]['hash'] + "')\">"
         pageHTML += "<img class=\"projectCardImage\" src=\""+ projects[i]['image'] + "\" style=\"width:80%\">";
         pageHTML += "<h3><b>" + projects[i]['title'] + "</b></h3>";
-        pageHTML += "<p class=\"projectCardText\">" + projects[i]['text'] + "</p>";
+        pageHTML += "<p class=\"projectCardText\">" + projects[i]['description'] + "</p>";
         pageHTML += "</div>";
 
         // close up the new row if you have to
@@ -321,6 +355,74 @@ function loadProjectsPage(){
     pageHTML += "</div>";
 
     // return
+    primaryContainer.innerHTML = pageHTML;
+}
+
+function loadProjectResultPage(urlKey){
+    // make sure there is actually a key
+    if(urlKey == undefined || urlKey == null || urlKey == ""){
+        setHash("Projects");
+    }
+    
+    var index = -1;
+    // get the index of the result based on url key:
+    for(var i =0; i < projects.length; i++){
+        if(urlKey == projects[i]['hash']){
+            index = i;
+        }
+    }
+
+    // make sure the index changed
+    if(index == -1){
+        setHash("Projects");
+    }
+
+    addDisplay = "";
+    if(!isMobile){
+        addDisplay = "display-3";
+    }
+    projectParagraphs = projects[index]['projectParagraphs']
+
+    // load top page
+    pageHTML = "";
+    pageHTML += "<div class = \"topHomePage\">";
+    pageHTML += "<h1 class=\"nameText " + addDisplay + "\">" + projects[index]['title'] + "</h1>";
+    pageHTML += "<h5 class=\"projectsHeaderText\">" + projects[index]['description'] + "</h5></div>";
+    pageHTML += "</div>";
+
+    // load bottom part
+    pageHTML += "<div class=\"bottomHomePage\">"
+
+    // load the summary paragraphs
+    pageHTML += "<h5 class=\"projectResults_secHeader\">" + projectParagraphs[0]['sectionheader'] + "</h5>";
+    pageHTML += "<p class=\"projectResults_paragraph\">" + projectParagraphs[0]['paragraph'] + "</p> ";
+    pageHTML += "<br>";
+
+    // lets load the dashboard if desktop, otherwise image
+    pageHTML += "<div class=\"dashboardContainer\">"
+    if(true){
+        // pageHTML += "<a href=\""+ projects[index]['dashboardLink'] + "\" target=\"_blank\">";
+        pageHTML += "<img class=\"dashboardFrame\" src=\""+ projects[index]['dashboardImage'] + "\">";
+        // pageHTML += "</a>";
+        pageHTML += "</div>"
+        pageHTML += "<div class=\"dashImageFooter\">Email me for live access to this data and dashboard!</div>";
+    } else {
+        pageHTML += projects[index]['iFrameEmbed'];
+        pageHTML += "</div>"
+
+    }
+
+    // load the rest of the paragraphs
+    for(var i = 1; i < projectParagraphs.length; i++){
+        pageHTML += "<h5 class=\"projectResults_secHeader\">" + projectParagraphs[i]['sectionheader'] + "</h5>";
+        pageHTML += "<p class=\"projectResults_paragraph\">" + projectParagraphs[i]['paragraph'] + "</p> ";
+    }
+
+    pageHTML += "<br><br>";
+
+    // wrap the whole thing up
+    pageHTML += "</div>";
+
     primaryContainer.innerHTML = pageHTML;
 }
 
