@@ -10,7 +10,7 @@ html, body
 }
 
 .mainContent{
-	background: white;	
+	background: #F5F5F5;	
 	overflow: auto;
 	height: 100%;
 	background-position:center; 
@@ -301,6 +301,7 @@ th{
 	padding-right: 20px;
 	margin-top: 5px;
 	padding-top: 20px;
+	background: white;
 }
 
 .rightCol_resume_mobile {
@@ -360,6 +361,15 @@ th{
 
 /* --------------------------- */
 /* projects page */
+.projectsTitleText{
+	text-align: center;
+	vertical-align: middle;
+	color: #6f94d9;
+	font-weight: bold;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
 .projectsHeaderText{
 	text-align: center;
 	padding-left: 10%;
@@ -367,6 +377,16 @@ th{
 	color: rgba(0,0,0,0.5);
 	padding-top: 10px;
 	padding-bottom: 40px;
+}
+
+.projectsSearch{
+	width: 60% !important;
+	margin-left: 20%;
+}
+
+.projectsSearch_mobile{
+	width: 90% !important;
+	margin-left: 5%;
 }
 
 .projectCard{
@@ -390,6 +410,7 @@ th{
 
 .projectCardImage{
 	padding-top: 10px;
+	width:80%;
 }
 /* end of projects section */
 

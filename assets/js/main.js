@@ -113,7 +113,7 @@ const addProjectsItems = [
 const projects = [
     {
         title:"NBA 1st Quarter Leads",
-        description:"I always wondered how \"critical\" it was to get off to an early start in the NBA given the profilic offenses in today's NBA. Do first quarter leads actually hold? In this report, I look into the final score impact of having a first quarter lead.",
+        description:"How critical is it have a strong start in the NBA given today's profilic offenses? Let's see if 10+ point first quarter leads win games",
         image:"assets/images/nbalogo.png",
         hash: "NBALeads",
         iFrameEmbed: "<iframe class = \"dashboardFrame\" src=\"https://play.semoss.org/SemossWeb/#!/insight?type=multi&engine=38beddd1-f9e3-4736-9754-272180ccc6e0&id=e4b84a89-5098-4dac-a8f7-d376447ea232\"></iframe>",
@@ -141,7 +141,7 @@ const projects = [
     },
     {
         title:"More to Come",
-        description:"These are my projects so far, but I'm always looking for more ideas. If you have a cool idea of what I could be working on, contact me via email!",
+        description:"These are my projects so far, but I'm always looking for more ideas. Feel free to email me your ideas!",
         image:"assets/images/comingsoon.png",
     }
 ];
@@ -321,41 +321,79 @@ function loadResumePage(){
 }
 
 function loadProjectsPage(){
+    searchClass = "projectsSearch";
+
     // load top page
     pageHTML = "";
     pageHTML += "<div class = \"topHomePage\">";
-    pageHTML += "<h1 class=\"nameText display-3\">Projects</h1>";
+    pageHTML += "<h1 class=\"projectsTitleText display-3\">Projects</h1>";
     pageHTML += "<h5 class=\"projectsHeaderText\">I bring an analytical and fact-focused approach to all my stances when it comes to sports, movies, and everything else. Here are a few of my projects that I have developed that look deeper into those topics.</h5></div>";
     pageHTML += "</div>";
 
+    // start bottom of page
+    pageHTML += "<div class = \"bottomHomePage\">";
+    pageHTML += "<br>";
+
+    // make search bar
+    pageHTML += "<form class=\"form-inline \">";
+    if(isMobile){
+        searchClass += "_mobile";
+    }
+
+    pageHTML += "<input class=\"form-control mr-sm-2 " + searchClass + "\" id=\"searchQuery\" type=\"search\" placeholder=\"Search for a Project\" onkeyup=\"loadProjectCards()\" autocomplete=\"off\">";
+    pageHTML += "</form>";
+
     // load project cards
-    pageHTML += "<div class=\"container-fluid grey full-height\">";
+    pageHTML += "<div class=\"container-fluid\" id=\"projectCardList\">";
+    pageHTML += loadProjectCards("return");
+
+    // wrap the whole thing up
+    pageHTML += "</div>";
+    pageHTML += "</div>";
+
+    // return
+    primaryContainer.innerHTML = pageHTML;
+}
+
+function loadProjectCards(type){
+    pageHTML = "";
+    
+    searchQuery = document.getElementById('searchQuery');
+    if(searchQuery != null){
+        searchQuery = searchQuery.value.toUpperCase();
+    }
+
     for(var i = 0; i < projects.length; i++){
         // check if starting a new row
         if(i % 4 == 0){
             pageHTML += "<div class=\"row\">"
         }
 
-        // otherwise loop through the cards
-        pageHTML += "<div class=\"col-md-3 text-center projectCard\" onclick=\"setHash('Projects/" + projects[i]['hash'] + "')\">"
-        pageHTML += "<img class=\"projectCardImage\" src=\""+ projects[i]['image'] + "\" style=\"width:80%\">";
-        pageHTML += "<h3><b>" + projects[i]['title'] + "</b></h3>";
-        pageHTML += "<p class=\"projectCardText\">" + projects[i]['description'] + "</p>";
-        pageHTML += "</div>";
-
+        titleCaps = projects[i]['title'].toUpperCase();
+        if(searchQuery == null || titleCaps.includes(searchQuery)){
+            // otherwise loop through the cards
+            pageHTML += "<div class=\"col-md-3 text-center projectCard\" onclick=\"setHash('Projects/" + projects[i]['hash'] + "')\">"
+            pageHTML += "<img class=\"projectCardImage\" src=\""+ projects[i]['image'] + "\">";
+            pageHTML += "<h3><b>" + projects[i]['title'] + "</b></h3>";
+            pageHTML += "<p class=\"projectCardText\">" + projects[i]['description'] + "</p>";
+            pageHTML += "</div>";
+        }
         // close up the new row if you have to
         if(i % 4 == 3 || i == (projects.length-1)){
             pageHTML += "</div>";
         }
 
     }
-    
-    
-    // wrap the whole thing up
-    pageHTML += "</div>";
 
-    // return
-    primaryContainer.innerHTML = pageHTML;
+    if(type == "return"){
+        return pageHTML;
+    } else{
+        projectCardContainer = document.getElementById("projectCardList");
+        projectCardContainer.innerHTML = pageHTML;
+    }
+
+
+    
 }
 
 function loadProjectResultPage(urlKey){
@@ -386,7 +424,7 @@ function loadProjectResultPage(urlKey){
     // load top page
     pageHTML = "";
     pageHTML += "<div class = \"topHomePage\">";
-    pageHTML += "<h1 class=\"nameText " + addDisplay + "\">" + projects[index]['title'] + "</h1>";
+    pageHTML += "<h1 class=\"projectsTitleText " + addDisplay + "\">" + projects[index]['title'] + "</h1>";
     pageHTML += "<h5 class=\"projectsHeaderText\">" + projects[index]['description'] + "</h5></div>";
     pageHTML += "</div>";
 
