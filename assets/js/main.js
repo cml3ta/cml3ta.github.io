@@ -113,12 +113,13 @@ const addProjectsItems = [
 const projects = [
     {
         title:"NBA 1st Quarter Leads",
-        description:"How critical is it have a strong start in the NBA given today's profilic offenses? Let's see if 10+ point first quarter leads win games",
+        descriptionShort:"How critical is it have a strong start in the NBA given today's profilic offenses? Let's see if 10+ point first quarter leads win games",
+        descriptionLong:"How critical is it have a strong start in the NBA given today's profilic offenses? Let's see if 10+ point first quarter leads win games and how it varies between teams with an offensive or defensive focus.",
         image:"assets/images/nbalogo.png",
         hash: "NBALeads",
-        iFrameEmbed: "<iframe class = \"dashboardFrame\" src=\"https://play.semoss.org/SemossWeb/#!/insight?type=multi&engine=38beddd1-f9e3-4736-9754-272180ccc6e0&id=e4b84a89-5098-4dac-a8f7-d376447ea232\"></iframe>",
         dashboardImage:"assets/images/nbaleadhelddashboard.PNG",
-        dashboardLink: "https://play.semoss.org/SemossWeb/#!/insight?type=multi&engine=38beddd1-f9e3-4736-9754-272180ccc6e0&id=e4b84a89-5098-4dac-a8f7-d376447ea232",
+        imageFooter:"In this dashboard, you can see that the ability to hold a lead varies among a team's relative offensive vs. defensive reputation. In all cases, however, the lead often plateaus after the first quarter or even shrinks. Email me for live access to this dashboard and database. ",
+        date:"March 3, 2020",
         projectParagraphs: [
             {
                 sectionheader: "Do teams with 10+ point first quarter leads end up winning the game?",
@@ -375,7 +376,7 @@ function loadProjectCards(type){
             pageHTML += "<div class=\"col-md-3 text-center projectCard\" onclick=\"setHash('Projects/" + projects[i]['hash'] + "')\">"
             pageHTML += "<img class=\"projectCardImage\" src=\""+ projects[i]['image'] + "\">";
             pageHTML += "<h3><b>" + projects[i]['title'] + "</b></h3>";
-            pageHTML += "<p class=\"projectCardText\">" + projects[i]['description'] + "</p>";
+            pageHTML += "<p class=\"projectCardText\">" + projects[i]['descriptionShort'] + "</p>";
             pageHTML += "</div>";
         }
         // close up the new row if you have to
@@ -415,43 +416,23 @@ function loadProjectResultPage(urlKey){
         setHash("Projects");
     }
 
-    addDisplay = "";
-    if(!isMobile){
-        addDisplay = "display-3";
-    }
     projectParagraphs = projects[index]['projectParagraphs']
 
     // load top page
     pageHTML = "";
-    pageHTML += "<div class = \"topHomePage\">";
-    pageHTML += "<h1 class=\"projectsTitleText " + addDisplay + "\">" + projects[index]['title'] + "</h1>";
-    pageHTML += "<h5 class=\"projectsHeaderText\">" + projects[index]['description'] + "</h5></div>";
-    pageHTML += "</div>";
-
-    // load bottom part
-    pageHTML += "<div class=\"bottomHomePage\">"
-
-    // load the summary paragraphs
-    pageHTML += "<h5 class=\"projectResults_secHeader\">" + projectParagraphs[0]['sectionheader'] + "</h5>";
-    pageHTML += "<p class=\"projectResults_paragraph\">" + projectParagraphs[0]['paragraph'] + "</p> ";
-    pageHTML += "<br>";
+    pageHTML += "<div class = \"projectResultsContainer shadow-sm\">";
+    pageHTML += "<h1 class=\"projectsTitleTextResult\">" + projects[index]['title'] + "</h1>";
+    pageHTML += "<h5 class=\"projectsHeaderTextResult\">" + projects[index]['descriptionLong'] + "</h5>";
 
     // lets load the dashboard if desktop, otherwise image
     pageHTML += "<div class=\"dashboardContainer\">"
-    if(true){
-        // pageHTML += "<a href=\""+ projects[index]['dashboardLink'] + "\" target=\"_blank\">";
-        pageHTML += "<img class=\"dashboardFrame\" src=\""+ projects[index]['dashboardImage'] + "\">";
-        // pageHTML += "</a>";
-        pageHTML += "</div>"
-        pageHTML += "<div class=\"dashImageFooter\">Email me for live access to this data and dashboard!</div>";
-    } else {
-        pageHTML += projects[index]['iFrameEmbed'];
-        pageHTML += "</div>"
-
-    }
-
+    pageHTML += "<img class=\"dashboardFrame\" src=\""+ projects[index]['dashboardImage'] + "\">";
+    pageHTML += "</div>"
+    pageHTML += "<div class=\"dashImageFooter\">" + projects[index]['imageFooter'] + "</div>";
+    pageHTML += "<br>";
+    
     // load the rest of the paragraphs
-    for(var i = 1; i < projectParagraphs.length; i++){
+    for(var i = 0; i < projectParagraphs.length; i++){
         pageHTML += "<h5 class=\"projectResults_secHeader\">" + projectParagraphs[i]['sectionheader'] + "</h5>";
         pageHTML += "<p class=\"projectResults_paragraph\">" + projectParagraphs[i]['paragraph'] + "</p> ";
     }

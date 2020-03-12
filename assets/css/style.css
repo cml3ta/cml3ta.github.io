@@ -77,6 +77,7 @@ html, body
 	height: 95%;
 	margin-left: 2px;
 	margin-top: 5px;
+	padding-right: 20px;
 }
 
 .nameText{
@@ -369,7 +370,6 @@ th{
 	padding-left: 5px;
 	padding-right: 5px;
 }
-
 .projectsHeaderText{
 	text-align: center;
 	padding-left: 10%;
@@ -395,7 +395,7 @@ th{
 }
 
 .projectCard:hover{
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.09);
 	background-color: white;
 }
 
@@ -418,9 +418,9 @@ th{
 /* project result page */
 .dashboardContainer{
 	position: relative;
-	width: 90%;
+	width: 80%;
 	padding-top: 40%; /* 16:9 Aspect Ratio */
-	margin-left: 5%;
+	margin-left: 10%;
 }
 
 .dashboardFrame{
@@ -434,23 +434,44 @@ th{
 }
 
 .projectResultImage{
-	width: 50%;
-	margin-left: 25%;
+	width: 70%;
+	margin-left: 15%;
 	height: auto;
 }
 
-.projectResults_secHeader{
-	padding-left: 1%;
-	text-transform: uppercase;
+.projectsTitleTextResult{
+	text-align: center;
+	vertical-align: middle;
 	color: #6f94d9;
 	font-weight: bold;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-size: 48px;
+	padding-top: 30px;
+}
+
+
+.projectsHeaderTextResult{
+	text-align: center;
+	padding-left: 20%;
+	padding-right: 20%;
+	color: black;
 	padding-top: 10px;
 }
 
-.projectResults_paragraph{
-	padding-left: 2%;
+.projectResults_secHeader{
+	padding-left: 10%;
+	/* text-transform: uppercase; */
+	color: black;
+	font-weight: bold;
 	padding-top: 10px;
-	padding-right: 10px;
+	padding-right: 10%;
+}
+
+.projectResults_paragraph{
+	padding-left: 10%;
+	padding-top: 10px;
+	padding-right: 10%;
 }
 
 .dashImageFooter{
@@ -461,4 +482,10 @@ th{
 	text-align: center;
 	padding-bottom: 20px;
 	padding-top: 5px;
+}
+
+.projectResultsContainer{
+	margin-left: 5%;
+	width: 90%;
+	background: white;
 }
