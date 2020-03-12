@@ -422,7 +422,11 @@ function loadProjectResultPage(urlKey){
     pageHTML = "";
     pageHTML += "<div class = \"projectResultsContainer shadow-sm\">";
     pageHTML += "<h1 class=\"projectsTitleTextResult\">" + projects[index]['title'] + "</h1>";
-    pageHTML += "<h5 class=\"projectsHeaderTextResult\">" + projects[index]['descriptionLong'] + "</h5>";
+    if(!isMobile){
+        pageHTML += "<h5 class=\"projectsHeaderTextResult\">" + projects[index]['descriptionLong'] + "</h5>";
+    } else {
+        pageHTML += "<br>";
+    }
 
     // lets load the dashboard if desktop, otherwise image
     pageHTML += "<div class=\"dashboardContainer\">"
