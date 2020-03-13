@@ -421,10 +421,19 @@ th{
 
 /* --------------------------- */
 /* project result page */
+
+.projectResultDate{
+	padding-top: 0px;
+	text-align: center;
+	padding-right: 5px;
+	color: rgba(0,0,0,0.5);
+	font-size: 12px;
+}
+
 .dashboardContainer{
 	position: relative;
 	width: 80%;
-	padding-top: 40%; /* 16:9 Aspect Ratio */
+	padding-top: 35%; /* 16:9 Aspect Ratio */
 	margin-left: 10%;
 }
 
@@ -453,8 +462,8 @@ th{
 	padding-right: 5px;
 	font-size: 48px;
 	padding-top: 30px;
+	margin-bottom: 5px;
 }
-
 
 .projectsHeaderTextResult{
 	text-align: center;
@@ -471,6 +480,7 @@ th{
 	font-weight: bold;
 	padding-top: 10px;
 	padding-right: 10%;
+	font-size: 125%;
 }
 
 .projectResults_paragraph{
@@ -492,5 +502,9 @@ th{
 .projectResultsContainer{
 	margin-left: 5%;
 	width: 90%;
+	background: white;
+}
+
+.projectResultsContainer_mobile{
 	background: white;
 }
