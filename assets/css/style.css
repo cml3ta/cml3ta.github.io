@@ -30,6 +30,11 @@ html, body
 	color: #6f94d9;
 }
 
+.links:hover{
+	color: rgb(0,78,176);
+	text-decoration: underline;
+}
+
 /* end of primary main content */
 
 
