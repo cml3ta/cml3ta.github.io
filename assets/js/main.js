@@ -10,6 +10,11 @@ if(screenWidth < 750) {
 
 const bioCardDeets = [
     {
+        bolded: "Interested in",
+        regular: "advancing technology solutions to address consumer challenges",
+        image: "assets/images/star.png"
+    },
+    {
         bolded: "Studied at",
         regular: "The University of Virginia",
         image: "assets/images/capandgown.png"
@@ -183,9 +188,6 @@ function loadHomePage(){
     leftClass = "";
     rightClass = "";
     addDisplay = "";
-    birthday = new Date("11/13/1995"); 
-    present_date = new Date(); 
-    age = (present_date.getTime() - birthday.getTime())/(1000 * 3600 * 24 *365);  
 
     // start top page
     pageHTML = " <div class = \"topHomePage\">";
@@ -205,8 +207,8 @@ function loadHomePage(){
     if(!isMobile){
         // start cc table
         pageHTML += "<div class=\"contactCardTable\" style=\"overflow-x:auto;\"> ";
-        pageHTML += "<table> <tr> <th>Age</th> <th>Specialty</th> <th>Ask About</th> </tr> ";
-        pageHTML += "<tr> <td>" + Math.floor(age) + "</td> <td>Product Management</td> <td>Sports Analytics</td> </tr> </table></div> ";
+        pageHTML += "<table> <tr><th>Specialty</th> <th>Ask Me About</th> </tr> ";
+        pageHTML += "<tr> <td>Product Management</td> <td>Sports Analytics</td> </tr> </table></div> ";
         
         // email me button
         pageHTML += emailMeButton;
@@ -268,8 +270,6 @@ function sendEmail(){
 }
 
 function loadResumePage(){
-    downloadButton = "<center><a class=\"button\" id=\"button-4\" style=\"width:90%;color: #F0F8FF;background-color:#6f94d9;\" href=\"assets/Resume_ChrisLong.pdf\" download><div id=\"underline\" style=\"background:#F0F8FF;\"></div>Download Resume</a></center> ";
-
     // if its not mobile, then show left side
     if(!isMobile){
         // get the left column html
@@ -278,7 +278,6 @@ function loadResumePage(){
         pageHTML += "<center><h1 class=\"resumeName\">Chris Long</h1></center> <div class=\"resumeBio\"><hr> <h6>Email Address</h5> <p>cml3ta@gmail.com</p> <hr> <h6>Phone Number</h5> <p>(540) 808-3354</p> <hr> <h6>Area of Residence</h5> <p>Washington DC</p><hr> </div>";
         
         // download button
-        pageHTML += downloadButton;
         pageHTML += "</div>";
 
         // start the right column html
@@ -312,11 +311,9 @@ function loadResumePage(){
     pageHTML += "<div class=\"resumeEmployer\">Interests: ";
     pageHTML += "<span class=\"resumeSkillDeets\">Golf, Running, Data Analytics (esp. Sports Analytics), UI/UX, Data Visualization, Product Demos</span>";
     pageHTML += "<br><br><br><br>";
-    // add download button on bottom if mobile
-    if(isMobile){
-        // download button
-        pageHTML += downloadButton;  
-    }
+
+    pageHTML += "<center><a class=\"button\" id=\"button-4\" style=\"width:90%;color: #F0F8FF;background-color:#6f94d9;max-width:50%;\" href=\"assets/Resume_ChrisLong.pdf\" download><div id=\"underline\" style=\"background:#F0F8FF;\"></div>Download Resume</a></center> ";
+    
 
     // wrap it up
     pageHTML += "</div>";
