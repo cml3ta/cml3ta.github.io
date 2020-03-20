@@ -115,7 +115,7 @@ const projects = [
     {
         title:"Breaking Down Blackjack Odds",
         description:"What are your real odds of leaving the casino a winner? Let's see how it varies with different strategies and table rules",
-        image:"assets/images/blackjacklogocomingsoon.PNG",
+        image:"assets/images/blackjacklogocomingsoon.png",
     },
     {
         title:"NBA 1st Quarter Leads",
