@@ -1,9 +1,10 @@
 var primaryContainer = document.getElementById("primaryContainer");
 
 var isMobile = false; //initiate as false
+var screenWidth = screen.width;
+
 // device detection
-if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
-    || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) { 
+if(screenWidth < 750) { 
     isMobile = true;
 }
 
@@ -60,7 +61,7 @@ const workExpItems = [
     },
     {
         employer:"",
-        position:"Business Technology Analyst | Primary Client: Internal SEMOSS Product Management",
+        position:"Business Technology Analyst | SEMOSS Product Management",
         date:"",
         bullets:[
             "Accelerated the business development and product growth of SEMOSS by performing to 50+ product demos to a range of potential clients, including federal agencies, non-profit organizations, and commercial businesses",
@@ -71,7 +72,7 @@ const workExpItems = [
     },
     {
         employer:"",
-        position:"Business Technology Analyst | Primary Client: Internal SEMOSS Back-End Developer",
+        position:"Business Technology Analyst | SEMOSS Back-End Developer",
         date:"",
         bullets:[
             "Develop Back-End algorithms for SEMOSS in R and Java to solve client needs, accelerate project performance and SEMOSS product advancement such as Document Summarization, Sentiment Analysis, and more",
@@ -112,45 +113,41 @@ const addProjectsItems = [
 
 const projects = [
     {
+        title:"Breaking Down Blackjack Odds",
+        description:"What are your real odds of leaving the casino a winner? Let's see how it varies with different strategies and table rules",
+        image:"assets/images/blackjacklogocomingsoon.PNG",
+    },
+    {
         title:"NBA 1st Quarter Leads",
         description:"How critical is it have a strong start in the NBA given today's profilic offenses? Let's see if 10+ point first quarter leads win games",
         image:"assets/images/nbalogo.png",
         hash: "NBALeads",
         dashboardImage:"assets/images/nbaleadhelddashboard.PNG",
         imageFooter:"In this dashboard, you can see that the ability to hold a lead varies among a team's relative offensive vs. defensive reputation. In all cases, however, the lead often plateaus after the first quarter or even shrinks. Email me for live access to this dashboard and database. ",
-        date: "February 20, 2019",
+        date: "Feb. 20, 2020",
         projectParagraphs: [
             {
                 sectionheader: "Do teams with 10+ point first quarter leads end up winning the game?",
                 paragraph: "It seems that with the prolific offenses that we see in the NBA today, that huge early leads are very often lost. So I decided to put this to the test. First, I collected quarter-by-quarter scores of all games in the first half the 2019-2020 season (i.e. until the All-Star Break). Then, I filtered to only games where there was at least a 10 point deficit at the end of the first quarter. This resulted in a sample size of 195 games. Lets start with the obvious question to ask: Did those teams win? Yes, teams with a <b>10+ point first quarter ended up winning the game about 80% of the time</b>.<br><br>It is very inconsistent among different teams, however. League leading teams like the Bucks or the Lakers have held 100% of their 10-point first quarter leads. Other teams such as the Pacers and Warriors have only a 50-50 chance of winning when holding a 10+ point first quarter lead. In either case, however, we find that <b>the early first quarter lead will also probably be the largest lead of the game</b>. This prompts further questions though on how it varies between individual teams and their strengths. Are some teams just built better to hold their leads? ",
-                paragraphImage: "",
-                paragraphImageAlignment: ""
+                smallImage: "assets/images/nbaleadheldbyteam.PNG"
             },
             {
                 sectionheader: "Do offensive or defensive teams do better with a lead?",
                 paragraph: "Next, I decided to look into whether the ability to hold a lead varies between teams that prioritize offensive or defensive schemes. So, I federated the previous game data with the Offensive and Defensive ranking of each leading team - with the ranking based on points scored per game and points allowed per game. If a team was in the top half of the league offensively and top half defensively then they are listed as <b>Both</b>. As you might expect, these teams are often the best teams in the league such as the Bucks, Clippers, Celtics, etc. If a team was in the upper half of the league in only one of the offensive or defensive rankings, they are listed as <b>Offensive</b> or <b>Defensive</b>. On the offensive side, a few examples of of teams in this category are the Rockets, Mavericks, and Suns. On the defensive side, a few examples of these teams are the Jazz, Nuggets, and Pacers. Finally, we have the teams in the bottom half offensively and defensively listed as <b>Neither</b> such as the Cavaliers, Warriors, and Knicks.<br><br>When looking at the results, we see that teams with a defensive focus and offensive focus tend to have the same success holding their leads - winning about 75% of the games where they have a first quarter lead. Teams in the Both category see extreme success in holding the leads, with a success of about 92%. And finally, teams in the Neither category hold their lead only 69% of the time. In conclusion, <b>neither offensively and defensively aligned teams hold an advantage over the other. But well-rounded teams hold their leads <u>significantly</u> better than all others</b>. With this, I wondered whether there was a difference in how offensive or defensive held their leads.",
-                paragraphImage: "",
-                paragraphImageAlignment: ""
+                smallImage: "assets/images/nbaleadheldbytype.PNG"
             },
             {
                 sectionheader: "When do teams lose their lead?",
-                paragraph: "Lets take this one step further and see if we can predict when teams will start to lose their lead or when we know <i>\"Okay, I'd say this lead is safe\"</i>. This is good to know if you want to make an informed wager with your friends, start to feel secure about your team's success, or know that maybe you still have a chance when you're trailing. By maintaining the same groups as in the previous section (Both, Offensive, Defensive, or Neither), I can now track how teams lose their lead by category. Here is what I found:<br><br> <b>Both</b>: These teams tend to steadily hold this 10 point lead throughout the game. You can bet on these teams holding (but maybe not expanding upon) a large first quarter lead.<br><b>Offensive</b>: These teams are volatile when it comes to holding leads. As you can see from the curve in the bottom right of the above dashboard, you can expect this lead to quickly decrease in one quarter, but then quickly reappear in the next.<br><b>Defensive</b>: These teams take a much steadier approach to holding their lead, where it (on average) slowly decreases throughout the game. Therefore, if a defensive team is able to hold this lead deep into the second quarter you can feel secure about an ultimate victory. On the other hand, defensive teams seem to let their opponents reduce their lead throughout the game, where their first quarter 10+ point lead will probably be one of the largest leads of the night.<br><b>Neither</b>: These teams are unpredictable, with the largest loss of their leads occuring in the 3rd quarter. Tough to discern any major insights from these teams, but I would be skeptical of the security of any early lead with these teams.",
-                paragraphImage: "",
-                paragraphImageAlignment: ""
+                paragraph: "Lets take this one step further and see if we can predict when teams will start to lose their lead or when we know <i>\"Okay, I'd say this lead is safe\"</i>. This is good to know if you want to make an informed wager with your friends, start to feel secure about your team's success, or know that maybe you still have a chance when you're trailing. By maintaining the same groups as in the previous section (Both, Offensive, Defensive, or Neither), I can now track how teams lose their lead by category. Here is what I found:<br><br> <b>Both</b>: These teams tend to steadily hold this 10 point lead throughout the game. You can bet on these teams holding (but maybe not expanding upon) a large first quarter lead.<br><br><b>Offensive</b>: These teams are volatile when it comes to holding leads. As you can see from the curve in the bottom right of the above dashboard, you can expect this lead to quickly decrease in one quarter, but then quickly reappear in the next.<br><br><b>Defensive</b>: These teams take a much steadier approach to holding their lead, where it (on average) slowly decreases throughout the game. Therefore, if a defensive team is able to hold this lead deep into the second quarter you can feel secure about an ultimate victory. On the other hand, defensive teams seem to let their opponents reduce their lead throughout the game, where their first quarter 10+ point lead will probably be one of the largest leads of the night.<br><br><b>Neither</b>: These teams are unpredictable, with the largest loss of their leads occuring in the 3rd quarter. Tough to discern any major insights from these teams, but I would be skeptical of the security of any early lead with these teams.",
+                smallImage: "assets/images/nbaleadchanges.PNG",
             },
             {
                 sectionheader: "Conclusion: The ability to hold an early lead varies team to team, and is heavily based on their relative strengths",
                 paragraph: "Despite an overall 80% win-rate for teams with a 10+ point first quarter lead, many teams will struggle to (1) build upon that lead or (2) even hold the lead at all. On average, that 10 point lead will be the largest lead of the game. We find that <b>score differentials are not linear, but rather seem to plateau or slowly decrease after the first quarter.</b> So when making a decision on how you feel about an early lead in the NBA, think about the leading team's strengths (offensive vs. defensive) and decide when you feel that the lead has begun to plateau.",
-                paragraphImage: "",
-                paragraphImageAlignment: ""
+                smallImage: "assets/images/nbaleadhelddashboard.PNG"
             }
         ]
         
-    },
-    {
-        title:"More to Come",
-        description:"These are my projects so far, but I'm always looking for more ideas. Feel free to email me your ideas!",
-        image:"assets/images/comingsoon.png",
     }
 ];
 
@@ -204,12 +201,12 @@ function loadHomePage(){
     pageHTML += "<img class = \"contactCardHeadshot\" src=\"./assets/images/chris_headshot_square.jpg\"> ";
     pageHTML += "<img class = \"contactCardImage\" src=\"./assets/images/bg.jpg\"> ";
 
-    emailMeButton = "</div> <center><div class=\"button emailButton\" id=\"button-4\" data-toggle=\"modal\" data-target=\"#sendEmailModal\"><div id=\"underline\"></div>Email Me</div></center> ";
+    emailMeButton = "<center><div class=\"button emailButton\" id=\"button-4\" data-toggle=\"modal\" data-target=\"#sendEmailModal\"><div id=\"underline\"></div>Email Me</div></center> ";
     if(!isMobile){
         // start cc table
         pageHTML += "<div class=\"contactCardTable\" style=\"overflow-x:auto;\"> ";
-        pageHTML += "<table> <tr> <th>Age</th> <th>Area of Specialty</th> <th>Ask Me About</th> </tr> ";
-        pageHTML += "<tr> <td>" + Math.floor(age) + "</td> <td>Product Management</td> <td>Sports Analytics</td> </tr> </table>";
+        pageHTML += "<table> <tr> <th>Age</th> <th>Specialty</th> <th>Ask About</th> </tr> ";
+        pageHTML += "<tr> <td>" + Math.floor(age) + "</td> <td>Product Management</td> <td>Sports Analytics</td> </tr> </table></div> ";
         
         // email me button
         pageHTML += emailMeButton;
@@ -335,7 +332,7 @@ function loadProjectsPage(){
     pageHTML = "";
     pageHTML += "<div class = \"topHomePage\">";
     pageHTML += "<h1 class=\"projectsTitleText display-3\">Projects</h1>";
-    pageHTML += "<h5 class=\"projectsHeaderText\">I bring an analytical and fact-focused approach to all my stances when it comes to sports, movies, and everything else. Here are a few of my projects that I have developed that look deeper into those topics.</h5></div>";
+    pageHTML += "<h5 class=\"projectsHeaderText\">I bring an analytical and fact-focused approach to all my stances when it comes to sports, movies, and everything else. Here are a few of my projects so far, but I'm always looking for more ideas. Feel free to email me your ideas!</h5></div>";
     pageHTML += "</div>";
 
     // start bottom of page
@@ -365,6 +362,16 @@ function loadProjectsPage(){
 
 function loadProjectCards(type){
     pageHTML = "";
+
+    // default to 4 cards per row
+    numCards = 4;
+
+    //if mobile, make it 2
+    if(isMobile){
+        numCards = 2;
+    }
+
+    cardTwelfth = 12/numCards;
     
     searchQuery = document.getElementById('searchQuery');
     if(searchQuery != null){
@@ -373,21 +380,25 @@ function loadProjectCards(type){
 
     for(var i = 0; i < projects.length; i++){
         // check if starting a new row
-        if(i % 4 == 0){
+        if(i % numCards == 0){
             pageHTML += "<div class=\"row\">"
         }
 
         titleCaps = projects[i]['title'].toUpperCase();
         if(searchQuery == null || titleCaps.includes(searchQuery)){
             // otherwise loop through the cards
-            pageHTML += "<div class=\"col-md-3 text-center projectCard\" onclick=\"setHash('Projects/" + projects[i]['hash'] + "')\">"
+            pageHTML += "<div class=\"col-" + cardTwelfth + " text-center projectCard\" onclick=\"setHash('Projects/" + projects[i]['hash'] + "')\">"
             pageHTML += "<img class=\"projectCardImage\" src=\""+ projects[i]['image'] + "\">";
             pageHTML += "<h3><b>" + projects[i]['title'] + "</b></h3>";
-            pageHTML += "<p class=\"projectCardText\">" + projects[i]['description'] + "</p>";
+
+            // only show description if desktop
+            if(!isMobile){
+                pageHTML += "<p class=\"projectCardText\">" + projects[i]['description'] + "</p>";
+            }
             pageHTML += "</div>";
         }
         // close up the new row if you have to
-        if(i % 4 == 3 || i == (projects.length-1)){
+        if(i % numCards == 3 || i == (projects.length-1)){
             pageHTML += "</div>";
         }
 
@@ -426,15 +437,19 @@ function loadProjectResultPage(urlKey){
     projectParagraphs = projects[index]['projectParagraphs']
 
     projectResultsContainer = "projectResultsContainer";
+    smallImage = "smallImage"
     if(isMobile){
         projectResultsContainer += "_mobile";
+        smallImage = "dashboard";
     }
 
     // load top page
     pageHTML = "";
     pageHTML += "<div class = \"" + projectResultsContainer + " shadow-sm\">";
     pageHTML += "<h1 class=\"projectsTitleTextResult\">" + projects[index]['title'] + "</h1>";
-    pageHTML += "<div class=\"projectResultDate\">" + projects[index]['date'] + "</div>";
+    pageHTML += "<div class=\"projectResultDate\"> Chris Long | ";
+    pageHTML += "<span class=\"pointer\" onclick=\"sendEmail()\">cml3ta@gmail.com</span>";
+    pageHTML += " | " + projects[index]['date'] + "</div>";
 
     if(isMobile){
         pageHTML += "<br>"
@@ -445,11 +460,15 @@ function loadProjectResultPage(urlKey){
     pageHTML += "<img class=\"dashboardFrame\" src=\""+ projects[index]['dashboardImage'] + "\">";
     pageHTML += "</div>"
     pageHTML += "<div class=\"dashImageFooter\">" + projects[index]['imageFooter'] + "</div>";
-    pageHTML += "<br>";
     
     // load the rest of the paragraphs
     for(var i = 0; i < projectParagraphs.length; i++){
+        pageHTML += "<hr class=\"paragraphDivider\"></hr>";
         pageHTML += "<h5 class=\"projectResults_secHeader\">" + projectParagraphs[i]['sectionheader'] + "</h5>";
+        pageHTML += "<br>";
+        pageHTML += "<div class=\"" + smallImage + "Container\">"
+        pageHTML += "<img class=\"" + smallImage + "Frame\" src=\""+ projectParagraphs[i]['smallImage'] + "\">";
+        pageHTML += "</div>"
         pageHTML += "<p class=\"projectResults_paragraph\">" + projectParagraphs[i]['paragraph'] + "</p> ";
     }
 

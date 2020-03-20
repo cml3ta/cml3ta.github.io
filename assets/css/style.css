@@ -124,10 +124,11 @@ html, body
 }
 
 .emailButton{
-	padding-left: 100px !important;
-	padding-right: 100px !important;
+	text-align: center !important;
 	margin-top: 10px;
 	margin-bottom: 25px;
+	max-width:80%;
+	min-width: 60%;
 }
 
 .contactCardTable{
@@ -319,6 +320,7 @@ th{
 	padding-right: 20px;
 	margin-top: 5px;
 	padding-top: 20px;
+	background-color: white;
 }
 
 .sectionHeader{
@@ -427,7 +429,7 @@ th{
 	text-align: center;
 	padding-right: 5px;
 	color: rgba(0,0,0,0.5);
-	font-size: 12px;
+	font-size: 14px;
 }
 
 .dashboardContainer{
@@ -438,6 +440,23 @@ th{
 }
 
 .dashboardFrame{
+	position:  absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.smallImageContainer{
+	position: relative;
+	width: 50%;
+	padding-top: 22%; /* 16:9 Aspect Ratio */
+	margin-left: 25%;
+}
+
+.smallImageFrame{
 	position:  absolute;
 	top: 0;
 	left: 0;
@@ -480,7 +499,7 @@ th{
 	font-weight: bold;
 	padding-top: 10px;
 	padding-right: 10%;
-	font-size: 125%;
+	font-size: 200%;
 }
 
 .projectResults_paragraph{
@@ -500,11 +519,19 @@ th{
 }
 
 .projectResultsContainer{
-	margin-left: 5%;
-	width: 90%;
+	
+	margin-left: 10%;
+	width: 80%;
 	background: white;
 }
 
 .projectResultsContainer_mobile{
 	background: white;
+}
+
+hr.paragraphDivider{
+	border: 2px solid #6f94d9;
+	border-radius: 1px;
+	width: 80%;
+	margin-left: 10%;
 }
