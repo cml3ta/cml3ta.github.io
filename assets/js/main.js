@@ -120,7 +120,44 @@ const projects = [
     {
         title:"Breaking Down Blackjack Odds",
         description:"What are your real odds of leaving the casino a winner? Let's see how it varies with different strategies and table rules",
-        image:"assets/images/blackjacklogocomingsoon.png",
+        image:"assets/images/blackjacklogo.png",
+        hash: "BlackjackOdds",
+        dashboardImage:"assets/images/blackjackdashboard.png",
+        imageFooter:"In this dashboard, you can see the incremental benefit of using the optimal strategy, doubling strong hands, splitting pairs, etc. You can also see that the odds of the player winning are greater than 50% given perfect play. Email me for live access to this dashboard and database.",
+        date: "Mar. 20, 2020",
+        projectParagraphs: [
+            {
+                sectionheader: "What are our odds of winning in blackjack?",
+                paragraph: "Blackjack (also known as 21) is one of the most common casino games, with tables at most casinos and easy to follow rules. If you are unfamiliar with the rules of blackjack, you can find a good summary <a class=\"links\" href=\"https://bicyclecards.com/how-to-play/blackjack/\" target=\"_blank\">here</a>. In essence, there are four possible outcomes of each blackjack game: (1) a regular, non-blackjack win, (2) a blackjack win, (3) a loss to the dealer, and (4) a push (aka tie) with the dealer. Please be aware that table rules can vary between casinos. Some key table rules to look out for are (1) blackjacks paying out 3:2 or better, (2) restrictions of when you can double or split, (3) dealer staying or hitting on a soft 17, and <a class=\"links\" href=\"https://www.888casino.com/blog/blackjack-strategy-guide/scouting-blackjack-tables\" target=\"_blank\">more</a>.<br><br>To break down our odds of winning in blackjack, I created an algorithm that simulates 1,000,000 <i>completed</i> games of blackjack (more to come on this later) to determine win rates (blackjack and regular), push rates, and loss rates. We can also remove certain components of the optimal strategy to see the components that are most critical to achieving the highest possible odds of winning.<br><br>From this analysis, we see that the player has slightly <b>greater than 50% probability of winning in blackjack</b>. Let’s find out how…",
+                smallImage: "assets/images/blackjackresultsbarchart.png"
+            },
+            {
+                sectionheader: "What is the \"optimal strategy\"?",
+                paragraph: "Blackjack, like most games, is a game of pre-defined probabilities. Therefore, blackjack players have created a strategy of when to properly hit, stand, double down, split pairs, etc. This is known as the <a class=\"links\" href=\"https://www.blackjackapprenticeship.com/blackjack-strategy-charts/\" target=\"_blank\">optimal strategy</a>. As you can see at that link or in the charts above, the strategy is a simple chart that uses the total of your cards vs. the card that the dealer is showing. For example, think about the scenario where the dealer is showing a 5 or 6. It is very likely that the dealer will go past 21 in this scenario and, therefore, we should not take an additional card even when the total of our hand is only 12. Beyond knowing when to hit or stay, this chart provides immense value by telling us when to <b>take advantage of high probability wins by doubling</b> our bet, and when to <b>split our weaker hand into two better hands.</b><br><br>Let's compare this strategy to the dealer's required strategy. In this analysis, we assume the dealer is required to stay anytime their total (soft or hard) is 17 or greater. We will call these the <i>Follow Dealer's Rules</i> strategy. As we'll see in the next section, our odds of winning are only 41.1% if we also follow this strategy. Therefore, using this strategy is paramount to winning in blackjack, as it provides us with the statistically best chance of winning. ",
+                smallImage: "assets/images/blackjackoptimalstrategy.png"
+            },
+            {
+                sectionheader: "What percent of our hands will be wins, losses, or pushes?",
+                paragraph: "First, let’s talk a bit about the methodology of the simulation. I define a “game” as every time that we bet money. As an example, think about the scenario where we bet $20 to get dealt our cards and we receive a pair of 8's. As the optimal strategy above dictates, we will always split this pair. Therefore, we should bet another $20 and, thus, we have started a second game within the same deal. If we win both of those hands, we just won two games. If we lose both, we have just lost two games, etc. This definition holds for doubles as well. If we bet $20 and receive an 11, then we should always double that bet and bet another $20. If we win that one hand, it is equivalent to winning two games and, therefore, it gets treated as such.<br><br>Now, let’s look at the above table of simulation results. Outside of the <i>Follow Dealer\'s Rules</i> strategy, each of these strategies loosely follows the optimal strategy. As seen in the table, using the optimal strategy without splitting or doubling improves our odds of winning by about 1.5% over the <i>Follow Dealer's Rules</i> strategy. If we add splitting or doubling, then we improve our odds by an additional 0.4% and 1.2% respectively. Finally, the full optimal strategy (<i>Yes Double, Yes Split</i>) includes both of those gains and therefore adds an additional 1.5% towards our odds of winning. As you can see in the above table, we are still only winning 44.2% of hands using the full optimal strategy.",
+                smallImage: "assets/images/blackjackresulttable.png"
+            },
+            {
+                sectionheader: "How do we factor pushes into our odds of winning?",
+                paragraph: "If you view blackjack in the same way that you view other sports (basketball, football, etc.), then you would expect that a tie would lead to an overtime round. This is how we should be viewing the result of a push. Each push’s “overtime” round is the next deal. This leads us to a new term: a completed game of blackjack. <br><br>A completed game of blackjack begins when the bet is placed and concludes when the player has either (1) made money from the bet or (2) lost the money placed in the bet. For example, let’s say that we bet $20 on a hand of blackjack and get an 18. If the dealer also gets an 18, then we have a push. The game is not over. We have neither won nor lost. We enter the first “overtime” deal and this time we win. Both of those deals together constitute a complete game. <br><br>Let’s see how this affects our simulated results above using our best strategy’s (Yes Double, Yes Split) result. We need to, under these new definitions, play the “overtime” games of these hands. So, 4.2% of those pushes are now blackjack wins, 40.0% are now regular wins, etc. To give a simplified example, let’s ignore when we have multiple pushes in a row (which happens 0.7% of the time): <br><br>New Expected Regular Wins: 40.0% + 40.0% * 8.2% = 43.3%<br><br>New Expected Blackjack Wins: 4.2% + 4.2% * 8.2% = 4.5%<br><br>New Expected Losses: 47.6% + 47.6% * 8.2% = 51.5%<br><br>Another way to perform this analysis, is to totally remove pushes from the count altogether and look only at the completed games. This is exactly how the algorithm calculates the odds, where we find that the new <b>odds of getting a regular win are 43.6% and the odds of getting a blackjack win are 4.6% - for a total of 48.2% of winning each hand. </b>",
+                smallImage: "assets/images/blackjackpushovertime.png"
+            },
+            {
+                sectionheader: "What if we factor in player-friendly table rules? Specifically a 3:2 payout on blackjack?",
+                paragraph: "<b>Player friendly rules, such as a 3:2 payout on blackjack wins, move our odds of winning from the 48.2% to 50.5%</b>. Let’s reuse our earlier definition of a \"game\" as every time that we bet our money and use the standard blackjack payout of 3:2 in this example. If we bet $20 and win via blackjack, then we will receive $30 in winnings. Therefore, we have essentially won 1.5 games. This allows us to win more than we bet, which is a crucial advantage that is <i> not shared by the dealer</i>. Let’s include that in the equation from the previous section to watch it move greater than 50%. <br><br>New Expected Total Wins: 43.6% + 1.5 * 4.6% = 50.5%<br><br>Therefore, with this one (very important) table rule, <b>we can actually have the edge on the casino </b>by playing the optimal strategy to perfection. Factoring in additional player-friendly table rules can increase these odds slightly further.",
+                smallImage: "assets/images/blackjacktotaloddsgauge.png"
+            },
+            {
+                sectionheader: "Conclusion: Players have >50% chance of winning in blackjack with perfect play and friendly rules",
+                paragraph: "You’re probably thinking… then why does everyone seem to always lose money when they play blackjack at the casino? That is for one specific reason: they do not play the optimal strategy. This is because either (1) they think they can outsmart the proven strategy (they can’t) or (2) simple mistakes in the heat of a game. At its best, blackjack is a winnable game with a greater than 50% odds. At its worst, blackjack has favorable enough odds to let you last a long time on the table before losing. In either case, I recommend <b>memorizing the optimal strategy and walking into the casino confidently… because you have the edge. </b>",
+                smallImage: "assets/images/blackjackdashboard.png"
+            }
+        ]
+
     },
     {
         title:"NBA 1st Quarter Leads",
@@ -128,7 +165,7 @@ const projects = [
         image:"assets/images/nbalogo.png",
         hash: "NBALeads",
         dashboardImage:"assets/images/nbaleadhelddashboard.PNG",
-        imageFooter:"In this dashboard, you can see that the ability to hold a lead varies among a team's relative offensive vs. defensive reputation. In all cases, however, the lead often plateaus after the first quarter or even shrinks. Email me for live access to this dashboard and database. ",
+        imageFooter:"In this dashboard, you can see that the ability to hold a lead varies among a team's relative offensive vs. defensive reputation. In all cases, however, the lead often plateaus after the first quarter or even shrinks. Email me for live access to this dashboard and database.",
         date: "Feb. 20, 2020",
         projectParagraphs: [
             {
@@ -169,7 +206,9 @@ function setHash(target){
 }
 
 function loadPage(){
-    if(window.location.hash == "#Home"){
+    if(window.location.hash == "#Test"){
+        
+    } else if(window.location.hash == "#Home"){
         loadHomePage();
     } else if(window.location.hash == "#Resume"){
         loadResumePage();
@@ -503,3 +542,9 @@ function getStandardResumeSec(section){
 }
 
 window.addEventListener("hashchange",loadPage,false);
+
+
+/*
+// table for blackjack results table:
+<center><table><tr><th>Strategy</th> <th>Regular Wins</th> <th>Blackjack Wins</th> <th>Losses</th> <th>Pushes</th> </tr><tr> <td>Follow Dealer Rules</td> <td>36.6%</td> <td>4.5%</td> <td>49.1%</td> <td>9.7%</td> </tr> <tr> <td>No Double, No Split</td> <td>38.2%</td> <td>4.5%</td> <td>48.9%</td> <td>8.5%</td> </tr> <tr> <td>Yes Double, No Split</td> <td>39.9%</td> <td>4.0%</td> <td>47.9%</td> <td>8.2%</td> </tr> <tr> <td>No Double, Yes Split</td> <td>38.3%</td> <td>4.8%</td> <td>48.4%</td> <td>8.5%</td> </tr> <tr> <td>Yes Double, Yes Split</td> <td>40.0%</td> <td>4.2%</td> <td>47.6%</td> <td>8.2%</td> </tr> </table></center><br>
+*/

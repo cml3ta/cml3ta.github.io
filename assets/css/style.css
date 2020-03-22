@@ -143,7 +143,7 @@ width: 100%;
 th, td {
 padding-bottom: 8px;
 text-align: center;
-min-width: 20%;
+width: 50%;
 }
 
 th{
