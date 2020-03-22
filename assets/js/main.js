@@ -190,6 +190,40 @@ const projects = [
             }
         ]
         
+    },
+    {
+        title:"Tax Money Allocation",
+        description:"Let's set aside whether taxes should be higher, lower, or the same. Instead, let's look at where our tax money is allocated and how deviates from public perception",
+        image:"assets/images/taxtransparencylogocomingsoon.png",
+        hash: "",
+        dashboardImage:"",
+        imageFooter:"",
+        date: "",
+        projectParagraphs: [
+            {
+                sectionheader: "",
+                paragraph: "",
+                smallImage: ""
+            }
+        ]
+        
+    },
+    {
+        title:"4th Down Expected Value",
+        description:"When does the data say you have a positive expected value when going for it on 4th down? Does that vary by team? Let's find out",
+        image:"assets/images/nfllogocomingsoon.png",
+        hash: "",
+        dashboardImage:"",
+        imageFooter:"",
+        date: "",
+        projectParagraphs: [
+            {
+                sectionheader: "",
+                paragraph: "",
+                smallImage: ""
+            }
+        ]
+        
     }
 ];
 
