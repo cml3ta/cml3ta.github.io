@@ -27,11 +27,11 @@ html, body
 }
 
 .links{
-	color: #6f94d9;
+	color: rgb(0,78,176);
 }
 
 .links:hover{
-	color: rgb(0,78,176);
+	color: #6f94d9;
 	text-decoration: underline;
 }
 
@@ -403,7 +403,7 @@ th{
 
 .projectCard:hover{
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.09);
-	background-color: white;
+	background-color: rgba(0,0,0,0.1);
 }
 
 .projectCardText{
@@ -535,4 +535,12 @@ hr.paragraphDivider{
 	width: 80%;
 	margin-left: 10%;
 	color:#6f94d9;
+}
+
+.projectSources{
+	width: 80%;
+	margin-left: 10%;
+	color:rgba(0,0,0,0.5);
+	font-size: 12px;
+	padding-bottom: 5px;
 }
