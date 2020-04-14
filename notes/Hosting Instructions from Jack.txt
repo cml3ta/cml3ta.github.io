@@ -1,4 +1,0 @@
-jackhgarabedian.com is where my site is live
-deployed it using github pages and then used a CNAME to route to my domain
-
-the other demo I sent is deployed using heroku since it uses python

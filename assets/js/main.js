@@ -125,18 +125,18 @@ const projects = [
         title:"Oscar for Best Picture",
         description:"What does it take to win the covetted award for Best Picture at the Oscars? A big budget? High critic ratings? Let's find out",
         image:"./../assets/images/oscarlogo.png",
-        hash: "OscarBestPicture",
+        hash: "oscarbestpicture",
         date: "Apr. 13, 2020",
         projectParagraphs: [
             {
                 sectionheader: "What factors can predict the Best Picture winner?",
-                paragraph: "The Award for Best Picture at the <a class=\"links\" href=\"https://oscar.go.com/\" target=\"_blank\">Oscars</a> is an award that has been presented annually since the awards debuted in 1929. This is one of the biggest nights in Hollywood, where movie fans around the world tune in to see how their favorite movies fare. For this project, I will look to see if there is a way to predict which nominated movie ultimately wins the prize. The table above shows a statistical overview of some of the factors that I included in this analysis. These factors include:<br><br> <b>Financial (Box Office Sales, Budget)</b>: Financial performance of the movie adjusted for inflation<br><br><b>Diversity (Female Stars, Non-White Stars)</b>: The number of <a class=\"links\" href=\"https://www.imdb.com/?ref_=nv_home\" target=\"_blank\">IMDB</a> \"Stars\" in each movie that are either female or non-white according to <a class=\"links\" href=\"https://www.census.gov/quickfacts/fact/table/US/PST045218\" target=\"_blank\">US Census</a> demographic groups<br><br><b>Movie Ratings (Google Users, <a class=\"links\" href=\"https://www.imdb.com/?ref_=nv_home\" target=\"_blank\">IMDB</a>, <a class=\"links\" href=\"https://www.metacritic.com/\" target=\"_blank\">Metacritic</a>, <a class=\"links\" href=\"https://www.rottentomatoes.com/\" target=\"_blank\">Rotten Tomatoes</a>)</b>: Miscellaneous ctitic and fan reviews<br><br><b>Academy Nominations (Total Nominations)</b>: Total Oscar nominations in addition to Best Picture<br><br>Each of these categories are important predictors of Oscar success. The data includes information on Oscar Best Picture nominated movies from the last 10 years (88 movies total). I will break down each of these factors in the rest of this anlaysis. To summarize, I ultimately find that <b>movies with very small budgets, small box office results, many Oscar nominations, and a more diverse cast ultimately lead to award success.</b>",
+                paragraph: "The Award for Best Picture at the <a class=\"links\" href=\"https://oscar.go.com/\" target=\"_blank\">Oscars</a> is an award that has been presented annually since the awards debuted in 1929. This is one of the biggest nights in Hollywood, where movie fans around the world tune in to see how their favorite movies fare. For this project, I will look to see if there is a way to predict which nominated movie ultimately wins the prize. The table above shows a statistical overview of some of the factors that I included in this analysis. These factors include:<br><br><b>Financial (Box Office Sales, Budget)</b>: Financial performance of the movie adjusted for inflation<br><br><b>Diversity (Female Stars, Non-White Stars)</b>: The number of <a class=\"links\" href=\"https://www.imdb.com/?ref_=nv_home\" target=\"_blank\">IMDB</a> \"Stars\" in each movie that are either female or non-white according to <a class=\"links\" href=\"https://www.census.gov/quickfacts/fact/table/US/PST045218\" target=\"_blank\">US Census</a> demographic groups<br><br><b>Movie Ratings (Google Users, <a class=\"links\" href=\"https://www.imdb.com/?ref_=nv_home\" target=\"_blank\">IMDB</a>, <a class=\"links\" href=\"https://www.metacritic.com/\" target=\"_blank\">Metacritic</a>, <a class=\"links\" href=\"https://www.rottentomatoes.com/\" target=\"_blank\">Rotten Tomatoes</a>)</b>: Miscellaneous ctitic and fan reviews<br><br><b>Academy Nominations (Total Nominations)</b>: Total Oscar nominations in addition to Best Picture<br><br>Each of these categories are important predictors of Oscar success. The data includes information on Oscar Best Picture nominated movies from the last 10 years (88 movies total). I will break down each of these factors in the rest of this anlaysis. To summarize, I ultimately find that <b>movies with very small budgets, small box office results, many Oscar nominations, and a more diverse cast ultimately lead to award success.</b>",
                 smallImage: "./../../assets/images/oscarsfactortable.png"
             },
             {
                 sectionheader: "How Oscar Voting Works",
-                paragraph: "The Oscar Academy Awards employ what is called an instant run-off voting system, or a preferential voting system. In 2017, <a class=\"links\" href=\"https://www.vox.com/2016/1/14/10767930/oscar-nominations-voting\" target=\"_blank\">Vox</a> created a very compelling <a class=\"links\" href=\"https://www.imdb.com/title/tt1663202/?ref_=nv_sr_srsg_0\" target=\"_blank\">video</a> about how this system heavily benefits mediocre, non-daring movies. Here is a brief explanation of how the system works:<br><br>1. Each Academy member ranks the movies from first to last place<br><br>2. The votes for the movie with the fewest first place votes now move to the voter's second choice<br><br>3. This process continues until a movie has at least 50% of the total votes<br><br>For example, refer to the image above. In this case, Movie 2 has the most first place votes. But as Movie 4 and Movie 3's votes trickle upwards, Movie 1 ends up with the most votes. One can quickly reason that polarizing movies do poorly in this system. Although they may receive many first place votes from their supporters, it is unlikely that they will have many 2nd or 3rd choice votes. Therefore, <b>this system ultimately benefits the movies that are universally <i>liked</i>, but not <i>loved</i>.</b> This observation is seen in the results of this project, as niche movies with small budgets routinely outperform the year's controversial movie.",
-                smallImage: "./../../assets/images/oscarsrunoffvoting.png"
+                paragraph: "The Oscar Academy Awards employ what is called an instant run-off voting system, or a preferential voting system. In 2017, <a class=\"links\" href=\"https://www.vox.com/2016/1/14/10767930/oscar-nominations-voting\" target=\"_blank\">Vox</a> created a very compelling <a class=\"links\" href=\"https://www.imdb.com/title/tt1663202/?ref_=nv_sr_srsg_0\" target=\"_blank\">video</a> about how this system heavily benefits mediocre, non-daring movies. Here is a brief explanation of how the system works:<br><br>1. Each Academy member ranks the movies from first to last place<br><br>2. The votes for the movie with the fewest first place votes now move to the voter's second choice<br><br>3. This process continues until a movie has at least 50% of the total votes<br><br>For example, refer to the image above. In this scenario, there are 11 voters that have ranked Movie 1, Movie 2, and Movie 3 from first to last place. Initially, Movie 2 received five first place votes, Movie 1 received four first place votes, and Movie 3 received only two first place votes. Since Movie 3 has the fewest first place votes, those votes now move to the voters' second choice movie: Movie 1.  Movie 1 now combines its original four first place votes with the two newly gained second place votes from Movie 3. Movie 1 now has six total votes compared to the five total votes for Movie 2. Since Movie 1 now has greater than 50% of the voter share (55%), Movie 1 is now the official winner of the award.<br><br>This runoff system greatly benefits movies with many 2nd choice or 3rd choice votes, as they gradually accumulate enough votes to beat movies that originally had many more 1st choice votes. One can quickly reason that polarizing movies do poorly in this system. Although they may receive many first place votes from their supporters, it is unlikely that they will have many 2nd or 3rd choice votes. Therefore, <b>this system ultimately benefits the movies that are universally <i>liked</i>, but not <i>loved</i>.</b> This observation is seen in the results of this project, as niche movies with small budgets routinely outperform the year's controversial movie.",
+                smallImage: "./../../assets/images/oscarsrunoffvotingsimple.png"
             },
             {
                 sectionheader: "Impact of Movie Financials",
@@ -155,12 +155,12 @@ const projects = [
             },
             {
                 sectionheader: "Regression Model to Predict Winner",
-                paragraph: "Using the factors mentioned, I created a simple regression model to estimate a <i>score</i> for each movie. The average movie in this dataset has a score of 0.11, whereas the average winning movie in this dataset has a score of 0.34. The three key differentiators between the average movie vs. the average <i>winning</i> movie are: (1) Total Nominations, (2) Budget, and a (3) Diverse Cast. <br><br> This model accurately predicted 8 of the last 10 winners, incorrectly predicting the winner in only 2018 and 2012. This model certainly has some shortcomings though. First, it is created using the testing data, so it is unclear if it will continue to succeed in future years. Second, the dataset only uses 10 years of data, or 88 movies. There is still work to be done, but this model certainly aligns with the insights that we saw earlier and will be fun to reuse in future years.",
+                paragraph: "Using the factors mentioned, I created a simple regression model to estimate a <i>score</i> for each movie. The average movie in this dataset has a score of 0.11, whereas the average winning movie in this dataset has a score of 0.34. The three key differentiators between the average movie vs. the average <i>winning</i> movie are: (1) Total Nominations, (2) Budget, and a (3) Diverse Cast. <br><br>This model accurately predicted 8 of the last 10 winners, incorrectly predicting the winner in only 2018 and 2012. This model certainly has some shortcomings though. First, it is created using the testing data, so it is unclear if it will continue to succeed in future years. Second, the dataset only uses 10 years of data, or 88 movies. There is still work to be done, but this model certainly aligns with the insights that we saw earlier and will be fun to reuse in future years.",
                 smallImage: "./../../assets/images/oscarsregressionresults.png"
             },
             {
                 sectionheader: "Great Cinematography is King, and it's Predictable (...kind of)",
-                paragraph: "Data over the last ten years makes a few things clear: movies with smaller budgets, more award nominations, higher critics ratings, and a more diverse cast have a greater chance of winning the Oscar for Best Picture. Many of these things are to be expected, but I think the gravity of their importance is significant. Through a few simple filters and deliberate thought, I can fairly quickly reduce the nominated movies into the two or three movies that have a realistic chance of winning.<br><br>So do the Oscars reward mediocre, non-polarizing movies? I don't think so. I think the Oscars rewards movies that made deliberate cinematic choices to create a cost-effective movie. To be the <i>Best</i> Picture of the year, directors don't need to use CGI, only hire celebrity actors and actresses, or spend millions of dollars in marketing. I think it levels the playing field for all nominated movies and truly rewards movies that provide a great experience to all.<br><br> Even with all this analysis, there is certainly still lots of unpredictability. Think about the exception to all our rules: Green Book. Although we can make an informed prediction about which movies will <i>probably</i> win the Oscar, we will continue to tune in every year and might just be surprised.",
+                paragraph: "Data over the last ten years makes a few things clear: movies with smaller budgets, more award nominations, higher critics ratings, and a more diverse cast have a greater chance of winning the Oscar for Best Picture. Many of these things are to be expected, but I think the gravity of their importance is significant. Through a few simple filters and deliberate thought, I can fairly quickly reduce the nominated movies into the two or three movies that have a realistic chance of winning.<br><br>So do the Oscars reward mediocre, non-polarizing movies? I don't think so. I think the Oscars rewards movies that made deliberate cinematic choices to create a cost-effective movie. To be the <i>Best</i> Picture of the year, directors don't need to use CGI, only hire celebrity actors and actresses, or spend millions of dollars in marketing. I think it levels the playing field for all nominated movies and truly rewards movies that provide a great experience to all.<br><br>Even with all this analysis, there is certainly still lots of unpredictability. Think about the exception to all our rules: Green Book. Although we can make an informed prediction about which movies will <i>probably</i> win the Oscar, we will continue to tune in every year and might just be surprised.",
                 smallImage: "./../../assets/images/oscarsdashboard.png"
             }
         ],
@@ -171,7 +171,7 @@ const projects = [
         title:"Blackjack Casino Odds",
         description:"What are your real odds of leaving the casino a winner? Let's see how it varies with different strategies and table rules",
         image:"./../assets/images/blackjacklogo.png",
-        hash: "BlackjackOdds",
+        hash: "blackjackodds",
         date: "Mar. 20, 2020",
         projectParagraphs: [
             {
@@ -211,7 +211,7 @@ const projects = [
         title:"NBA 1st Quarter Leads",
         description:"How critical is it have a strong start in the NBA given today's profilic offenses? Let's see if 10+ point first quarter leads win games",
         image:"./../assets/images/nbalogo.png",
-        hash: "NBALeads",
+        hash: "nbaleads",
         date: "Feb. 20, 2020",
         projectParagraphs: [
             {
@@ -226,7 +226,7 @@ const projects = [
             },
             {
                 sectionheader: "When do teams lose their lead?",
-                paragraph: "Lets take this one step further and see if we can predict when teams will start to lose their lead or when we know <i>\"Okay, I'd say this lead is safe\"</i>. This is good to know if you want to make an informed wager with your friends, start to feel secure about your team's success, or know that maybe you still have a chance when you're trailing. By maintaining the same groups as in the previous section (Both, Offensive, Defensive, or Neither), I can now track how teams lose their lead by category. Here is what I found:<br><br> <b>Both</b>: These teams tend to steadily hold this 10 point lead throughout the game. You can bet on these teams holding (but maybe not expanding upon) a large first quarter lead.<br><br><b>Offensive</b>: These teams are volatile when it comes to holding leads. As you can see from the curve in the bottom right of the above dashboard, you can expect this lead to quickly decrease in one quarter, but then quickly reappear in the next.<br><br><b>Defensive</b>: These teams take a much steadier approach to holding their lead, where it (on average) slowly decreases throughout the game. Therefore, if a defensive team is able to hold this lead deep into the second quarter you can feel secure about an ultimate victory. On the other hand, defensive teams seem to let their opponents reduce their lead throughout the game, where their first quarter 10+ point lead will probably be one of the largest leads of the night.<br><br><b>Neither</b>: These teams are unpredictable, with the largest loss of their leads occuring in the 3rd quarter. Tough to discern any major insights from these teams, but I would be skeptical of the security of any early lead with these teams.",
+                paragraph: "Lets take this one step further and see if we can predict when teams will start to lose their lead or when we know <i>\"Okay, I'd say this lead is safe\"</i>. This is good to know if you want to make an informed wager with your friends, start to feel secure about your team's success, or know that maybe you still have a chance when you're trailing. By maintaining the same groups as in the previous section (Both, Offensive, Defensive, or Neither), I can now track how teams lose their lead by category. Here is what I found:<br><br><b>Both</b>: These teams tend to steadily hold this 10 point lead throughout the game. You can bet on these teams holding (but maybe not expanding upon) a large first quarter lead.<br><br><b>Offensive</b>: These teams are volatile when it comes to holding leads. As you can see from the curve in the bottom right of the above dashboard, you can expect this lead to quickly decrease in one quarter, but then quickly reappear in the next.<br><br><b>Defensive</b>: These teams take a much steadier approach to holding their lead, where it (on average) slowly decreases throughout the game. Therefore, if a defensive team is able to hold this lead deep into the second quarter you can feel secure about an ultimate victory. On the other hand, defensive teams seem to let their opponents reduce their lead throughout the game, where their first quarter 10+ point lead will probably be one of the largest leads of the night.<br><br><b>Neither</b>: These teams are unpredictable, with the largest loss of their leads occuring in the 3rd quarter. Tough to discern any major insights from these teams, but I would be skeptical of the security of any early lead with these teams.",
                 smallImage: "./../../assets/images/nbaleadchanges.PNG",
             },
             {
@@ -276,7 +276,7 @@ window.onload = function(){
     if(urlBits.length > 3){
         loadPage();
     } else {    
-        changePage("Home");
+        changePage("home");
     }
 }
 
@@ -316,24 +316,28 @@ function getTargetUrl(){
     }
 }
 
+
 function loadPage(){
     // get the page to load
     urlTarget = getTargetUrl();
 
+    // convert it to camel case to fix issue
+    
+
     // always load the nav bar
     loadNavBar(urlTarget);
 
-    if(urlTarget.startsWith("Home")){
+    if(urlTarget.startsWith("home")){
         loadHomePage();
-    } else if(urlTarget.startsWith("Resume")){
+    } else if(urlTarget.startsWith("resume")){
         loadResumePage();
-    } else if(urlTarget == "Projects/"){
+    } else if(urlTarget == "projects/"){
         loadProjectsPage();
-    } else if (urlTarget.startsWith("Projects/")){
+    } else if (urlTarget.startsWith("projects/")){
         urlKey = urlTarget.split("/")[1];
         loadProjectResultPage(urlKey);
     } else {
-        changePage("Home")
+        changePage("home")
     }
 
     // always load modals
@@ -351,7 +355,7 @@ function loadNavBar(urlTarget){
     navHTML = "<nav class=\"navbar navbar-expand-lg navbar-light fixed-top\">";
 
     // load the home page icon
-    navHTML += "<a class=\"nav-link\" onclick=\"changePage('Home')\"><img class=\"navImage pointer\"";
+    navHTML += "<a class=\"nav-link\" onclick=\"changePage('home')\"><img class=\"navImage pointer\"";
     navHTML += "src=\"./../" + extraFolderBack + "assets/images/logo.png\" alt=\"Christopher Long\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\"></a>";
     
     // load the collapsible container
@@ -364,9 +368,9 @@ function loadNavBar(urlTarget){
     navHTML += "<ul class=\"navbar-nav mr-auto\">";
 
     // load the nav items
-    navHTML += "<li class=\"nav-item\"> <div class=\"nav-link pointer\" onclick=\"changePage('Resume')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Resume</div></li>";
+    navHTML += "<li class=\"nav-item\"> <div class=\"nav-link pointer\" onclick=\"changePage('resume')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Resume</div></li>";
 
-    navHTML += "<li class=\"nav-item\"> <div class=\"nav-link pointer\"  onclick=\"changePage('Projects')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Projects</div></li>";
+    navHTML += "<li class=\"nav-item\"> <div class=\"nav-link pointer\"  onclick=\"changePage('projects')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Projects</div></li>";
 
     navHTML += "<li class=\"nav-item\"> <a class=\"nav-link\" href=\"https://www.linkedin.com/in/christopher-long-039b77b6/\" target=\"_blank\">LinkedIn</a> </li>";
 
@@ -475,7 +479,7 @@ function loadResumePage(){
     if(!isMobile){
         // get the left column html
         pageHTML = "<div class=\"leftCol_resume\">";
-        pageHTML += "<img class=\"resumeHeadshot\" src=\"./../assets/images/chris_headshot.jpg\" alt=\"Chris Long\"> <br> ";
+        pageHTML += "<img class=\"resumeHeadshot\" src=\"./../assets/images/chris_headshot.jpg\" alt=\"Chris Long\"><br>";
         pageHTML += "<center><h1 class=\"resumeName\">Chris Long</h1></center> <div class=\"resumeBio\"><hr> <h6>Email Address</h5> <p>cml3ta@gmail.com</p> <hr> <h6>Phone Number</h5> <p>(540) 808-3354</p> <hr> <h6>Area of Residence</h5> <p>Washington DC</p><hr> </div>";
         
         // download button
@@ -585,7 +589,7 @@ function loadProjectCards(type){
         titleCaps = projects[i]['title'].toUpperCase();
         if(searchQuery == null || titleCaps.includes(searchQuery)){
             // otherwise loop through the cards
-            pageHTML += "<div class=\"col-" + cardTwelfth + " text-center projectCard\" onclick=\"changePage('Projects/" + projects[i]['hash'] + "')\">"
+            pageHTML += "<div class=\"col-" + cardTwelfth + " text-center projectCard\" onclick=\"changePage('projects/" + projects[i]['hash'] + "')\">"
             pageHTML += "<img class=\"projectCardImage\" src=\""+ projects[i]['image'] + "\">";
             pageHTML += "<h3><b>" + projects[i]['title'] + "</b></h3>";
 
@@ -616,7 +620,7 @@ function loadProjectCards(type){
 function loadProjectResultPage(urlKey){
     // make sure there is actually a key
     if(urlKey == undefined || urlKey == null || urlKey == ""){
-        changePage("Projects");
+        changePage("projects");
     }
     
     var index = -1;
@@ -629,7 +633,7 @@ function loadProjectResultPage(urlKey){
 
     // make sure the index changed
     if(index == -1){
-        changePage("Projects");
+        changePage("projects");
     }
 
     projectParagraphs = projects[index]['projectParagraphs']
