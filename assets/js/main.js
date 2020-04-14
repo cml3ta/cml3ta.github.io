@@ -475,7 +475,7 @@ function loadResumePage(){
     if(!isMobile){
         // get the left column html
         pageHTML = "<div class=\"leftCol_resume\">";
-        pageHTML += "<img class=\"resumeHeadshot\" src=\"./../assets/images/chris_headshot.jpg\" alt=\"Chris Long\" style=\"width:100%;\"> <br> ";
+        pageHTML += "<img class=\"resumeHeadshot\" src=\"./../assets/images/chris_headshot.jpg\" alt=\"Chris Long\"> <br> ";
         pageHTML += "<center><h1 class=\"resumeName\">Chris Long</h1></center> <div class=\"resumeBio\"><hr> <h6>Email Address</h5> <p>cml3ta@gmail.com</p> <hr> <h6>Phone Number</h5> <p>(540) 808-3354</p> <hr> <h6>Area of Residence</h5> <p>Washington DC</p><hr> </div>";
         
         // download button
