@@ -276,20 +276,18 @@ window.onload = function(){
     if(urlBits.length > 3){
         loadPage();
     } else {    
-        changePage("home");
+        changePage("");
     }
 }
 
 function changePage(target){
-    window.history.pushState("", "", "/" + target + "/");
+    if(target==""){
+        window.history.pushState("", "", "/");
+    } else{
+        window.history.pushState("", "", "/" + target + "/");
+    }
     loadPage();
 }
-
-window.addEventListener("popstate", function(e) {
-    if (window.historyInitiated) {
-      window.location.reload();
-    }
-  });
 
 function getBaseUrl(){
     fullUrl = window.location.href;
@@ -311,8 +309,9 @@ function getTargetUrl(){
     } else if(urlBits.length == 5){
         return urlBits[3] + "/" + urlBits[4]; 
     } else if(urlBits.length == 6){
-        // just a temporary means to integrate with current hash method
         return urlBits[3] + "/" + urlBits[4] + "/" + urlBits[5]; 
+    } else{
+        return "";
     }
 }
 
@@ -321,13 +320,11 @@ function loadPage(){
     // get the page to load
     urlTarget = getTargetUrl();
 
-    // convert it to camel case to fix issue
-    
-
     // always load the nav bar
     loadNavBar(urlTarget);
-
-    if(urlTarget.startsWith("home")){
+    
+    // catch the page
+    if(urlTarget == "" ){
         loadHomePage();
     } else if(urlTarget.startsWith("resume")){
         loadResumePage();
@@ -337,7 +334,7 @@ function loadPage(){
         urlKey = urlTarget.split("/")[1];
         loadProjectResultPage(urlKey);
     } else {
-        changePage("home")
+        changePage("")
     }
 
     // always load modals
@@ -355,7 +352,7 @@ function loadNavBar(urlTarget){
     navHTML = "<nav class=\"navbar navbar-expand-lg navbar-light fixed-top\">";
 
     // load the home page icon
-    navHTML += "<a class=\"nav-link\" onclick=\"changePage('home')\"><img class=\"navImage pointer\"";
+    navHTML += "<a class=\"nav-link\" onclick=\"changePage('')\"><img class=\"navImage pointer\"";
     navHTML += "src=\"./../" + extraFolderBack + "assets/images/logo.png\" alt=\"Christopher Long\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\"></a>";
     
     // load the collapsible container
