@@ -537,11 +537,3 @@ hr.paragraphDivider{
 	margin-left: 10%;
 	color:#6f94d9;
 }
-
-.projectSources{
-	width: 80%;
-	margin-left: 10%;
-	color:rgba(0,0,0,0.5);
-	font-size: 12px;
-	padding-bottom: 5px;
-}

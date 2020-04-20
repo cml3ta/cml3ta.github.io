@@ -124,7 +124,7 @@ const projects = [
     {
         title:"Oscar for Best Picture",
         description:"What does it take to win the covetted award for Best Picture at the Oscars? A big budget? High critic ratings? Let's find out",
-        image:"./../assets/images/oscarlogo.png",
+        image:"/assets/images/oscarlogo.png",
         hash: "oscarbestpicture",
         date: "Apr. 13, 2020",
         projectParagraphs: [
@@ -163,84 +163,85 @@ const projects = [
                 paragraph: "Data over the last ten years makes a few things clear: movies with smaller budgets, more award nominations, higher critics ratings, and a more diverse cast have a greater chance of winning the Oscar for Best Picture. Many of these things are to be expected, but I think the gravity of their importance is significant. Through a few simple filters and deliberate thought, I can fairly quickly reduce the nominated movies into the two or three movies that have a realistic chance of winning.<br><br>So do the Oscars reward mediocre, non-polarizing movies? I don't think so. I think the Oscars rewards movies that made deliberate cinematic choices to create a cost-effective movie. To be the <i>Best</i> Picture of the year, directors don't need to use CGI, only hire celebrity actors and actresses, or spend millions of dollars in marketing. I think it levels the playing field for all nominated movies and truly rewards movies that provide a great experience to all.<br><br>Even with all this analysis, there is certainly still lots of unpredictability. Think about the exception to all our rules: Green Book. Although we can make an informed prediction about which movies will <i>probably</i> win the Oscar, we will continue to tune in every year and might just be surprised.",
                 smallImage: "./../../assets/images/oscarsdashboard.png"
             }
-        ],
-        sources: ["asdf","asdf","asdf"]
-    
+        ]
     },
     {
         title:"Blackjack Casino Odds",
         description:"What are your real odds of leaving the casino a winner? Let's see how it varies with different strategies and table rules",
-        image:"./../assets/images/blackjacklogo.png",
+        image:"/assets/images/blackjacklogo.png",
         hash: "blackjackodds",
         date: "Mar. 20, 2020",
         projectParagraphs: [
             {
                 sectionheader: "What are our odds of winning in blackjack?",
-                paragraph: "Blackjack (also known as 21) is one of the most common casino games, with tables at most casinos and easy to follow rules. If you are unfamiliar with the rules of blackjack, you can find a good summary <a class=\"links\" href=\"https://bicyclecards.com/how-to-play/blackjack/\" target=\"_blank\">here</a>. In essence, there are four possible outcomes of each blackjack game: (1) a regular, non-blackjack win, (2) a blackjack win, (3) a loss to the dealer, and (4) a push (aka tie) with the dealer. Please be aware that table rules can vary between casinos. Some key table rules to look out for are (1) blackjacks paying out 3:2 or better, (2) restrictions of when you can double or split, (3) dealer staying or hitting on a soft 17, and <a class=\"links\" href=\"https://www.888casino.com/blog/blackjack-strategy-guide/scouting-blackjack-tables\" target=\"_blank\">more</a>.<br><br>To break down our odds of winning in blackjack, I created an algorithm that simulates 1,000,000 <i>completed</i> games of blackjack (more to come on this later) to determine win rates (blackjack and regular), push rates, and loss rates. We can also remove certain components of the optimal strategy to see the components that are most critical to achieving the highest possible odds of winning.<br><br>From this analysis, we see that the player has slightly <b>greater than 50% probability of winning in blackjack</b>. Let’s find out how…",
+                paragraph: "<a class=\"links\" href=\"https://bicyclecards.com/how-to-play/blackjack/\" target=\"_blank\">Blackjack</a> (also known as 21) is one of the most common casino games, with tables at most casinos and easy-to-follow rules. <a class=\"links\" href=\"https://www.888casino.com/blog/blackjack-strategy-guide/scouting-blackjack-tables\" target=\"_blank\">Table rules</a>, however, can vary by casino or even vary by table within a casino. Some key table rules to look out for are the payout for a blackjack win, restrictions of when you can <a class=\"links\" href=\"https://www.casino.org/blog/double-down-blackjack/\" target=\"_blank\">double</a> or <a class=\"links\" href=\"https://www.wikihow.com/Know-when-to-Split-Pairs-in-Blackjack\" target=\"_blank\">split</a>, or whether the dealer must stay or hit on a soft 17. Regardless of the table rules, there are four possible outcomes of each blackjack game:<br><br><b>A Blackjack Win:</b> A winning hand that consists of only two cards that sum to 21<br><br><b>A Regular Win: </b>A hand that is superior to the dealer's hand, but is not a blackjack<br><br><b>A Loss to the Dealer: </b>A hand that is inferior to the dealer's hand<br><br><b>A Push:</b> A hand that has an equivalent value to the hand of the dealer.<br><br>For this project, I will look to see the relative importance of each component of the <a class=\"links\" href=\"https://www.blackjackapprenticeship.com/blackjack-strategy-charts/\" target=\"_blank\">basic strategy</a> and whether player friendly table rules (ex. 3:2 payout on a blackjack win) can push our odds of winning to 50%. In this pursuit, I created an algorithm that simulates 1,000,000 <i>completed</i> games of blackjack (more to come on this later) to determine the probability of each of the above four outcomes occurring. This simulation also remove certain components of the basic strategy to determine which are the most critical to achieving the highest possible odds of winning. Ultimately, I find that <b> effectively doubling down on hands and a 3:2 payout for a blackjack win are the most critical components of winning in blackjack</b>. In fact, I find that perfect use of the basic strategy plus favorable table rules push our odds of winning close-to or even above 50%.",
                 smallImage: "./../../assets/images/blackjackresultsbarchart.PNG"
             },
             {
-                sectionheader: "What is the \"optimal strategy\"?",
-                paragraph: "Blackjack, like most games, is a game of pre-defined probabilities. Therefore, blackjack players have created a strategy of when to properly hit, stand, double down, split pairs, etc. This is known as the <a class=\"links\" href=\"https://www.blackjackapprenticeship.com/blackjack-strategy-charts/\" target=\"_blank\">optimal strategy</a>. As you can see at that link or in the charts above, the strategy is a simple chart that uses the total of your cards vs. the card that the dealer is showing. For example, think about the scenario where the dealer is showing a 5 or 6. It is very likely that the dealer will go past 21 in this scenario and, therefore, we should not take an additional card even when the total of our hand is only 12. Beyond knowing when to hit or stay, this chart provides immense value by telling us when to <b>take advantage of high probability wins by doubling</b> our bet, and when to <b>split our weaker hand into two better hands.</b><br><br>Let's compare this strategy to the dealer's required strategy. In this analysis, we assume the dealer is required to stay anytime their total (soft or hard) is 17 or greater. We will call these the <i>Follow Dealer's Rules</i> strategy. As we'll see in the next section, our odds of winning are only 41.1% if we also follow this strategy. Therefore, using this strategy is paramount to winning in blackjack, as it provides us with the statistically best chance of winning. ",
+                sectionheader: "What is the \"Basic Strategy\"",
+                paragraph: "Blackjack, like most games, is a game of pre-defined probabilities. Therefore, blackjack players have created a strategy of when to properly hit, stand, double down, split pairs, etc. This is known as the <a class=\"links\" href=\"https://www.blackjackapprenticeship.com/blackjack-strategy-charts/\" target=\"_blank\">basic strategy</a>. As you can see in the charts above, this strategy is a simple table that uses the sum of your cards vs. the card that the dealer is showing. For example, think about the scenario where the dealer is showing a 5 or 6. It is very likely that the dealer will go past 21 in this scenario and, therefore, we should not take an additional card even when the total of our hand is only 12. Beyond knowing when to hit or stay, this chart provides immense value by telling us when to <b>take advantage of high probability wins by doubling</b> our bet, and when to <b>split our weaker hand into two better hands.</b><br><br>In this project, we will compare the basic strategy to that of the dealer's required strategy. We will assume the table rule that the dealer is required to stay anytime their total (soft or hard) is 17 or greater. We will call this the <i>Follow Dealer's Rules</i> strategy. As we'll see in the next section, <b>our odds of winning are only 41.1% if we also follow this strategy. But if we use the optimal strategy, out odds of winning increase all the way to 44.2%.</b> Therefore, using this strategy is paramount to winning in blackjack, as it provides us with the statistically best chance of winning. ",
                 smallImage: "./../../assets/images/blackjackoptimalstrategy.png"
             },
             {
-                sectionheader: "What percent of our hands will be wins, losses, or pushes?",
-                paragraph: "First, let’s talk a bit about the methodology of the simulation. I define a “game” as every time that we bet money. As an example, think about the scenario where we bet $20 to get dealt our cards and we receive a pair of 8's. As the optimal strategy above dictates, we will always split this pair. Therefore, we should bet another $20 and, thus, we have started a second game within the same deal. If we win both of those hands, we just won two games. If we lose both, we have just lost two games, etc. This definition holds for doubles as well. If we bet $20 and receive an 11, then we should always double that bet and bet another $20. If we win that one hand, it is equivalent to winning two games and, therefore, it gets treated as such.<br><br>Now, let’s look at the above table of simulation results. Outside of the <i>Follow Dealer\'s Rules</i> strategy, each of these strategies loosely follows the optimal strategy. As seen in the table, using the optimal strategy without splitting or doubling improves our odds of winning by about 1.5% over the <i>Follow Dealer's Rules</i> strategy. If we add splitting or doubling, then we improve our odds by an additional 0.4% and 1.2% respectively. Finally, the full optimal strategy (<i>Yes Double, Yes Split</i>) includes both of those gains and therefore adds an additional 1.5% towards our odds of winning. As you can see in the above table, we are still only winning 44.2% of hands using the full optimal strategy.",
+                sectionheader: "Rate of Wins, Losses, and Pushes by Strategy",
+                paragraph: "To conduct this simulation, I created a program that uses 8 shuffled decks, one player, and a dealer. For each of the 1,000,000 games that are simulated, the cards are dealt in the same order as they would be at a real blackjack table: player, dealer, player, dealer. Then, the player makes their \"decision\" based on the sum of their hand and the value of the second card dealt to the dealer (i.e. the \"Dealer's Up Card\"). This decision may vary between each of the above strategies. For example, the player may decide to double in one strategy but only hit in a different strategy. <b>These varying strategies show us the impact of each individual component of the complete basic strategy</b>. <br><br>The simulation defines a \"game\" as every time that we bet money. As an example, think about the scenario where we bet $20 to get dealt our cards and we receive a pair of 8's. As the basic strategy above dictates, we will always split this pair. Therefore, we should bet another $20 and, thus, we have started a second game within the same deal. If we win both of those hands, it is the equivalent of winning two $20 games. If we lose both, we have just lost those two games. This definition holds for doubles as well. If we bet $20 and receive an 11, then we should always double that bet and bet another $20. If we win that one hand, it is equivalent to winning two games and, therefore, it gets treated as such.<br><br>We see that <b>using the basic strategy without splitting or doubling improves our odds of winning by about 1.5% over the <i>Follow Dealer's Rules</i> strategy. If we add splitting or doubling, then we improve our odds by an additional 0.4% and 1.2% respectively.</b> Finally, the full basic strategy (<i>Yes Double, Yes Split</i>) includes both of those gains and therefore adds an additional 1.5% towards our odds of winning. As you can see in the above table, we are still only winning 44.2% of hands using the full basic strategy.",
                 smallImage: "./../../assets/images/blackjackresulttable.PNG"
             },
             {
-                sectionheader: "How do we factor pushes into our odds of winning?",
-                paragraph: "If you view blackjack in the same way that you view other sports (basketball, football, etc.), then you would expect that a tie would lead to an overtime round. This is how we should be viewing the result of a push. Each push’s “overtime” round is the next deal. This leads us to a new term: a completed game of blackjack. <br><br>A completed game of blackjack begins when the bet is placed and concludes when the player has either (1) made money from the bet or (2) lost the money placed in the bet. For example, let’s say that we bet $20 on a hand of blackjack and get an 18. If the dealer also gets an 18, then we have a push. The game is not over. We have neither won nor lost. We enter the first “overtime” deal and this time we win. Both of those deals together constitute a complete game. <br><br>Let’s see how this affects our simulated results above using our best strategy’s (Yes Double, Yes Split) result. We need to, under these new definitions, play the “overtime” games of these hands. So, 4.2% of those pushes are now blackjack wins, 40.0% are now regular wins, etc. To give a simplified example, let’s ignore when we have multiple pushes in a row (which happens 0.7% of the time): <br><br>New Expected Regular Wins: 40.0% + 40.0% * 8.2% = 43.3%<br><br>New Expected Blackjack Wins: 4.2% + 4.2% * 8.2% = 4.5%<br><br>New Expected Losses: 47.6% + 47.6% * 8.2% = 51.5%<br><br>Another way to perform this analysis, is to totally remove pushes from the count altogether and look only at the completed games. This is exactly how the algorithm calculates the odds, where we find that the new <b>odds of getting a regular win are 43.6% and the odds of getting a blackjack win are 4.6% - for a total of 48.2% of winning each hand. </b>",
+                sectionheader: "Impact of Factoring in Pushes",
+                paragraph: "If you view blackjack in the same way that you view other sports (basketball, football, etc.), then you would expect that a tie would lead to an overtime round. This is how we should be viewing the result of a push. <b>Each push’s \"overtime\" round is the next deal</b>. This leads us to a new term: a completed game of blackjack. <br><br>A completed game of blackjack begins when the bet is placed and concludes when the player has either made money from the bet or lost the money placed in the bet. For example, let’s say that we bet $20 on a hand of blackjack and get an 18. If the dealer also gets an 18, then we have a push. The game is not over. We have neither won nor lost. We enter the first \"overtime\" deal and this time we win. Both of those deals together constitute a complete game. <br><br>Applying this new defintion to the results of our best strategy’s (Yes Double, Yes Split) result, we now need to play the \"overtime\" games of these hands. So, <b>4.2% of those pushes are now blackjack wins, 40.0% are now regular wins, etc</b>. To give a simplified example, let’s ignore when we have multiple pushes in a row: <br><br>New Expected Regular Wins: 40.0% + 40.0% * 8.2% = 43.3%<br><br>New Expected Blackjack Wins: 4.2% + 4.2% * 8.2% = 4.5%<br><br>New Expected Losses: 47.6% + 47.6% * 8.2% = 51.5%<br><br>Another way to perform this analysis, is to totally remove pushes from the count altogether and look only at the completed games. This is exactly how the simulation calculates the odds, where we find that the new <b>odds of getting a regular win are 43.6% and the odds of getting a blackjack win are 4.6% - for a total of 48.2% of winning each hand. </b>",
                 smallImage: "./../../assets/images/blackjackpushovertime.png"
             },
             {
-                sectionheader: "What if we factor in player-friendly table rules? Specifically a 3:2 payout on blackjack?",
-                paragraph: "<b>Player friendly rules, such as a 3:2 payout on blackjack wins, move our odds of winning from the 48.2% to 50.5%</b>. Let’s reuse our earlier definition of a \"game\" as every time that we bet our money and use the standard blackjack payout of 3:2 in this example. If we bet $20 and win via blackjack, then we will receive $30 in winnings. Therefore, we have essentially won 1.5 games. This allows us to win more than we bet, which is a crucial advantage that is <i> not shared by the dealer</i>. Let’s include that in the equation from the previous section to watch it move greater than 50%. <br><br>New Expected Total Wins: 43.6% + 1.5 * 4.6% = 50.5%<br><br>Therefore, with this one (very important) table rule, <b>we can actually have the edge on the casino </b>by playing the optimal strategy to perfection. Factoring in additional player-friendly table rules can increase these odds slightly further.",
+                sectionheader: "Impact of Player Friendly Table Rules",
+                paragraph: "<b>Player friendly rules, such as a 3:2 payout on blackjack wins, move our odds of winning from the 48.2% to 50%</b>. Blackjack wins paying out at 3:2 is a common example of a player friendly table rule. For example, a $20 bet that results in a blackjack win would return $30. Using our earlier definition of a \"game\", we have essentially won 1.5 games. This rule allows us to win more games than what we bet, a crucial advantage that is <i> not shared by the dealer</i>. If we include that 1.5x payout for blackjack wins in the previous equation, we can actually calculate our odds of winning to be greater than 50%. <br><br>New Expected Total Wins: 43.6% + 1.5 * 4.6% = 50.5%<br><br>Therefore, with this one (very important) table rule, <b>we can actually have a 50% chance of winning at the casino</b> by playing the basic strategy to perfection and taking advantage of player friendly rules. Any deviation from the basic strategy or variation in table rules, however, can quickly bring those odds of winning back down.",
                 smallImage: "./../../assets/images/blackjacktotaloddsgauge.png"
             },
             {
-                sectionheader: "Players have >50% chance of winning in blackjack with perfect play and friendly rules",
-                paragraph: "You’re probably thinking… then why does everyone seem to always lose money when they play blackjack at the casino? That is for one specific reason: they do not play the optimal strategy. This is because either (1) they think they can outsmart the proven strategy (they can’t) or (2) simple mistakes in the heat of a game. At its best, blackjack is a winnable game with a greater than 50% odds. At its worst, blackjack has favorable enough odds to let you last a long time on the table before losing. In either case, I recommend <b>memorizing the optimal strategy and walking into the casino confidently… because you have the edge. </b>",
+                sectionheader: "Players have 50% Chance of Winning in Blackjack with Perfect Play and Friendly Rules",
+                paragraph: "Simulating 1,000,000 hands of blackjack shows that playing the blackjack basic strategy to perfection and capitalizing on player friendly rules provides blackjack players with a 50% chance of winning money at the table. The two most essential components of realizing these odds are clear: capitalize on doubling opportunities and search for a high payout on blackjack hands.<br><br>Then why does everyone seem to always lose money when they play blackjack at the casino? That is for one specific reason: they do not play the basic strategy. This is because either they think they can outsmart the proven basic strategy or simple mistakes in the heat of a game. It is certainly not easy to play the basic strategy to perfection every time, but the simulated results show that it is a absolutely critical skill in order to win at the casino. In either case, blackjack absolutely presents the opportunity to realize a nearly 50% win rate. Blackjack has favorable enough odds to let you last a long time on the table before losing and, thus, should be an entertaining experience. In either case, I recommend <b>memorizing the basic strategy, looking for player friendly table rules, and walking into the casino confidently </b> because you have great odds... if you are prepared. </b>",
                 smallImage: "./../../assets/images/blackjackdashboard.png"
             }
-        ],
-        sources: ["asdf","asdf","asdf"]
+        ]
     },
     {
         title:"NBA 1st Quarter Leads",
         description:"How critical is it have a strong start in the NBA given today's profilic offenses? Let's see if 10+ point first quarter leads win games",
-        image:"./../assets/images/nbalogo.png",
+        image:"/assets/images/nbalogo.png",
         hash: "nbaleads",
         date: "Feb. 20, 2020",
         projectParagraphs: [
             {
                 sectionheader: "Do teams with 10+ point first quarter leads end up winning the game?",
-                paragraph: "It seems that with the prolific offenses that we see in the NBA today, that huge early leads are very often lost. So I decided to put this to the test. First, I collected quarter-by-quarter scores of all games in the first half the 2019-2020 season (i.e. until the All-Star Break). Then, I filtered to only games where there was at least a 10 point deficit at the end of the first quarter. This resulted in a sample size of 195 games. Lets start with the obvious question to ask: Did those teams win? Yes, teams with a <b>10+ point first quarter ended up winning the game about 80% of the time</b>.<br><br>It is very inconsistent among different teams, however. League leading teams like the Bucks or the Lakers have held 100% of their 10-point first quarter leads. Other teams such as the Pacers and Warriors have only a 50-50 chance of winning when holding a 10+ point first quarter lead. In either case, however, we find that <b>the early first quarter lead will also probably be the largest lead of the game</b>. This prompts further questions though on how it varies between individual teams and their strengths. Are some teams just built better to hold their leads? ",
+                paragraph: "It seems that with the prolific offenses that we see in the <a class=\"links\" href=\"https://www.nba.com\" target=\"_blank\">NBA</a> today that huge early leads are very easily lost. I decided to put this to the test. I collected <a class=\"links\" href=\"https://www.scoreboard.com/nba/results/\" target=\"_blank\">quarter-by-quarter scores</a> of all games in the first half the 2019-2020 season (i.e. until the <a class=\"links\" href=\"https://www.nba.com/allstar\" target=\"_blank\">All-Star Break</a>) and filtered only to those games where there was at least a 10 point deficit at the end of the first quarter. This resulted in a sample size of 195 games. Let's start with the obvious question: Did those teams win? Teams with a <b>10+ point first quarter lead ended up only winning the game about 80% of the time</b>.<br><br>The ability to hold a 10+ point lead varies greatly among different teams. League leading teams like the <a class=\"links\" href=\"https://www.nba.com/bucks/\" target=\"_blank\">Milwaukee Bucks</a> or the <a class=\"links\" href=\"https://www.nba.com/lakers/\" target=\"_blank\">LA Lakers</a> have held all of their 10+ point first quarter leads. Other teams such as the <a class=\"links\" href=\"https://www.nba.com/pacers/\" target=\"_blank\">Indiana Pacers</a> and <a class=\"links\" href=\"https://www.nba.com/warriors/\" target=\"_blank\">Golden State Warriors</a> have held only 50% of their 10+ point first quarter leads. I ultimately find that <b>the early first quarter lead will likely be the largest lead of the game and the means of holding the lead varies greatly between offensive and defensive teams</b>. ",
                 smallImage: "./../../assets/images/nbaleadheldbyteam.PNG"
             },
             {
-                sectionheader: "Do offensive or defensive teams do better with a lead?",
-                paragraph: "Next, I decided to look into whether the ability to hold a lead varies between teams that prioritize offensive or defensive schemes. So, I federated the previous game data with the Offensive and Defensive ranking of each leading team - with the ranking based on points scored per game and points allowed per game. If a team was in the top half of the league offensively and top half defensively then they are listed as <b>Both</b>. As you might expect, these teams are often the best teams in the league such as the Bucks, Clippers, Celtics, etc. If a team was in the upper half of the league in only one of the offensive or defensive rankings, they are listed as <b>Offensive</b> or <b>Defensive</b>. On the offensive side, a few examples of of teams in this category are the Rockets, Mavericks, and Suns. On the defensive side, a few examples of these teams are the Jazz, Nuggets, and Pacers. Finally, we have the teams in the bottom half offensively and defensively listed as <b>Neither</b> such as the Cavaliers, Warriors, and Knicks.<br><br>When looking at the results, we see that teams with a defensive focus and offensive focus tend to have the same success holding their leads - winning about 75% of the games where they have a first quarter lead. Teams in the Both category see extreme success in holding the leads, with a success of about 92%. And finally, teams in the Neither category hold their lead only 69% of the time. In conclusion, <b>neither offensively and defensively aligned teams hold an advantage over the other. But well-rounded teams hold their leads <u>significantly</u> better than all others</b>. With this, I wondered whether there was a difference in how offensive or defensive held their leads.",
+                sectionheader: "Offensive vs. Defensive Teams",
+                paragraph: "I combined the previous game data with the <a class=\"links\" href=\"https://stats.nba.com/teams/traditional/?sort=PTS&dir=-1\" target=\"_blank\">offensive</a> and <a class=\"links\" href=\"https://stats.nba.com/teams/opponent/?sort=OPP_PTS&dir=-1\" target=\"_blank\">defensive</a> ranking of each leading team to determine whether teams that prioritize offensive or defensive schemes hold their lead more effectively.<br><br>If a team was in the top half of the league offensively and top half defensively then they are listed as <b>Both</b>. As you might expect, these teams are often the best teams in the league such as the Milwaukee Bucks, <a class=\"links\" href=\"https://www.nba.com/clippers/\" target=\"_blank\">LA Clippers</a>, and <a class=\"links\" href=\"https://www.nba.com/celtics/\" target=\"_blank\">Boston Celtics</a>. If a team was in the top half of the league in only one of the offensive or defensive rankings, they are listed as <b>Offensive</b> or <b>Defensive</b>. On the offensive side, a few examples of teams in this category are the <a class=\"links\" href=\"https://www.nba.com/rockets/\" target=\"_blank\">Houston Rockets</a>, <a class=\"links\" href=\"https://www.nba.com/mavericks/\" target=\"_blank\">Dallas Mavericks</a>, and <a class=\"links\" href=\"https://www.nba.com/suns/\" target=\"_blank\">Phoenix Suns</a>. On the defensive side, a few examples of these teams are the <a class=\"links\" href=\"https://www.nba.com/jazz/\" target=\"_blank\">Utah Jazz</a>, <a class=\"links\" href=\"https://www.nba.com/nuggets/\" target=\"_blank\">Denver Nuggets</a>, and Indiana Pacers. Finally, there are the teams in the bottom half offensively and defensively listed as <b>Neither</b> such as the <a class=\"links\" href=\"https://www.nba.com/cavaliers/\" target=\"_blank\">Cleveland Cavaliers</a>, Golden State Warriors, and  <a class=\"links\" href=\"https://www.nba.com/knicks/\" target=\"_blank\">New York Knicks</a>.",
+                smallImage: "./../../assets/images/nbatypescatter.PNG"
+            },
+            {
+                sectionheader: "Impact of Offensive vs. Defensive Focus",
+                paragraph: "As you can see in the above chart, there is very little difference between offensive and defensive teams when it comes to successfully holding their 10+ point first quarter lead. Both categories of teams win about 75% of such games. Teams in the Both category see extreme success in holding their leads, with a win rate of about 92%. And finally, teams in the Neither category hold their 10+ point first quarter lead only 69% of the time. In conclusion, <b>neither offensively or defensively aligned teams hold an advantage over the other. But well-rounded teams hold their leads <u>significantly</u> better than all others</b>. The difference between offensive and defensive teams, however, may lie in <i>how</i> they hold their lead. ",
                 smallImage: "./../../assets/images/nbaleadheldbytype.PNG"
             },
             {
-                sectionheader: "When do teams lose their lead?",
-                paragraph: "Lets take this one step further and see if we can predict when teams will start to lose their lead or when we know <i>\"Okay, I'd say this lead is safe\"</i>. This is good to know if you want to make an informed wager with your friends, start to feel secure about your team's success, or know that maybe you still have a chance when you're trailing. By maintaining the same groups as in the previous section (Both, Offensive, Defensive, or Neither), I can now track how teams lose their lead by category. Here is what I found:<br><br><b>Both</b>: These teams tend to steadily hold this 10 point lead throughout the game. You can bet on these teams holding (but maybe not expanding upon) a large first quarter lead.<br><br><b>Offensive</b>: These teams are volatile when it comes to holding leads. As you can see from the curve in the bottom right of the above dashboard, you can expect this lead to quickly decrease in one quarter, but then quickly reappear in the next.<br><br><b>Defensive</b>: These teams take a much steadier approach to holding their lead, where it (on average) slowly decreases throughout the game. Therefore, if a defensive team is able to hold this lead deep into the second quarter you can feel secure about an ultimate victory. On the other hand, defensive teams seem to let their opponents reduce their lead throughout the game, where their first quarter 10+ point lead will probably be one of the largest leads of the night.<br><br><b>Neither</b>: These teams are unpredictable, with the largest loss of their leads occuring in the 3rd quarter. Tough to discern any major insights from these teams, but I would be skeptical of the security of any early lead with these teams.",
+                sectionheader: "How Teams Hold Leads",
+                paragraph: "Taking this one step further, we see that offensive and defensive teams hold their leads very differently. By maintaining the same groups (Both, Offensive, Defensive, or Neither) as before, we can now track how teams lose their lead by category. As seen in the above chart, here is what we can determine:<br><br><b>Both</b>: These teams tend to steadily hold their lead throughout the game. You can bet on these teams holding (but maybe not expanding upon) a large first quarter lead.<br><br><b>Offensive</b>: These teams are volatile when it comes to holding leads. As you can see, an offensive team's lead may quickly decrease in one quarter, but then quickly reappear in the next quarter. <br><br><b>Defensive</b>: These teams take a much steadier approach to holding their lead. As you can see, a defensive team may let their opponents reduce their lead throughout the game before ultimately winning. Their first quarter 10+ point lead will probably be one of the largest leads of the night.<br><br><b>Neither</b>: These teams are unpredictable, with the largest loss of their leads occurring in the 3rd quarter. It is tough to discern any major insights from these teams, but I would be skeptical of the security of any early lead with these teams.<br><br>Aside from the top-tier teams in the league, all teams struggle to build upon that early lead. Often, the first quarter lead is their largest lead of the entire game. <b>Defensively aligned teams in particular seem to not have the volatility to have another dominant quarter and, therefore, their first quarter lead will often decrease </b>despite ultimately winning the game. Offensively aligned teams, on the other hand, do have that volatility; they may lose much of their lead in one quarter but then gain it all back the next quarter.",
                 smallImage: "./../../assets/images/nbaleadchanges.PNG",
             },
             {
-                sectionheader: "The ability to hold an early lead varies team to team, and is heavily based on their relative strengths",
-                paragraph: "Despite an overall 80% win-rate for teams with a 10+ point first quarter lead, many teams will struggle to (1) build upon that lead or (2) even hold the lead at all. On average, that 10 point lead will be the largest lead of the game. We find that <b>score differentials are not linear, but rather seem to plateau or slowly decrease after the first quarter.</b> So when making a decision on how you feel about an early lead in the NBA, think about the leading team's strengths (offensive vs. defensive) and decide when you feel that the lead has begun to plateau.",
+                sectionheader: "Offensive and Defensive Teams Both Hold Leads, the Difference is How",
+                paragraph: "When it comes to holding a large first quarter lead, it is clear that offensive and defensive teams hold their lead differently. Defensive teams employ a \"Bend, Don't Break\" strategy where their lead will decrease by a few points each quarter, but they will ultimately win the game. Conversely, offensive teams employ a strategy of volatility to either lose or build upon their lead. Both are equally effective strategies in the aggregate. In both strategies, however, teams will struggle to build upon an early lead. On average, that early 10+ point lead will be the largest lead of the game. We find that <b>score differentials of large first quarter leads seem to plateau or slowly decrease after the first quarter.</b> <br><br>So when making a decision on how you feel about an early lead in the NBA, think about the leading team's strengths (offensive vs. defensive) and decide when you feel that the lead has begun to plateau.",
                 smallImage: "./../../assets/images/nbaleadhelddashboard.PNG"
             }
-        ],
-        sources: ["asdf","asdf","asdf"] 
+        ]
     },
     {
         title:"4th Down Expected Value",
         description:"When does the data say you have a positive expected value when going for it on 4th down? Does that vary by team? Let's find out",
-        image:"./../assets/images/nfllogocomingsoon.png",
+        image:"/assets/images/nfllogocomingsoon.png",
         imageFooter:"",
         date: "",
         projectParagraphs: [
@@ -249,14 +250,12 @@ const projects = [
                 paragraph: "",
                 smallImage: ""
             }
-        ],
-        sources: ["asdf","asdf","asdf"] 
+        ]
     },
     {
         title:"Tax Money Allocation",
         description:"Let's look at where our tax money is allocated and see whether or not it deviates from public perception. Is it even close?",
-        image:"./../assets/images/taxtransparencylogocomingsoon.png",
-        hash: "",
+        image:"/assets/images/taxtransparencylogocomingsoon.png",
         dashboardImage:"",
         imageFooter:"",
         date: "",
@@ -266,11 +265,11 @@ const projects = [
                 paragraph: "",
                 smallImage: ""
             }
-        ],
-        sources: ["asdf","asdf","asdf"] 
+        ]
     }
 ];
 
+// for when the page loads
 window.onload = function(){
     targetUrl = getTargetUrl();
     if(urlBits.length > 3){
@@ -280,6 +279,12 @@ window.onload = function(){
     }
 }
 
+// for when we use back or forward button
+window.onpopstate = function(){
+    this.loadPage();
+};
+
+//  changing the page
 function changePage(target){
     if(target==""){
         window.history.pushState("", "", "/");
@@ -315,7 +320,7 @@ function getTargetUrl(){
     }
 }
 
-
+// page navigation
 function loadPage(){
     // get the page to load
     urlTarget = getTargetUrl();
@@ -339,6 +344,9 @@ function loadPage(){
 
     // always load modals
     loadModals();
+
+    // always start loaded at the top
+    primaryContainer.scrollTop = 0;
 }
 
 function loadNavBar(urlTarget){
@@ -560,6 +568,26 @@ function loadProjectsPage(){
 }
 
 function loadProjectCards(type){
+    // help with source
+    if(type=="append"){
+        imageSrc = "./../..";
+
+        // remove the projects without a hash
+        var projectsToLoop = [];
+        curHash = getTargetUrl();
+        curHash = curHash.split("/")[1];
+
+        for(var i = 0; i < projects.length; i++){
+            if(projects[i]['hash'] != null && projects[i]['hash'] != curHash){
+                projectsToLoop.push(projects[i]);
+            }
+        }
+
+    } else {
+        imageSrc = "./..";
+        projectsToLoop = projects;
+    }
+
     pageHTML = "";
 
     // default to 6 cards per row
@@ -577,33 +605,35 @@ function loadProjectCards(type){
         searchQuery = searchQuery.value.toUpperCase();
     }
 
-    for(var i = 0; i < projects.length; i++){
+    for(var i = 0; i < projectsToLoop.length; i++){
         // check if starting a new row
         if(i % numCards == 0){
             pageHTML += "<div class=\"row\">"
         }
 
-        titleCaps = projects[i]['title'].toUpperCase();
+        titleCaps = projectsToLoop[i]['title'].toUpperCase();
         if(searchQuery == null || titleCaps.includes(searchQuery)){
             // otherwise loop through the cards
-            pageHTML += "<div class=\"col-" + cardTwelfth + " text-center projectCard\" onclick=\"changePage('projects/" + projects[i]['hash'] + "')\">"
-            pageHTML += "<img class=\"projectCardImage\" src=\""+ projects[i]['image'] + "\">";
-            pageHTML += "<h3><b>" + projects[i]['title'] + "</b></h3>";
+            pageHTML += "<div class=\"col-" + cardTwelfth + " text-center projectCard\" onclick=\"changePage('projects/" + projectsToLoop[i]['hash'] + "')\">"
+            pageHTML += "<img class=\"projectCardImage\" src=\"" + imageSrc +  projectsToLoop[i]['image'] + "\">";
+            pageHTML += "<h3><b>" + projectsToLoop[i]['title'] + "</b></h3>";
 
-            // only show description if desktop
+            // dont show description if mobile or append
             if(!isMobile){
-                pageHTML += "<p class=\"projectCardText\">" + projects[i]['description'] + "</p>";
+                if(type != "append"){
+                    pageHTML += "<p class=\"projectCardText\">" + projectsToLoop[i]['description'] + "</p>";
+                }
             }
             pageHTML += "</div>";
         }
         // close up the new row if you have to
-        if(i % numCards == (numCards-1) || i == (projects.length-1)){
+        if(i % numCards == (numCards-1) || i == (projectsToLoop.length-1)){
             pageHTML += "</div>";
         }
 
     }
 
-    if(type == "return"){
+    if(type == "return" || type=="append"){
         return pageHTML;
     } else{
         projectCardContainer = document.getElementById("projectCardList");
@@ -650,34 +680,26 @@ function loadProjectResultPage(urlKey){
     pageHTML += "<span class=\"pointer\" onclick=\"sendEmail()\">cml3ta@gmail.com</span>";
     pageHTML += " | " + projects[index]['date'] + "</div>";
 
-    /*
-    // lets load the dashboard if desktop, otherwise image
-    pageHTML += "<br>"
-    pageHTML += "<div class=\"dashboardContainer\">"
-    pageHTML += "<img class=\"dashboardFrame\" src=\""+ projects[index]['dashboardImage'] + "\">";
-    pageHTML += "</div>"
-    pageHTML += "<div class=\"dashImageFooter\">" + projects[index]['imageFooter'] + "</div>";
-    */
     // load the rest of the paragraphs
     for(var i = 0; i < projectParagraphs.length; i++){
+        if( i != 0 ){
+            pageHTML += "<hr class=\"paragraphDivider\"></hr>";
+        }
         pageHTML += "<h5 class=\"projectResults_secHeader\">" + projectParagraphs[i]['sectionheader'] + "</h5>";
         pageHTML += "<br>";
         pageHTML += "<div class=\"" + smallImage + "Container\">"
         pageHTML += "<img class=\"" + smallImage + "Frame\" src=\""+ projectParagraphs[i]['smallImage'] + "\">";
         pageHTML += "</div>"
         pageHTML += "<p class=\"projectResults_paragraph\">" + projectParagraphs[i]['paragraph'] + "</p> ";
-        pageHTML += "<hr class=\"paragraphDivider\"></hr>";
     }
 
-    // TODO: load the sources
-    /*
-    projectSources = projects[index]['sources'];
-    pageHTML += "<div class=\"projectSources\"><b>Sources:</b></div>";
-    for(var i = 0; i < projectSources.length; i++){
-        pageHTML += "<div class=\"projectSources\">" + projectSources[i] + "</div>";
-    }
-    */
-    
+    // give a read more list of projects
+    pageHTML += "<hr class=\"paragraphDivider\"></hr>";
+    pageHTML += "<h5 class=\"projectResults_secHeader\">Interested in Another Project?</h5>";
+    pageHTML += "<center><div style=\"width:80%\">";
+    pageHTML += loadProjectCards("append");
+    pageHTML += "</center>";
+
     // wrap the whole thing up
     pageHTML += "<br><br>";
     pageHTML += "</div>";
