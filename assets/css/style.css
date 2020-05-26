@@ -51,8 +51,8 @@ html
     text-align: center;
     
 	/* Background styles */
-	/* 'https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg' */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(http://cml3ta.github.io/assets/images/heroimage.png);
+	/* 'https://codetheweb.blog/img/posts/full-image-hero/image.jpg' */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('./../images/heroimage.png');
 	background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -71,6 +71,24 @@ html
 	
 	overflow-x: hidden;
 	overflow-y: hidden;
+}
+
+.topHomePage_mobile {
+    /* Sizing */
+    width: 100%;
+    height: 80vh;
+    
+	/* Background styles */
+	/* 'https://codetheweb.blog/img/posts/full-image-hero/image.jpg' */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('./../images/heroimage_mobile2.png');
+
+	/* Flexbox stuff */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* Text styles */
+	text-align: center;
 }
 
 .bottomHomePage{
@@ -304,7 +322,7 @@ th{
     height: 45px;
     
     /* Background styles */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(http://cml3ta.github.io/assets/images/heroimage.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('./../images/heroimage.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -316,6 +334,26 @@ th{
 	overflow-x: hidden;
 	overflow-y: hidden;
 
+}
+
+.topResumePage_mobile {
+	position: fixed;
+	z-index: 2;
+    /* Sizing */
+    width: 100%;
+    height: 45px;
+    
+	/* Background styles */
+	/* 'https://codetheweb.blog/img/posts/full-image-hero/image.jpg' */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('./../images/heroimage_mobile2.png');
+
+	/* Flexbox stuff */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* Text styles */
+	text-align: center;
 }
 
 .verticalLine {
@@ -419,7 +457,7 @@ th{
     text-align: center;
     
     /* Background styles */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(http://cml3ta.github.io/assets/images/heroimage.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('./../images/heroimage.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -438,6 +476,24 @@ th{
 	
 	overflow-x: hidden;
 	overflow-y: hidden;
+}
+
+.topProjectsPage_mobile {
+    /* Sizing */
+    width: 100%;
+    height: 40vh;
+    
+	/* Background styles */
+	/* 'https://codetheweb.blog/img/posts/full-image-hero/image.jpg' */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('./../images/heroimage_mobile2.png');
+
+	/* Flexbox stuff */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* Text styles */
+	text-align: center;
 }
 
 .projectsTitleText{

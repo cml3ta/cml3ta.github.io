@@ -437,11 +437,15 @@ function loadHomePage(){
     leftClass = "";
     rightClass = "";
     addDisplay = "";
+    addMobile = "";
+    if(isMobile){
+        addMobile = "_mobile";
+    }
 
-    pageHTML = "<div class=\"topResumePage\">";
+    pageHTML = "<div class=\"topResumePage" + addMobile + "\">";
     pageHTML += "</div>";
     // start top page
-    pageHTML += " <div class = \"topHomePage\">";
+    pageHTML += " <div class = \"topHomePage" + addMobile + "\">";
 
     if(!isMobile){
         leftClass = "homepageCol_left shadow-lg";
@@ -528,8 +532,12 @@ function sendEmail(){
 }
 
 function loadResumePage(){
+    addMobile = "";
+    if(isMobile){
+        addMobile = "_mobile";
+    }
     
-    pageHTML = "<div class=\"topResumePage\">";
+    pageHTML = "<div class=\"topResumePage" + addMobile + "\">";
     pageHTML += "</div>";
 
     // if its not mobile, then show left side
@@ -598,14 +606,16 @@ function loadProjectsPage(){
     searchClass = "projectsSearch";
 
     addDisplay = "";
+    addMobile = "_mobile";
     if(!isMobile){
         addDisplay = "display-3";
+        addMobile = "";
     }
 
     // load top page
-    pageHTML = "<div class=\"topResumePage\">";
+    pageHTML = "<div class=\"topResumePage" + addMobile + "\">";
     pageHTML += "</div>";
-    pageHTML += "<div class = \"topProjectsPage\">";
+    pageHTML += "<div class = \"topProjectsPage" + addMobile + "\">";
     pageHTML += "<div class=\"hero-inner\">";
     pageHTML += "<br>";
     pageHTML += "<h1 class=\"projectsTitleText " + addDisplay + "\">Projects</h1>";
