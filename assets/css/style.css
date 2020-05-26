@@ -52,7 +52,7 @@ html
     
 	/* Background styles */
 	/* 'https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg' */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('./../images/heroimage.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('./../images/heroimage.png');
 	background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -301,7 +301,7 @@ th{
     height: 45px;
     
     /* Background styles */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('./../images/heroimage.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('./../images/heroimage.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -413,7 +413,7 @@ th{
     text-align: center;
     
     /* Background styles */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('./../images/heroimage.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('./../images/heroimage.png');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
