@@ -1,17 +1,17 @@
 /* --------------------------- */
 /* primary main content */
-
-html, body
+html
 {
-	background-color: #F5F5F5;
-	padding-top: 25px;
 	position: relative;
 	height: 100%;
+	font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+	overflow: overlay;
+	overflow-y: scroll;
 }
 
 .mainContent{
-	background: #F5F5F5;	
-	overflow: auto;
+	background: whitesmoke;	
+	overflow-x: hidden;
 	height: 100%;
 	background-position:center; 
 	background-size: cover;
@@ -33,6 +33,7 @@ html, body
 .links:hover{
 	color: #6f94d9;
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 /* end of primary main content */
@@ -41,39 +42,52 @@ html, body
 
 /* --------------------------- */
 /* home page containers */
-.topHomePage{
-	background-color: white;
-	position: relative;
-	width: 100%;
+.topHomePage {
+    /* Sizing */
+    width: 100vw;
+    height: 80vh;
+    
+    /* Text styles */
+    text-align: center;
+    
+	/* Background styles */
+	/* 'https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg' */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('./../images/heroimage.jpg');
+	background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	/* Flexbox stuff */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* Text styles */
+	text-align: center;
+	
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 .bottomHomePage{
-	background-color: #F5F5F5;
-	/* 	background-image: linear-gradient(to right, white 30%, #F5F5F5 30%); */
 	position: relative;
 	width: 100%;
-}
-
-.topHomePage:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-.bottomHomePage:after {
-	content: "";
-	display: table;
-	clear: both;
 }
 
 .homepageCol_left{
 	float: left;
-	border-radius: 10px;
-	height: 95%;
-	margin-left: 2px;
-	margin-top: 5px;
+	border-radius: 5px;
+	height: 100%;
+	margin-left: 2%;
+	margin-top: 20px;
 	position: relative;
-	width: 29%;
+	width: 27%;
+	/*
+	border: black;
+	border-width: 0.5px;
+	border-style: solid;
+	*/
 }
 
 .homepageCol_right{
@@ -81,27 +95,17 @@ html, body
 	width: 70%;
 	height: 95%;
 	margin-left: 2px;
-	margin-top: 5px;
+	margin-top: 0px;
 	padding-right: 20px;
 }
 
 .nameText{
-	text-align: center;
-	vertical-align: middle;
-	padding-top: 5%;
 	color: #6f94d9;
 	font-weight: bold;
-	padding-left: 5px;
-	padding-right: 5px;
 }
 
 .titleText{
-	position: relative;
-	text-align: center;
-	vertical-align: middle;
-	color: rgba(218,224,230,1);
-	padding-top: 5px;
-	padding-bottom: 20px;	
+	color: rgba(218,224,230,1);	
 }
 
 .contactCardImage{
@@ -127,8 +131,19 @@ html, body
 	text-align: center !important;
 	margin-top: 10px;
 	margin-bottom: 25px;
-	max-width:80%;
-	min-width: 60%;
+	max-width:40%;
+	min-width: 30%;
+	background-color: rgba(240,248,255,0.1) !important;
+	color: rgba(218,224,230,1) !important;	
+}
+
+.emailButton:hover{
+	background-color: rgba(240,248,255,0.2) !important;
+	color: white;
+	transform-origin:left;
+	transition:width 0.25s ease;
+	cursor: pointer;
+
 }
 
 .contactCardTable{
@@ -188,8 +203,6 @@ th{
   display: inline-block;
   height: 40px;
   line-height: 40px;
-  background-color: #F0F8FF;
-  color: #6f94d9;
   /*text-transform: uppercase;*/
   text-decoration: none;
   overflow: hidden;
@@ -197,34 +210,10 @@ th{
   font-weight: bold;
   padding-left: 10px;
   padding-right: 10px;
+  color: #F0F8FF;
+  background-color:#6f94d9;
 }
 
-#button-4 {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-#button-4 a {
-  position: relative;
-  transition: all .45s ease-Out;
-}
-
-#underline {
-  width: 100%;
-  height: 2.5px;
-  margin-top: 15px;
-  align-self: flex-end;
-  left: -600px;
-  background: #6f94d9;
-  position: absolute;
-  transition: all .3s ease-Out;
-  bottom: 0;
-}
-
-#button-4:hover #underline {
-  left: 0;
-}
 
 /* end of home page buttons */
 
@@ -236,25 +225,44 @@ th{
 	vertical-align: middle;
 	width: 30px;
 	height: 30px;
+	padding-top: 0 !important;
 }
 
 .navbar-light{
-	background-color: #FFF;
+	background-color: rgba(0, 0, 0, 0) !important;
+	padding-top: 0 !important;
 }
 
 .navbar{
 	min-height: 48px !important;
+	padding-top: 0 !important;
 }
 
 .contactInfoText{
 	cursor: pointer;
 	float: left !important;
 	padding: 8px 0px;
-	color: rgba(0,0,0,0.5) !important;
 }
 
 .contactInfoText:hover{
-	color: rgba(0,0,0,0.75) !important;
+	color: #6f94d9 !important;
+}
+
+.whiteText{
+	color: rgba(240,248,255,0.9) !important;
+	font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+	cursor: pointer;
+}
+
+.whiteText:hover{
+	color: #6f94d9 !important;
+	cursor: pointer;
+}
+
+.whiteText_active{
+	color: #6f94d9 !important;
+	font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+	cursor: pointer;
 }
 
 /* end of nav */
@@ -284,6 +292,26 @@ th{
 
 /* --------------------------- */
 /* resume page */
+.topResumePage {
+	position: fixed;
+	z-index: 2;
+
+    /* Sizing */
+    width: 100vw;
+    height: 45px;
+    
+    /* Background styles */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('./../images/heroimage.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+	
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+}
+
 .verticalLine {
   border-left: solid rgba(0,0,0,0.5);
   height: 50%;
@@ -292,21 +320,22 @@ th{
 
 .leftCol_resume {
     position: fixed;
-    width: 20%;
-    background-color: #F5F5F5; 
+    width: 22%;
+    background-color: white; 
     overflow-y: none;
 	height:100%;
+	margin-top: 55px;
 }
 
 .rightCol_resume {
-    position: relative;            
-    margin-left: 22%;
+	margin-top: 55px;
+    position: absolute;            
+    margin-left: 23%;
 	width:76%;
-	font-family: TimesNewRoman, "Times New Roman"; 
+	font-family: TimesNewRoman, "Times New Roman" !important; 
 	font-size: 14px;
 	padding-left: 20px;
 	padding-right: 20px;
-	margin-top: 5px;
 	padding-top: 20px;
 	background: white;
 }
@@ -314,11 +343,11 @@ th{
 .rightCol_resume_mobile {
     position: relative;            
 	width:100%;
-	font-family: TimesNewRoman, "Times New Roman"; 
+	font-family: TimesNewRoman, "Times New Roman" !important; 
 	font-size: 12px;
 	padding-left: 20px;
 	padding-right: 20px;
-	margin-top: 5px;
+	margin-top: 35px;
 	padding-top: 20px;
 	background-color: white;
 }
@@ -362,14 +391,46 @@ th{
 }
 
 .resumeHeadshot{
-	margin-top: 10px;
-	width: 110%;
+	width: 100%;
+}
+
+.resumeQuote{
+	font-style: italic;
+	text-align: center;
+	padding: 5px;
 }
 
 /* end of resume section */
 
 /* --------------------------- */
 /* projects page */
+.topProjectsPage {
+    /* Sizing */
+    width: 100vw;
+    height: 40vh;
+    
+    /* Text styles */
+    text-align: center;
+    
+    /* Background styles */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('./../images/heroimage.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+
+	/* Flexbox stuff */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* Text styles */
+	text-align: center;
+	
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
 .projectsTitleText{
 	text-align: center;
 	vertical-align: middle;
@@ -378,11 +439,12 @@ th{
 	padding-left: 5px;
 	padding-right: 5px;
 }
+
 .projectsHeaderText{
 	text-align: center;
 	padding-left: 10%;
 	padding-right: 10%;
-	color: rgba(0,0,0,0.5);
+	color: rgba(218,224,230,1);	
 	padding-top: 10px;
 	padding-bottom: 40px;
 }
@@ -419,6 +481,12 @@ th{
 .projectCardImage{
 	padding-top: 10px;
 	width:80%;
+}
+
+.bottomProjectResultsPage{
+	/* 	background-image: linear-gradient(to right, white 30%, #F5F5F5 30%); */
+	position: relative;
+	min-height: 60vh;
 }
 /* end of projects section */
 
@@ -520,7 +588,7 @@ th{
 }
 
 .projectResultsContainer{
-	
+	margin-top: 55px;
 	margin-left: 10%;
 	width: 80%;
 	background: white;

@@ -3,13 +3,19 @@ var navContainer = document.getElementById("navContainer");
 var modalsContainer = document.getElementById("modalsContainer");
 
 var isMobile = false; //initiate as false
+var navCollapsed = false;
 var screenWidth = screen.width;
+
 
 window.historyInitiated = true;
 
 // device detection
 if(screenWidth < 750) { 
     isMobile = true;
+}
+
+if(screenWidth < 950){
+    navCollapsed = true;
 }
 
 const bioCardDeets = [
@@ -20,7 +26,7 @@ const bioCardDeets = [
     },
     {
         bolded: "Studied at",
-        regular: "The University of Virginia",
+        regular: "The University of Virginia, McIntire School of Commerce",
         image: "./../assets/images/capandgown.png"
     },
     {
@@ -30,15 +36,32 @@ const bioCardDeets = [
     },
     {
         bolded: "Work as",
-        regular: "Businenss Technology Analyst at Deloitte Consulting LLP",
+        regular: "Analyst at Deloitte Consulting LLP",
         image: "./../assets/images/briefcase.png"
     },
     {
         bolded: "Proficient in",
         regular: "Java, JavaScript, HTML/CSS, R, SQL, Tableau, C++, VBA",
         image: "./../assets/images/skills.png"
+    }  
+]
+
+const resumeInfoDeets = [
+    {
+        bolded: "Phone: ",
+        regular: "540.808.3354",
+        image: "./../assets/images/phone.png"
     },
-    
+    {
+        bolded: "Email: ",
+        regular: "<span class=\"pointer\" onclick=\"sendEmail()\">cml3ta@gmail.com</span>",
+        image: "./../assets/images/email.png"
+    },
+    {
+        bolded: "Residence:",
+        regular: "Washington D.C.",
+        image: "./../assets/images/location.png"
+    }
 ]
 
 const homePageParagraphs = [
@@ -124,7 +147,7 @@ const projects = [
     {
         title:"Oscar for Best Picture",
         description:"What does it take to win the covetted award for Best Picture at the Oscars? A big budget? High critic ratings? Let's find out",
-        image:"/assets/images/oscarlogo.png",
+        image:"./../../assets/images/oscarsdashboard.png",
         hash: "oscarbestpicture",
         date: "Apr. 13, 2020",
         projectParagraphs: [
@@ -168,7 +191,7 @@ const projects = [
     {
         title:"Blackjack Casino Odds",
         description:"What are your real odds of leaving the casino a winner? Let's see how it varies with different strategies and table rules",
-        image:"/assets/images/blackjacklogo.png",
+        image:"./../../assets/images/blackjackdashboard.png",
         hash: "blackjackodds",
         date: "Mar. 20, 2020",
         projectParagraphs: [
@@ -207,7 +230,7 @@ const projects = [
     {
         title:"NBA 1st Quarter Leads",
         description:"How critical is it have a strong start in the NBA given today's profilic offenses? Let's see if 10+ point first quarter leads win games",
-        image:"/assets/images/nbalogo.png",
+        image:"./../../assets/images/nbaleadhelddashboard.PNG",
         hash: "nbaleads",
         date: "Feb. 20, 2020",
         projectParagraphs: [
@@ -241,7 +264,7 @@ const projects = [
     {
         title:"4th Down Expected Value",
         description:"When does the data say you have a positive expected value when going for it on 4th down? Does that vary by team? Let's find out",
-        image:"/assets/images/nfllogocomingsoon.png",
+        image:"/assets/images/comingsoon.png",
         imageFooter:"",
         date: "",
         projectParagraphs: [
@@ -255,7 +278,7 @@ const projects = [
     {
         title:"Tax Money Allocation",
         description:"Let's look at where our tax money is allocated and see whether or not it deviates from public perception. Is it even close?",
-        image:"/assets/images/taxtransparencylogocomingsoon.png",
+        image:"/assets/images/comingsoon.png",
         dashboardImage:"",
         imageFooter:"",
         date: "",
@@ -326,6 +349,7 @@ function loadPage(){
     urlTarget = getTargetUrl();
 
     // always load the nav bar
+    // only load the white on home page
     loadNavBar(urlTarget);
     
     // catch the page
@@ -346,7 +370,7 @@ function loadPage(){
     loadModals();
 
     // always start loaded at the top
-    primaryContainer.scrollTop = 0;
+    window.scrollTo(0, 0);
 }
 
 function loadNavBar(urlTarget){
@@ -354,7 +378,15 @@ function loadNavBar(urlTarget){
     if(urlTarget.split("/").length > 1){
         extraFolderBack = "../";
     }
+    textColor = "whiteText";
 
+    // check if the screen is condensed or not
+    navToAdd = "";
+    paddingToAdd = "";
+    if(navCollapsed) { 
+        navToAdd = "style=\"background-color:#0b1e35;\"";
+        paddingToAdd = "style = \"padding-left:10px;\""
+    }
 
     // start the container
     navHTML = "<nav class=\"navbar navbar-expand-lg navbar-light fixed-top\">";
@@ -364,26 +396,33 @@ function loadNavBar(urlTarget){
     navHTML += "src=\"./../" + extraFolderBack + "assets/images/logo.png\" alt=\"Christopher Long\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\"></a>";
     
     // load the collapsible container
-    navHTML += "<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">";
+    navHTML += "<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" id=\"hamburgerMenu\">";
     navHTML += "<span class=\"navbar-toggler-icon\"></span>";
     navHTML += "</button>";
 
     // load the collapsed content
-    navHTML += "<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">";
+    navHTML += "<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\" " + navToAdd + ">";
     navHTML += "<ul class=\"navbar-nav mr-auto\">";
 
     // load the nav items
-    navHTML += "<li class=\"nav-item\"> <div class=\"nav-link pointer\" onclick=\"changePage('resume')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Resume</div></li>";
+    if(urlTarget.startsWith("resume")){
+        textColor = "whiteText_active";
+    }
+    navHTML += "<li class=\"nav-item pointer\" " + paddingToAdd + "> <div class=\"nav-link pointer " + textColor + "\" onclick=\"changePage('resume')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Resume</div></li>";
 
-    navHTML += "<li class=\"nav-item\"> <div class=\"nav-link pointer\"  onclick=\"changePage('projects')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Projects</div></li>";
+    textColor = "whiteText";
+    if(urlTarget.startsWith("projects")){
+        textColor = "whiteText_active";
+    }
+    navHTML += "<li class=\"nav-item pointer\" " + paddingToAdd + "> <div class=\"nav-link pointer " + textColor + "\"  onclick=\"changePage('projects')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Projects</div></li>";
 
-    navHTML += "<li class=\"nav-item\"> <a class=\"nav-link\" href=\"https://www.linkedin.com/in/christopher-long-039b77b6/\" target=\"_blank\">LinkedIn</a> </li>";
+    navHTML += "<li class=\"nav-item pointer whiteText\" " + paddingToAdd + "> <a class=\"nav-link whiteText\" href=\"https://www.linkedin.com/in/christopher-long-039b77b6/\" target=\"_blank\">LinkedIn</a> </li>";
 
     // close up  list
     navHTML += "</ul>";
 
     // add contact me
-    navHTML += "<div class=\"contactInfoText nav-link\" data-toggle=\"modal\" data-target=\"#contactInfoModal\">Contact Me At...</div>";
+    navHTML += "<div class=\"contactInfoText nav-link whiteText\" " + paddingToAdd + " data-toggle=\"modal\" data-target=\"#contactInfoModal\">Contact Me At...</div>";
     
     // close up container
     navHTML += "</div></nav>";
@@ -399,14 +438,17 @@ function loadHomePage(){
     rightClass = "";
     addDisplay = "";
 
+    pageHTML = "<div class=\"topResumePage\">";
+    pageHTML += "</div>";
     // start top page
-    pageHTML = " <div class = \"topHomePage\">";
+    pageHTML += " <div class = \"topHomePage\">";
 
     if(!isMobile){
-        leftClass = "homepageCol_left shadow-sm";
+        leftClass = "homepageCol_left shadow-lg";
         rightClass = "homepageCol_right";
         addDisplay = "display-3";
     }
+    /*
 
     // start contact card
     pageHTML += "<div class=\"" + leftClass + "\">";
@@ -426,16 +468,22 @@ function loadHomePage(){
     
     // wrap up top left side
     pageHTML += "</div>";
+    */
 
     // top right side
-    pageHTML += "<div class=\"" + rightClass + "\"> ";
+    // pageHTML += "<div class=\"" + rightClass + "\"> ";
+    pageHTML += "<div class=\"hero-inner\">";
     pageHTML += "<h1 class=\"nameText "+ addDisplay + "\">Hi, I'm Chris.</h1>";
-    pageHTML += " <h5 class=\"titleText\"><b>Business Analyst</b> | Deloitte Consulting LLP</h5> </div> ";
+    pageHTML += " <h5 class=\"titleText\"><b> Business Analyst</b> | Deloitte Consulting LLP</h5>";
+    pageHTML += "<center><div class=\"button emailButton\" id=\"button-4\" data-toggle=\"modal\" data-target=\"#sendEmailModal\">Email Me</div></center> ";
+    pageHTML += "</div>";
+    // pageHTML +=  "</div> ";
 
+    /*
     if(isMobile){
          // email me button
          pageHTML += emailMeButton;
-    }
+    }*/
 
     // wrap up top
     pageHTML += "</div> ";
@@ -458,14 +506,14 @@ function loadHomePage(){
     // bio card list
     pageHTML += " <ul class=\"list-group\"> ";
     if(!isMobile){
-        pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"><p class=\"quote\">\"If I had asked people what they wanted, they would have said faster horses.\"</p><p class=\"quote\">- Henry Ford</p></li>";
+        pageHTML += "<li class=\" list-group-item\" style=\"border:none;padding-bottom:0px;\"><p class=\"quote\">\"If I had asked people what they wanted, they would have said faster horses.\"</p><p class=\"quote\">- Henry Ford</p></li>";
     }
 
     for (var i = 0; i < bioCardDeets.length; i++){
-        pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"> <div><img class=\"cardIcons\" src=\"" + bioCardDeets[i]['image'] +"\"> <b>" + bioCardDeets[i]['bolded'] + "</b> " + bioCardDeets[i]['regular'] + "</div> </li> ";
+        pageHTML += "<li class=\" list-group-item\" style=\"border:none;padding-top:20px;padding-bottom:0px;\"> <div><img class=\"cardIcons\" src=\"" + bioCardDeets[i]['image'] +"\"> <b>" + bioCardDeets[i]['bolded'] + "</b> " + bioCardDeets[i]['regular'] + "</div> </li> ";
     }
 
-    pageHTML += "</ul><br></div>"; 
+    pageHTML += "</ul><br><br></div>"; 
 
     primaryContainer.innerHTML = pageHTML;
 }
@@ -480,12 +528,26 @@ function sendEmail(){
 }
 
 function loadResumePage(){
+    
+    pageHTML = "<div class=\"topResumePage\">";
+    pageHTML += "</div>";
+
     // if its not mobile, then show left side
     if(!isMobile){
         // get the left column html
-        pageHTML = "<div class=\"leftCol_resume\">";
+        pageHTML += "<div class=\"leftCol_resume\">";
         pageHTML += "<img class=\"resumeHeadshot\" src=\"./../assets/images/chris_headshot.jpg\" alt=\"Chris Long\"><br>";
-        pageHTML += "<center><h1 class=\"resumeName\">Chris Long</h1></center> <div class=\"resumeBio\"><hr> <h6>Email Address</h5> <p>cml3ta@gmail.com</p> <hr> <h6>Phone Number</h5> <p>(540) 808-3354</p> <hr> <h6>Area of Residence</h5> <p>Washington DC</p><hr> </div>";
+        
+        // resume info list
+        pageHTML += "<center><h1 class=\"resumeName\">Chris Long</h1></center>";
+        pageHTML += " <ul class=\"list-group\"> ";
+
+        pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"><p class=\"resumeQuote\">I am currently an Analyst at Deloitte focused on the intersection between business and technology. I am passionate about data analytics, emerging technologies, and product development. I am also an avid NFL fan, movie watcher, and runner.</p></li>";
+        for (var i = 0; i < resumeInfoDeets.length; i++){
+            pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"> <div><img class=\"cardIcons\" src=\"" + resumeInfoDeets[i]['image'] +"\"> <b>" + resumeInfoDeets[i]['bolded'] + "</b> " + resumeInfoDeets[i]['regular'] + "</div> </li> ";
+        }
+
+        pageHTML += "</ul><br><br></div>"; 
         
         // download button
         pageHTML += "</div>";
@@ -494,7 +556,7 @@ function loadResumePage(){
         pageHTML += "<div class=\"rightCol_resume shadow-lg\">"; 
     } else {
         // start the resume html
-        pageHTML = "<div class=\"rightCol_resume_mobile shadow-lg\">"; 
+        pageHTML += "<div class=\"rightCol_resume_mobile shadow-lg\">"; 
     }
     
 
@@ -522,7 +584,7 @@ function loadResumePage(){
     pageHTML += "<span class=\"resumeSkillDeets\">Golf, Running, Data Analytics (esp. Sports Analytics), UI/UX, Data Visualization, Product Demos</span>";
     pageHTML += "<br><br><br><br>";
 
-    pageHTML += "<center><a class=\"button\" id=\"button-4\" style=\"width:90%;color: #F0F8FF;background-color:#6f94d9;max-width:50%;\" href=\"assets/Resume_ChrisLong.pdf\" download><div id=\"underline\" style=\"background:#F0F8FF;\"></div>Download Resume</a></center> ";
+    pageHTML += "<center><a class=\"button\" style=\"width:90%;max-width:50%;\" href=\"assets/Resume_ChrisLong.pdf\" download>Download Resume</a></center> ";
     
 
     // wrap it up
@@ -535,15 +597,23 @@ function loadResumePage(){
 function loadProjectsPage(){
     searchClass = "projectsSearch";
 
+    addDisplay = "";
+    if(!isMobile){
+        addDisplay = "display-3";
+    }
+
     // load top page
-    pageHTML = "";
-    pageHTML += "<div class = \"topHomePage\">";
-    pageHTML += "<h1 class=\"projectsTitleText display-3\">Projects</h1>";
-    pageHTML += "<h5 class=\"projectsHeaderText\">I bring an analytical and fact-focused approach to all my stances when it comes to sports, movies, and everything else. Here are a few of my projects so far, but I'm always looking for more ideas. Feel free to email me your ideas!</h5></div>";
+    pageHTML = "<div class=\"topResumePage\">";
     pageHTML += "</div>";
+    pageHTML += "<div class = \"topProjectsPage\">";
+    pageHTML += "<div class=\"hero-inner\">";
+    pageHTML += "<br>";
+    pageHTML += "<h1 class=\"projectsTitleText " + addDisplay + "\">Projects</h1>";
+    pageHTML += "<h5 class=\"projectsHeaderText\">I bring an analytical and fact-focused approach to all my stances when it comes to sports, movies, and everything else. Here are a few of my projects so far, but I'm always looking for more ideas. Feel free to email me your ideas!</h5></div>";
+    pageHTML += "</div></div>";
 
     // start bottom of page
-    pageHTML += "<div class = \"bottomHomePage\">";
+    pageHTML += "<div class = \"bottomProjectResultsPage\">";
     pageHTML += "<br>";
 
     // make search bar
@@ -673,8 +743,10 @@ function loadProjectResultPage(urlKey){
     }
 
     // load top page
-    pageHTML = "";
-    pageHTML += "<div class = \"" + projectResultsContainer + " shadow-sm\">";
+    pageHTML = "<div class=\"topResumePage\">";
+    pageHTML += "</div>";
+    pageHTML += "<div class = \"" + projectResultsContainer + " shadow-lg\">";
+    pageHTML += "<br>";
     pageHTML += "<h1 class=\"projectsTitleTextResult\">" + projects[index]['title'] + "</h1>";
     pageHTML += "<div class=\"projectResultDate\"> Chris Long | ";
     pageHTML += "<span class=\"pointer\" onclick=\"sendEmail()\">cml3ta@gmail.com</span>";
@@ -740,7 +812,7 @@ function loadModals(){
     // put in the header and closing details
     modalHTML += "<div class=\"modal-dialog\" role=\"document\"><div class=\"modal-content\">";
     modalHTML += "<div class=\"modal-header\">";
-    modalHTML += "<h3 class=\"modal-title\" id=\"contactInfoModalLabel\">Contact Information</h5>";
+    modalHTML += "<h3 class=\"modal-title\" id=\"contactInfoModalLabel\" style=\"color:black;font-weight:bold;\">Contact Information</h5>";
     modalHTML += "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>";
     modalHTML += "</div>";
     
@@ -760,7 +832,7 @@ function loadModals(){
     // header
     modalHTML += "<div class=\"modal fade bd-example-modal-lg\" id=\"sendEmailModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"sendEmailModalLabel\" aria-hidden=\"true\">";
     modalHTML += "<div class=\"modal-dialog modal-lg\"> <div class=\"modal-content\"> <div class=\"modal-header\">";
-    modalHTML += "<h3 class=\"modal-title\" id=\"sendEmailModalLabel\">";
+    modalHTML += "<h3 class=\"modal-title\" id=\"sendEmailModalLabel\" style=\"color:black;font-weight:bold;\">";
     modalHTML += "Email Me</h5>";
     modalHTML += "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>";
     modalHTML += "</div>";
@@ -777,7 +849,7 @@ function loadModals(){
     modalHTML += "<textarea class=\"form-control\" id=\"emailBody\" rows=\"10\" placeholder=\"Message\"></textarea>";
     modalHTML += "</div>";
     modalHTML += "<div class=\"modal-footer\">";
-    modalHTML += "<div class=\"button\" id=\"button-4\" onclick=\"sendEmail()\"><div id=\"underline\"></div>Send</div>";
+    modalHTML += "<div class=\"button\" onclick=\"sendEmail()\">Send</div>";
     modalHTML += "</div> </div> </div> </div>";
 
     modalsContainer.innerHTML = modalHTML;
