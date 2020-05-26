@@ -756,7 +756,6 @@ function loadProjectResultPage(urlKey){
     pageHTML = "<div class=\"topResumePage\">";
     pageHTML += "</div>";
     pageHTML += "<div class = \"" + projectResultsContainer + " shadow-lg\">";
-    pageHTML += "<br>";
     pageHTML += "<h1 class=\"projectsTitleTextResult\">" + projects[index]['title'] + "</h1>";
     pageHTML += "<div class=\"projectResultDate\"> Chris Long | ";
     pageHTML += "<span class=\"pointer\" onclick=\"sendEmail()\">cml3ta@gmail.com</span>";
