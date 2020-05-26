@@ -619,7 +619,7 @@ function loadProjectsPage(){
     pageHTML += "<div class=\"hero-inner\">";
     pageHTML += "<br>";
     pageHTML += "<h1 class=\"projectsTitleText " + addDisplay + "\">Projects</h1>";
-    pageHTML += "<h5 class=\"projectsHeaderText\">I bring an analytical and fact-focused approach to all my stances when it comes to sports, movies, and everything else. Here are a few of my projects so far, but I'm always looking for more ideas. Feel free to email me your ideas!</h5></div>";
+    pageHTML += "<h5 class=\"projectsHeaderText\">I bring an analytical and fact-focused approach to all my stances when it comes to sports, movies, and everything else. Here are a few of my projects so far, but I'm always looking for more ideas. Feel free to email me your ideas!</h5><br></div>";
     pageHTML += "</div></div>";
 
     // start bottom of page

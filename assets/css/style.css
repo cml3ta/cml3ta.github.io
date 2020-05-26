@@ -658,10 +658,12 @@ th{
 	margin-left: 10%;
 	width: 80%;
 	background: white;
+	padding-top: 5px;
 }
 
 .projectResultsContainer_mobile{
 	background: white;
+	padding-top: 10px;
 }
 
 hr.paragraphDivider{
