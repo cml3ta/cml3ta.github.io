@@ -52,11 +52,14 @@ html
     
 	/* Background styles */
 	/* 'https://codetheweb.blog/assets/img/posts/full-image-hero/image.jpg' */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('http://cml3ta.github.io/assets/images/heroimage.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(http://cml3ta.github.io/assets/images/heroimage.png);
 	background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 
 	/* Flexbox stuff */
 	display: flex;
@@ -301,11 +304,14 @@ th{
     height: 45px;
     
     /* Background styles */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('http://cml3ta.github.io/assets/images/heroimage.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(http://cml3ta.github.io/assets/images/heroimage.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	
 	overflow-x: hidden;
 	overflow-y: hidden;
@@ -413,11 +419,14 @@ th{
     text-align: center;
     
     /* Background styles */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url('http://cml3ta.github.io/assets/images/heroimage.png');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url(http://cml3ta.github.io/assets/images/heroimage.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 	background-attachment: fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 
 	/* Flexbox stuff */
 	display: flex;
