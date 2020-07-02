@@ -1,6 +1,7 @@
 var primaryContainer = document.getElementById("primaryContainer");
 var navContainer = document.getElementById("navContainer");
 var modalsContainer = document.getElementById("modalsContainer");
+var footerContainer = document.getElementById("footer");
 
 var isMobile = false; //initiate as false
 var navCollapsed = false;
@@ -365,6 +366,13 @@ function loadPage(){
         changePage("")
     }
 
+    // always load footer unless resume
+    if(!urlTarget.startsWith("resume")){
+        loadFooter();
+    } else{
+        footerContainer.innerHTML = "";
+    }
+
     // always load modals
     loadModals();
 
@@ -392,7 +400,7 @@ function loadNavBar(urlTarget){
 
     // load the home page icon
     navHTML += "<a class=\"nav-link\" onclick=\"changePage('')\"><img class=\"navImage pointer\"";
-    navHTML += "src=\"./../" + extraFolderBack + "assets/images/logo.png\" alt=\"Christopher Long\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\"></a>";
+    navHTML += "src=\"./../" + extraFolderBack + "assets/images/logo2.png\" alt=\"Christopher Long\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\"></a>";
     
     // load the collapsible container
     navHTML += "<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" id=\"hamburgerMenu\">";
@@ -451,27 +459,6 @@ function loadHomePage(){
         rightClass = "homepageCol_right";
         addDisplay = "display-3";
     }
-    /*
-
-    // start contact card
-    pageHTML += "<div class=\"" + leftClass + "\">";
-    pageHTML += "<img class = \"contactCardHeadshot\" src=\"./../assets/images/chris_headshot_square.jpg\"> ";
-    pageHTML += "<img class = \"contactCardImage\" src=\"./../assets/images/bg.jpg\"> ";
-
-    emailMeButton = "<center><div class=\"button emailButton\" id=\"button-4\" data-toggle=\"modal\" data-target=\"#sendEmailModal\"><div id=\"underline\"></div>Email Me</div></center> ";
-    if(!isMobile){
-        // start cc table
-        pageHTML += "<div class=\"contactCardTable\" style=\"overflow-x:auto;\"> ";
-        pageHTML += "<table> <tr><th>Specialty</th> <th>Ask Me About</th> </tr> ";
-        pageHTML += "<tr> <td>Product Management</td> <td>Sports Analytics</td> </tr> </table></div> ";
-        
-        // email me button
-        pageHTML += emailMeButton;
-    }
-    
-    // wrap up top left side
-    pageHTML += "</div>";
-    */
 
     // top right side
     // pageHTML += "<div class=\"" + rightClass + "\"> ";
@@ -501,7 +488,7 @@ function loadHomePage(){
 
         pageHTML += "<p class=\"homepage_paragraph\">" + homePageParagraphs[i]['paragraph'] + "</p> ";
     }
-    pageHTML += "</div>"; 
+    pageHTML += "<br><br></div>"; 
 
     // start bio card
     pageHTML += "<div class=\""+ leftClass +"\" style=\"background-color: white;\">";
@@ -591,7 +578,7 @@ function loadResumePage(){
     pageHTML += "<span class=\"resumeSkillDeets\">Golf, Running, Data Analytics (esp. Sports Analytics), UI/UX, Data Visualization, Product Demos</span>";
     pageHTML += "<br><br><br><br>";
 
-    pageHTML += "<center><a class=\"button\" style=\"width:90%;max-width:50%;\" href=\"assets/Resume_ChrisLong.pdf\" download>Download Resume</a></center> ";
+    pageHTML += "<center><a class=\"button\" style=\"width:90%;max-width:50%;\" href=\"./../assets/Resume_ChrisLong.pdf\" download>Download Resume</a></center> ";
     
 
     // wrap it up
@@ -638,6 +625,7 @@ function loadProjectsPage(){
     pageHTML += "<div class=\"container-fluid\" id=\"projectCardList\">";
     pageHTML += loadProjectCards("return");
 
+    pageHTML += "<br><br>";
     // wrap the whole thing up
     pageHTML += "</div>";
     pageHTML += "</div>";
@@ -768,7 +756,7 @@ function loadProjectResultPage(urlKey){
         pageHTML += "<h5 class=\"projectResults_secHeader\">" + projectParagraphs[i]['sectionheader'] + "</h5>";
         pageHTML += "<br>";
         pageHTML += "<div class=\"" + smallImage + "Container\">"
-        pageHTML += "<img class=\"" + smallImage + "Frame\" src=\""+ projectParagraphs[i]['smallImage'] + "\">";
+        pageHTML += "<img class=\"" + smallImage + "Frame\" src=\""+ projectParagraphs[i]['smallImage'] + "\" data-toggle=\"modal\" data-target=\"#imageModal\" onclick=\"fillImageModal('" + projectParagraphs[i]['smallImage'] + "')\">";
         pageHTML += "</div>"
         pageHTML += "<p class=\"projectResults_paragraph\">" + projectParagraphs[i]['paragraph'] + "</p> ";
     }
@@ -860,8 +848,30 @@ function loadModals(){
     modalHTML += "<div class=\"button\" onclick=\"sendEmail()\">Send</div>";
     modalHTML += "</div> </div> </div> </div>";
 
+    // image zoom modal
+    // header
+    modalHTML += "<div class=\"modal fade\" id=\"imageModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"imageModalLabel\" aria-hidden=\"true\">";
+    modalHTML += "<div class=\"modal-dialog modal-xl\"> <div class=\"modal-content\">";
+
+    // body
+    modalHTML += "<div class=\"modal-body\">";
+    modalHTML += "<img class=\"zoomImage\" id=\"zoomImage\" src=\"\">";
+    modalHTML += "</div> </div> </div> </div>";
+
     modalsContainer.innerHTML = modalHTML;
 }
+
+function fillImageModal(smallImage){
+    var imageContainer = document.getElementById("zoomImage");
+    imageContainer.src = smallImage;
+}
+
+function loadFooter(){
+    footerHTML = "Chris Long | Washington DC | 540.808.3354 | <span class=\"pointer\" onclick=\"sendEmail()\">cml3ta@gmail.com</span>";
+    footerContainer.innerHTML = footerHTML;
+}
+
+
 
 window.addEventListener("hashchange",loadPage,false);
 

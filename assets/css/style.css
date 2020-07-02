@@ -36,6 +36,16 @@ html
 	cursor: pointer;
 }
 
+.footer{
+	background-color: #0b1e35;
+	width: 100%;
+	color: whitesmoke;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 10px;
+	font-size: 90%;
+}
+
 /* end of primary main content */
 
 
@@ -244,9 +254,13 @@ th{
 /* Nav Stuff Overwriting Bootstrap :( */
 .navImage{
 	vertical-align: middle;
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 25px;
 	padding-top: 0 !important;
+}
+
+.navImage:hover{
+	border: rgba(0,0,0,0) solid 0.5px;
 }
 
 .modal-open[style] {
@@ -299,6 +313,13 @@ th{
 .modal-title{
 	color: #6f94d9;
 }
+
+@media (min-width: 768px) {
+	.modal-xl {
+	  width: 95%;
+	 max-width:1400px;
+	}
+  }
   
 .home-scrollspy-label{
 	color: #212529;
@@ -676,4 +697,9 @@ hr.paragraphDivider{
 	width: 80%;
 	margin-left: 10%;
 	color:#6f94d9;
+}
+
+.zoomImage{
+	height: auto;
+	width: 100%;
 }
