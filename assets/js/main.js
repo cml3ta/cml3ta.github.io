@@ -67,11 +67,11 @@ const resumeInfoDeets = [
 const homePageParagraphs = [
     {
         sectionheader: "Mission Statement",
-        paragraph: "I am passionate about using the intersection of business, technology, and design to create applications that solve client challenges. Professionally, I enjoy using my technical proficiencies and business education to serve as a liason between the development team and the end-users. I have worked as a Back End Software Developer, have led the delivery of client applications, have advanced the growth of an analytics playform called <a class=\"links\" href=\"https://play.semoss.org\" target=\"_blank\">SEMOSS</a>, developed this website from the ground up, and more. I am eager to learn and hope to continue to learn as I advance in my career. Ultimately, I hope to use my strong client management skills, technology fluency, and business instincts to advance consumer facing products and applications."
+        paragraph: "I am passionate about using the intersection of business, technology, and design to create applications that solve client challenges. Professionally, I enjoy using my technical proficiencies and business education to serve as a liason between the development team and the end-users. I have worked as a back end software developer, led the delivery of client applications, advanced the growth of an analytics playform called <a class=\"links\" href=\"https://play.semoss.org\" target=\"_blank\">SEMOSS</a>, developed this website from the ground up, and more. I am eager to learn, and I hope to continue to learn as I advance in my career. Ultimately, I hope to use my strong client management skills, technology fluency, and business instincts to advance consumer facing products and applications."
     },
     {
         sectionheader: "Background",
-        paragraph: "I chose to attend the University of Virginia (UVA) to study Computer Science, but quickly found myself much more passionate about using technology to solve problems, rather than developing the technology itself. Therefore, I instead pursued a business degree from the McIntire School of Commerce with concentrations in Finance and Business Analytics, with a minor in Computer Science. Upon graduation, I began working as a Business Technology Analyst at Deloitte Consulting LLP to continue pushing the envelope of technology and business. I have used my At Deloitte, I have been heavily involved with an end-to-end data analytics platform called Semantic Open Source Software (SEMOSS). I have developed analytics-focused product features in R and Java, have led the UI/UX design and development of a client facing SEMOSS wrapper, and have led the development and visualization of an interactive financial model. Outside of client work, I also lead an internal training curriculum that provides hands-on trainings on emerging technologies to 750-1000 Deloitte practitioners each year."
+        paragraph: "I chose to attend the University of Virginia to study Computer Science, but quickly found myself much more passionate about using technology to solve problems, rather than developing the technology itself. Therefore, I instead pursued a business degree from the McIntire School of Commerce with concentrations in Finance and Business Analytics, with a minor in Computer Science. Upon graduation, I began working as a Business Technology Analyst at Deloitte Consulting LLP to continue pushing the envelope of technology and business. At Deloitte, I have been heavily involved with an end-to-end data analytics platform called Semantic Open Source Software (SEMOSS). I have developed SEMOSS analytics capabilities, have led the UI/UX design of a client facing SEMOSS wrapper, and have led the development of an interactive financial model. Outside of client work, I also lead an internal training curriculum that provides hands-on trainings on emerging technologies to 750-1,000 Deloitte practitioners each year."
     },
     {
         sectionheader: "Get to Know Me",
@@ -144,7 +144,7 @@ const projects = [
         description:"What does it take to win the covetted award for Best Picture at the Oscars? A big budget? High critic ratings? Let's find out",
         image:"./../../assets/images/oscarsdashboard.png",
         hash: "oscarbestpicture",
-        date: "Apr. 13, 2020",
+        date: "July 2020",
         projectParagraphs: [
             {
                 sectionheader: "What factors can predict the Best Picture winner?",
@@ -188,7 +188,7 @@ const projects = [
         description:"What are your real odds of leaving the casino a winner? Let's see how it varies with different strategies and table rules",
         image:"./../../assets/images/blackjackdashboard.png",
         hash: "blackjackodds",
-        date: "Mar. 20, 2020",
+        date: "April 2020",
         projectParagraphs: [
             {
                 sectionheader: "What are our odds of winning in blackjack?",
@@ -227,7 +227,7 @@ const projects = [
         description:"How critical is it have a strong start in the NBA given today's profilic offenses? Let's see if 10+ point first quarter leads win games",
         image:"./../../assets/images/nbaleadhelddashboard.PNG",
         hash: "nbaleads",
-        date: "Feb. 20, 2020",
+        date: "February 2020",
         projectParagraphs: [
             {
                 sectionheader: "Do teams with 10+ point first quarter leads end up winning the game?",
@@ -407,6 +407,13 @@ function loadNavBar(urlTarget){
     navHTML += "<ul class=\"navbar-nav mr-auto\">";
 
     // load the nav items
+    if(urlTarget==""){
+        textColor = "whiteText_active";
+    }
+    navHTML += "<li class=\"nav-item pointer navText\" " + paddingToAdd + "> <div class=\"nav-link pointer " + textColor + "\" onclick=\"changePage('')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Home</div></li>";
+    
+    textColor = "whiteText";
+    // load the nav items
     if(urlTarget.startsWith("resume")){
         textColor = "whiteText_active";
     }
@@ -418,13 +425,26 @@ function loadNavBar(urlTarget){
     }
     navHTML += "<li class=\"nav-item pointer navText\" " + paddingToAdd + "> <div class=\"nav-link pointer " + textColor + "\"  onclick=\"changePage('projects')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Projects</div></li>";
 
-    navHTML += "<li class=\"nav-item pointer whiteText navText\" " + paddingToAdd + "> <a class=\"nav-link whiteText\" href=\"https://www.linkedin.com/in/christopher-long-039b77b6/\" target=\"_blank\">LinkedIn</a> </li>";
-
+    if(navCollapsed) { 
+        navHTML += "<li class=\"contactInfoText nav-link whiteText navText\" " + paddingToAdd + " data-toggle=\"modal\" data-target=\"#contactInfoModal\">Contact</li>";
+        navHTML += "<li class=\"nav-item pointer whiteText navText\" " + paddingToAdd + "> <a class=\"nav-link whiteText\" href=\"https://www.linkedin.com/in/christopher-long-039b77b6/\" target=\"_blank\">LinkedIn</a> </li>";
+    } else {
+        // close up  list
+        navHTML += "</ul>";
+        
+        // contact modal with icon        
+        navHTML += "<a style=\"padding-right:10px;\"><img class=\"navImageCircle pointer\"";
+        navHTML += "src=\"./../" + extraFolderBack + "assets/images/email_white.png\" alt=\"Christopher Long\" data-toggle=\"modal\" data-target=\"#contactInfoModal\"></a>";
+        
+        // linkedin with icon
+        navHTML += "<a style=\"padding-right:10px;\" href=\"https://www.linkedin.com/in/christopher-long-039b77b6/\" target=\"_blank\"><img class=\"navImageCircle pointer\"";
+        navHTML += "src=\"./../" + extraFolderBack + "assets/images/linkedin_white.png\"></a>";
+    }
+    
     // close up  list
     navHTML += "</ul>";
 
     // add contact me
-    navHTML += "<div class=\"contactInfoText nav-link whiteText navText\" " + paddingToAdd + " data-toggle=\"modal\" data-target=\"#contactInfoModal\">Contact Me At...</div>";
     
     // close up container
     navHTML += "</div></nav>";
@@ -843,6 +863,7 @@ function loadModals(){
     // header
     modalHTML += "<div class=\"modal fade\" id=\"imageModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"imageModalLabel\" aria-hidden=\"true\">";
     modalHTML += "<div class=\"modal-dialog modal-xl\"> <div class=\"modal-content\">";
+    modalHTML += "<div class=\"modal-header\"><button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button></div>";
 
     // body
     modalHTML += "<div class=\"modal-body\">";
@@ -861,8 +882,6 @@ function loadFooter(){
     footerHTML = "Chris Long | Washington DC | 540.808.3354 | <span class=\"pointer\" onclick=\"sendEmail()\">cml3ta@gmail.com</span>";
     footerContainer.innerHTML = footerHTML;
 }
-
-
 
 window.addEventListener("hashchange",loadPage,false);
 

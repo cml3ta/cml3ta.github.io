@@ -279,8 +279,24 @@ th{
 	border: rgba(0,0,0,0) solid 0.5px;
 }
 
+.navImageCircle{
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+	padding-top: 0 !important;
+	opacity: 0.9;
+}
+
+.navImageCircle:hover{
+	opacity: 1;
+}
+
 .modal-open[style] {
 	padding-right: 0px !important;
+}
+
+.modal-header{
+	border: none !important;
 }
 
 .navbar-dark{
@@ -300,7 +316,7 @@ th{
 }
 
 .contactInfoText:hover{
-	color: #6f94d9 !important;
+	color: white !important;
 }
 
 .whiteText{
@@ -309,13 +325,15 @@ th{
 }
 
 .whiteText:hover{
-	color: #6f94d9 !important;
+	color: white !important;
 	cursor: pointer;
+	font-weight: bold;
 }
 
 .whiteText_active{
-	color: #6f94d9 !important;
+	color: white !important;
 	cursor: pointer;
+	font-weight: bold;
 }
 
 /* end of nav */
@@ -344,6 +362,7 @@ th{
 
 .active{
 	color: #6f94d9 !important;
+	font-weight: bold !important;
 }
 
 /* end of modal */
@@ -478,6 +497,8 @@ th{
 
 .resumeHeadshot{
 	width: 100%;
+	border-right: rgba(0,0,0,0) 3px solid;
+	border-left: rgba(0,0,0,0) 3px solid;
 }
 
 .resumeQuote{
@@ -647,6 +668,7 @@ th{
 	right: 0;
 	width: 100%;
 	height: 100%;
+	cursor: zoom-in;
 }
 
 .projectResultImage{
