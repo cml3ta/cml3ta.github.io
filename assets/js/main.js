@@ -36,7 +36,7 @@ const bioCardDeets = [
     },
     {
         bolded: "Work as",
-        regular: "Analyst at Deloitte Consulting LLP",
+        regular: "Consultant at Deloitte Consulting LLP",
         image: "./../assets/images/briefcase.png"
     },
     {
@@ -67,48 +67,50 @@ const resumeInfoDeets = [
 const homePageParagraphs = [
     {
         sectionheader: "Mission Statement",
-        paragraph: "I am passionate about using the intersection of technology and business to improve the lives of all people. I use my technical proficiencies and business studies at UVA to serve as a liason between the users and development team. I have worked as a Back End Software Developer, have led the delivery of client applications, have advanced the growth of an analytics playform called SEMOSS (<a class=\"links\" href=\"https://play.semoss.org\" target=\"_blank\">Try it out!</a>) from a product management perspective, and even developed this website from ground-up! Ultimately, I hope to use my strong client management skills, technology fluency, and business instincts to advance consumer facing products and applications."
+        paragraph: "I am passionate about using the intersection of business, technology, and design to create applications that solve client challenges. Professionally, I enjoy using my technical proficiencies and business education to serve as a liason between the development team and the end-users. I have worked as a Back End Software Developer, have led the delivery of client applications, have advanced the growth of an analytics playform called <a class=\"links\" href=\"https://play.semoss.org\" target=\"_blank\">SEMOSS</a>, developed this website from the ground up, and more. I am eager to learn and hope to continue to learn as I advance in my career. Ultimately, I hope to use my strong client management skills, technology fluency, and business instincts to advance consumer facing products and applications."
     },
     {
         sectionheader: "Background",
-        paragraph: "I chose to attend the University of Virginia (UVA) to study Computer Science, but quickly found myself much more passionate about using technology to solve problems, rather than developing the technology itself. Therefore, I pursued a business degree from the McIntire School of Commerce with concentrations in Finance and Information Technology, with a focus in Business Analytics. Upon graduation, I began working as a Business Technology Analyst at Deloitte Consulting LLP to continue pushing the envelope of technology and business. At Deloitte, I have been heavily involved with an end-to-end data analytics platform called Semantic Open Source Software (SEMOSS). I have performed 50+ external SEMOSS demos, attended multiple national conferences such as the Strata O'Reilly Data and AI Conference, and even was chosen to represent SEMOSS in a Deloitte-Wide video promoting its innovative capabilities. Along with these product management efforts, I have also used my finance and programming backgrounds to lead the development of an award-winning financial model in R, SQL, and SEMOSS to calculate and visualize the cost savings associated with retiring legacy IT systems."
+        paragraph: "I chose to attend the University of Virginia (UVA) to study Computer Science, but quickly found myself much more passionate about using technology to solve problems, rather than developing the technology itself. Therefore, I instead pursued a business degree from the McIntire School of Commerce with concentrations in Finance and Business Analytics, with a minor in Computer Science. Upon graduation, I began working as a Business Technology Analyst at Deloitte Consulting LLP to continue pushing the envelope of technology and business. I have used my At Deloitte, I have been heavily involved with an end-to-end data analytics platform called Semantic Open Source Software (SEMOSS). I have developed analytics-focused product features in R and Java, have led the UI/UX design and development of a client facing SEMOSS wrapper, and have led the development and visualization of an interactive financial model. Outside of client work, I also lead an internal training curriculum that provides hands-on trainings on emerging technologies to 750-1000 Deloitte practitioners each year."
     },
     {
         sectionheader: "Get to Know Me",
-        paragraph: "Analytical, Hard-Working, and Always Smiling. I enjoy watching the NFL (Go Bills!), staying up to date with the latest movies, and going for long runs. I love talking and meeting new people, so feel free to contact me and I would love to discuss anything from the latest tech trend to whether Coco is the best Disney movie of all time. Looking forward to talking!"
+        paragraph: "Analytical. Hardworking. Eager to Learn. I enjoy watching the NFL (Go Bills!), staying up to date with the latest movies, and going for long runs. I love talking and meeting new people, so feel free to contact me and I would love to discuss anything from the latest tech trend to whether Coco is the best Disney movie of all time. Looking forward to talking!"
     }
 ]
 
 const workExpItems = [
     {
         employer:"Deloitte Consulting LLP",
-        position:"Business Technology Analyst | Primary Client: Public Healthcare Provider",
+        position:"Consultant | Supporting Public Healthcare Provider",
         date:"July 2018 – Pres.",
         bullets:[
             "Develop analyses and custom visualizations within an end-to-end data analytics platform called Semantic Open Source Software (SEMOSS) that helps the provider's leadership and 250+ users drive decision making surrounding the transition to a new electronic health record",
             "Lead the development of an internally award-winning financial model in R, SQL, and SEMOSS to calculate and visualize the cost savings associated with retiring legacy IT systems, resulting in the discovery of $500M+ in savings which was directly inputted into the provider’s 5-year budget",
-            "Designed and developed user-friendly website showing an “Executive View” of all SEMOSS reports to ensure high traffic, page views, and user experience",
-            "Awarded an Applause Award and Outstanding Performance Award for my individual contribution"
+            "Proactively designed, developed, and launched a user-friendly “Executive View” website for clients that highlights the key reports, dashboards, and improved user experience; ultimately generating an increase in site traffic ",
+            "Developed a client reporting tool to monitor the progress of 150+ IT procurement contracts across the provider’s portfolio that is now briefed monthly to client leadership",
+            "Awarded an <i>Applause Award</i> and <i>Outstanding Performance Award</i> for my individual contribution"
         ]
     },
     {
         employer:"",
-        position:"Business Technology Analyst | SEMOSS Product Management",
+        position:"Consultant | Internal SEMOSS Product Advancement",
         date:"",
         bullets:[
             "Accelerated the business development and product growth of SEMOSS by performing to 50+ product demos to a range of potential clients, including federal agencies, non-profit organizations, and commercial businesses",
             "Lead the development of marketing content, having produced 10+ user videos with over 1500+ views on YouTube, standardized style guides for videos, presentations, and documentation",
             "Advance usability of SEMOSS by holding feature ideation discussions with frequent product users, guiding UI design with front end developers, and establishing user tracking analytics to refine the user experience",
-            "Selected to represent SEMOSS on at three national conferences including the Strata O’Reilly Data & AI Conference in New York in September 2019"
+            "Selected to represent SEMOSS on at three national conferences including the Strata O’Reilly Data & AI Conference in New York in September 2019",
+            "Presented on behalf of SEMOSS in an annual Deloitte series entitled “Deloitte Disrupt” to discuss the innovation surrounding SEMOSS, resulting in 200+ views across the firm"
         ]
     },
     {
         employer:"",
-        position:"Business Technology Analyst | SEMOSS Back-End Developer",
+        position:"Consultant | Internal SEMOSS Back-End Developer",
         date:"",
         bullets:[
             "Develop Back-End algorithms for SEMOSS in R and Java to solve client needs, accelerate project performance and SEMOSS product advancement such as Document Summarization, Sentiment Analysis, and more",
-            "Led the development of Natural Language Database Querying which allows users to query databases in plain text rather than SQL (Ex. “What movies are dramas?”), which greatly reduced query time for multi-database queries"
+            "Led the development of Natural Language Database Querying which allows users to query databases in plain text rather than SQL (Ex. “What movies are dramas?”)"
         ]
     }
 ];
@@ -119,17 +121,10 @@ const addProjectsItems = [
         position:"Firm Initiative Lead",
         date:"Feb. 2019 – Pres.",
         bullets:[
-            "Lead a team of 4 in a firm initiative sponsored by the Deloitte Consulting CTO of the Government and Public Sector (GPS)",
-            "Plan and execute five series of training events each year for 40+ fellow Deloitte practitioners to provide with hands-on training on emerging technologies such as Blockchain, IoT, AR/VR etc"
-        ]
-    },
-    {
-        employer:"Proposal Analytics Initiative at Deloitte",
-        position:"Founder and Lead Data Visualization",
-        date:"Sep. 2018 – Pres.",
-        bullets:[
-            "Founded a data analytics and visualization effort that analyzes the performance of past proposal efforts to (1) discover drivers of successful proposals and (2) diagnose financial variance between expected and actual project results",
-            "Received internal sponsorship from Deloitte Leadership and briefed findings to the Consulting Chief Operating and Chief Financial Officers of the GPS Sector of Deloitte Consulting"
+            "Lead a team of 4 in a firm initiative sponsored by the Deloitte Consulting CTO of the Government and Public Sector (GPS), ultimately increasing GeekOut attendance by 10x in the last 18 months",
+            "Plan and execute 10 hands-on training events each year on emerging technologies (Blockchain, IoT, AR/VR etc.), reaching between 750 and 1,000 Deloitte junior practitioners across the US GPS consulting practice",
+            "Led the expansion of the GeekOut target audience from VA-based GPS Technology Analysts (~800 practitioners) to US-Wide Analysts and Consultants (~3,000 practitioners)",
+            "Spearheaded the development of a GeekOut webpage within the Deloitte-network to serve as a repository of resources from previous sessions, collaborating with both UI Designers and Web Developers"
         ]
     },
     {
@@ -415,21 +410,21 @@ function loadNavBar(urlTarget){
     if(urlTarget.startsWith("resume")){
         textColor = "whiteText_active";
     }
-    navHTML += "<li class=\"nav-item pointer\" " + paddingToAdd + "> <div class=\"nav-link pointer " + textColor + "\" onclick=\"changePage('resume')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Resume</div></li>";
+    navHTML += "<li class=\"nav-item pointer navText\" " + paddingToAdd + "> <div class=\"nav-link pointer " + textColor + "\" onclick=\"changePage('resume')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Resume</div></li>";
 
     textColor = "whiteText";
     if(urlTarget.startsWith("projects")){
         textColor = "whiteText_active";
     }
-    navHTML += "<li class=\"nav-item pointer\" " + paddingToAdd + "> <div class=\"nav-link pointer " + textColor + "\"  onclick=\"changePage('projects')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Projects</div></li>";
+    navHTML += "<li class=\"nav-item pointer navText\" " + paddingToAdd + "> <div class=\"nav-link pointer " + textColor + "\"  onclick=\"changePage('projects')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Projects</div></li>";
 
-    navHTML += "<li class=\"nav-item pointer whiteText\" " + paddingToAdd + "> <a class=\"nav-link whiteText\" href=\"https://www.linkedin.com/in/christopher-long-039b77b6/\" target=\"_blank\">LinkedIn</a> </li>";
+    navHTML += "<li class=\"nav-item pointer whiteText navText\" " + paddingToAdd + "> <a class=\"nav-link whiteText\" href=\"https://www.linkedin.com/in/christopher-long-039b77b6/\" target=\"_blank\">LinkedIn</a> </li>";
 
     // close up  list
     navHTML += "</ul>";
 
     // add contact me
-    navHTML += "<div class=\"contactInfoText nav-link whiteText\" " + paddingToAdd + " data-toggle=\"modal\" data-target=\"#contactInfoModal\">Contact Me At...</div>";
+    navHTML += "<div class=\"contactInfoText nav-link whiteText navText\" " + paddingToAdd + " data-toggle=\"modal\" data-target=\"#contactInfoModal\">Contact Me At...</div>";
     
     // close up container
     navHTML += "</div></nav>";
@@ -443,7 +438,7 @@ function loadHomePage(){
     // use this to pass around proper class names
     leftClass = "";
     rightClass = "";
-    addDisplay = "";
+    addDisplay = "display-4";
     addMobile = "";
     if(isMobile){
         addMobile = "_mobile";
@@ -463,8 +458,8 @@ function loadHomePage(){
     // top right side
     // pageHTML += "<div class=\"" + rightClass + "\"> ";
     pageHTML += "<div class=\"hero-inner\">";
-    pageHTML += "<h1 class=\"nameText "+ addDisplay + "\">Hi, I'm Chris.</h1>";
-    pageHTML += " <h5 class=\"titleText\"><b> Business Analyst</b> | Deloitte Consulting LLP</h5>";
+    pageHTML += "<div class=\"nameText "+ addDisplay + "\">Hi, I'm Chris.</div>";
+    pageHTML += " <div class=\"titleText\"><b> Consultant</b> | Deloitte Consulting LLP</div>";
     pageHTML += "<center><div class=\"button emailButton\" id=\"button-4\" data-toggle=\"modal\" data-target=\"#sendEmailModal\">Email Me</div></center> ";
     pageHTML += "</div>";
     // pageHTML +=  "</div> ";
@@ -484,7 +479,7 @@ function loadHomePage(){
     // start paragraph content
     pageHTML += "<div class=\"" + rightClass + "\"> ";
     for(var i = 0; i < homePageParagraphs.length; i++){
-        pageHTML += "<h5 class=\"homepage_secHeader\">" + homePageParagraphs[i]['sectionheader'] + "</h5>";
+        pageHTML += "<div class=\"homepage_secHeader\">" + homePageParagraphs[i]['sectionheader'] + "</div>";
 
         pageHTML += "<p class=\"homepage_paragraph\">" + homePageParagraphs[i]['paragraph'] + "</p> ";
     }
@@ -495,9 +490,7 @@ function loadHomePage(){
 
     // bio card list
     pageHTML += " <ul class=\"list-group\"> ";
-    if(!isMobile){
-        pageHTML += "<li class=\" list-group-item\" style=\"border:none;padding-bottom:0px;\"><p class=\"quote\">\"If I had asked people what they wanted, they would have said faster horses.\"</p><p class=\"quote\">- Henry Ford</p></li>";
-    }
+    pageHTML += "<img class=\"homepageHeadshot\" src=\"./assets/images/chris_headshot.jpg\" alt=\"Chris Long\">";
 
     for (var i = 0; i < bioCardDeets.length; i++){
         pageHTML += "<li class=\" list-group-item\" style=\"border:none;padding-top:20px;padding-bottom:0px;\"> <div><img class=\"cardIcons\" src=\"" + bioCardDeets[i]['image'] +"\"> <b>" + bioCardDeets[i]['bolded'] + "</b> " + bioCardDeets[i]['regular'] + "</div> </li> ";
@@ -536,7 +529,7 @@ function loadResumePage(){
         pageHTML += "<center><h1 class=\"resumeName\">Chris Long</h1></center>";
         pageHTML += " <ul class=\"list-group\"> ";
 
-        pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"><p class=\"resumeQuote\">I am currently an Analyst at Deloitte focused on the intersection between business and technology. I am passionate about data analytics, emerging technologies, and product development. I am also an avid NFL fan, movie watcher, and runner.</p></li>";
+        pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"><p class=\"resumeQuote\">I am currently a Consultant at Deloitte focused on the intersection between business and technology. I am passionate about data analytics, emerging technologies, and product development. I am also an avid NFL fan, movie watcher, and runner.</p></li>";
         for (var i = 0; i < resumeInfoDeets.length; i++){
             pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"> <div><img class=\"cardIcons\" src=\"" + resumeInfoDeets[i]['image'] +"\"> <b>" + resumeInfoDeets[i]['bolded'] + "</b> " + resumeInfoDeets[i]['regular'] + "</div> </li> ";
         }
@@ -570,15 +563,13 @@ function loadResumePage(){
 
     // skills and interests
     pageHTML += "<div class=\"sectionHeader\">SKILLS AND INTERESTS</div>";
-    pageHTML += "<div class=\"resumeEmployer\">Development Skills: ";
+    pageHTML += "<div class=\"resumeEmployer\">Software Development Skills: ";
     pageHTML += "<span class=\"resumeSkillDeets\">Java, JavaScript, HTML/CSS, R, SQL, Tableau, C++, VBA</span></div>";
-    pageHTML += "<div class=\"resumeEmployer\">Security Clearance: ";
-    pageHTML += "<span class=\"resumeSkillDeets\">Department of Defense Public Trust Clearance</span></div>";
     pageHTML += "<div class=\"resumeEmployer\">Interests: ";
     pageHTML += "<span class=\"resumeSkillDeets\">Golf, Running, Data Analytics (esp. Sports Analytics), UI/UX, Data Visualization, Product Demos</span>";
     pageHTML += "<br><br><br><br>";
 
-    pageHTML += "<center><a class=\"button\" style=\"width:90%;max-width:50%;\" href=\"./../assets/Resume_ChrisLong.pdf\" download>Download Resume</a></center> ";
+    pageHTML += "<div><center><a class=\"button\" style=\"max-width:50%;background-color:#0b1e35;font-family:\" href=\"./../assets/Resume_ChrisLong.pdf\" download>Download Resume</a></center></div> ";
     
 
     // wrap it up
@@ -591,7 +582,7 @@ function loadResumePage(){
 function loadProjectsPage(){
     searchClass = "projectsSearch";
 
-    addDisplay = "";
+    addDisplay = "display-4";
     addMobile = "_mobile";
     if(!isMobile){
         addDisplay = "display-3";
@@ -604,8 +595,8 @@ function loadProjectsPage(){
     pageHTML += "<div class = \"topProjectsPage" + addMobile + "\">";
     pageHTML += "<div class=\"hero-inner\">";
     pageHTML += "<br>";
-    pageHTML += "<h1 class=\"projectsTitleText " + addDisplay + "\">Projects</h1>";
-    pageHTML += "<h5 class=\"projectsHeaderText\">I bring an analytical and fact-focused approach to all my stances when it comes to sports, movies, politics, and everything else</h5><br></div>";
+    pageHTML += "<div class=\"projectsTitleText " + addDisplay + "\">Projects</div>";
+    pageHTML += "<div class=\"projectsHeaderText\">I bring an analytical and fact-focused approach to all my stances when it comes to sports, movies, politics, and everything else</div><br></div>";
     pageHTML += "</div></div>";
 
     // start bottom of page
@@ -613,13 +604,13 @@ function loadProjectsPage(){
     pageHTML += "<br>";
 
     // make search bar
-    pageHTML += "<form class=\"form-inline \">";
+    pageHTML += "<div><form class=\"form-inline \">";
     if(isMobile){
         searchClass += "_mobile";
     }
 
     pageHTML += "<input class=\"form-control mr-sm-2 " + searchClass + "\" id=\"searchQuery\" type=\"search\" placeholder=\"Search for a Project\" onkeyup=\"loadProjectCards()\" autocomplete=\"off\">";
-    pageHTML += "</form>";
+    pageHTML += "</form></div>";
 
     // load project cards
     pageHTML += "<div class=\"container-fluid\" id=\"projectCardList\">";
@@ -683,7 +674,7 @@ function loadProjectCards(type){
             // otherwise loop through the cards
             pageHTML += "<div class=\"col-" + cardTwelfth + " text-center projectCard\" onclick=\"changePage('projects/" + projectsToLoop[i]['hash'] + "')\">"
             pageHTML += "<img class=\"projectCardImage\" src=\"" + imageSrc +  projectsToLoop[i]['image'] + "\">";
-            pageHTML += "<h3><b>" + projectsToLoop[i]['title'] + "</b></h3>";
+            pageHTML += "<div class=\"projectCardHeader\"><b>" + projectsToLoop[i]['title'] + "</b></div>";
 
             // dont show description if mobile or append
             if(!isMobile){
@@ -743,7 +734,7 @@ function loadProjectResultPage(urlKey){
     pageHTML = "<div class=\"topResumePage\">";
     pageHTML += "</div>";
     pageHTML += "<div class = \"" + projectResultsContainer + " shadow-lg\">";
-    pageHTML += "<h1 class=\"projectsTitleTextResult\">" + projects[index]['title'] + "</h1>";
+    pageHTML += "<div class=\"projectsTitleTextResult\">" + projects[index]['title'] + "</div>";
     pageHTML += "<div class=\"projectResultDate\"> Chris Long | ";
     pageHTML += "<span class=\"pointer\" onclick=\"sendEmail()\">cml3ta@gmail.com</span>";
     pageHTML += " | " + projects[index]['date'] + "</div>";
@@ -753,7 +744,7 @@ function loadProjectResultPage(urlKey){
         if( i != 0 ){
             pageHTML += "<hr class=\"paragraphDivider\"></hr>";
         }
-        pageHTML += "<h5 class=\"projectResults_secHeader\">" + projectParagraphs[i]['sectionheader'] + "</h5>";
+        pageHTML += "<div class=\"projectResults_secHeader\">" + projectParagraphs[i]['sectionheader'] + "</div>";
         pageHTML += "<br>";
         pageHTML += "<div class=\"" + smallImage + "Container\">"
         pageHTML += "<img class=\"" + smallImage + "Frame\" src=\""+ projectParagraphs[i]['smallImage'] + "\" data-toggle=\"modal\" data-target=\"#imageModal\" onclick=\"fillImageModal('" + projectParagraphs[i]['smallImage'] + "')\">";
@@ -763,7 +754,7 @@ function loadProjectResultPage(urlKey){
 
     // give a read more list of projects
     pageHTML += "<hr class=\"paragraphDivider\"></hr>";
-    pageHTML += "<h5 class=\"projectResults_secHeader\">Interested in Another Project?</h5>";
+    pageHTML += "<div class=\"projectResults_secHeader\">Interested in Another Project?</div>";
     pageHTML += "<center><div style=\"width:80%\">";
     pageHTML += loadProjectCards("append");
     pageHTML += "</center>";
@@ -808,19 +799,19 @@ function loadModals(){
     // put in the header and closing details
     modalHTML += "<div class=\"modal-dialog\" role=\"document\"><div class=\"modal-content\">";
     modalHTML += "<div class=\"modal-header\">";
-    modalHTML += "<h3 class=\"modal-title\" id=\"contactInfoModalLabel\" style=\"color:black;font-weight:bold;\">Contact Information</h5>";
+    modalHTML += "<div class=\"modal-title\" id=\"contactInfoModalLabel\" style=\"color:black;font-weight:bold;font-size:120%\">Contact Information</div>";
     modalHTML += "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>";
     modalHTML += "</div>";
     
     // body
     modalHTML += "<div class=\"modal-body\">";
-    modalHTML += "<h5>Email Address</h5>";
+    modalHTML += "<div>Email Address</div>";
     modalHTML += "<p class=\"links pointer\" onclick=\"sendEmail()\">cml3ta@gmail.com</p>";
     modalHTML += "<br>";
-    modalHTML += "<h5>Phone Number</h5>";
+    modalHTML += "<div>Phone Number</div>";
     modalHTML += "<p>(540) 808-3354</p>";
     modalHTML += "<br>";
-    modalHTML += "<h5>Area of Residence</h5>";
+    modalHTML += "<div>Area of Residence</div>";
     modalHTML += "<p>Washington DC</p>";
     modalHTML += "</div></div></div></div>";
 
@@ -828,8 +819,8 @@ function loadModals(){
     // header
     modalHTML += "<div class=\"modal fade bd-example-modal-lg\" id=\"sendEmailModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"sendEmailModalLabel\" aria-hidden=\"true\">";
     modalHTML += "<div class=\"modal-dialog modal-lg\"> <div class=\"modal-content\"> <div class=\"modal-header\">";
-    modalHTML += "<h3 class=\"modal-title\" id=\"sendEmailModalLabel\" style=\"color:black;font-weight:bold;\">";
-    modalHTML += "Email Me</h5>";
+    modalHTML += "<div class=\"modal-title\" id=\"sendEmailModalLabel\" style=\"color:black;font-weight:bold;font-size:120%;\">";
+    modalHTML += "Email Me</div>";
     modalHTML += "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>";
     modalHTML += "</div>";
 

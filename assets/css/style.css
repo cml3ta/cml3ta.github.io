@@ -1,12 +1,17 @@
 /* --------------------------- */
 /* primary main content */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 html
 {
 	position: relative;
 	height: 100%;
-	font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
+	font-family: 'Open Sans',sans-serif !important; 
 	overflow: overlay;
 	overflow-y: scroll;
+}
+
+html div{
+	font-family: 'Open Sans',sans-serif !important; 
 }
 
 .mainContent{
@@ -47,7 +52,9 @@ html
 }
 
 /* end of primary main content */
-
+.navText{
+	font-family: 'Open Sans',sans-serif !important; 
+}
 
 
 /* --------------------------- */
@@ -133,10 +140,12 @@ html
 .nameText{
 	color: #6f94d9;
 	font-weight: bold;
+	padding-bottom: 10px;
 }
 
 .titleText{
 	color: rgba(218,224,230,1);	
+	padding-bottom: 10px;
 }
 
 .contactCardImage{
@@ -215,13 +224,20 @@ th{
 	text-transform: uppercase;
 	color: #6f94d9;
 	font-weight: bold;
-	padding-top: 10px;
+	padding-top: 20px;
+	font-size: 120%;
 }
 
 .homepage_paragraph{
 	padding-left: 10%;
 	padding-top: 10px;
 	padding-right: 10px;
+	line-height: 2;
+}
+
+.homepageHeadshot{
+	border: white 10px solid;
+	width: 100%;
 }
 
 
@@ -289,7 +305,6 @@ th{
 
 .whiteText{
 	color: rgba(240,248,255,0.9) !important;
-	font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
 	cursor: pointer;
 }
 
@@ -300,7 +315,6 @@ th{
 
 .whiteText_active{
 	color: #6f94d9 !important;
-	font-family: Verdana, Geneva, Tahoma, sans-serif !important; 
 	cursor: pointer;
 }
 
@@ -425,15 +439,18 @@ th{
 	border-bottom: solid rgba(0,0,0,0.5);
 	color: #6f94d9;
 	font-weight: bold;
+	font-family: TimesNewRoman, "Times New Roman" !important; 
 }
 
 .resumeEmployer{
 	font-weight: bold;
 	text-align: left;
+	font-family: TimesNewRoman, "Times New Roman" !important; 
 }
 
 .resumePosition{
 	font-style: italic;
+	font-family: TimesNewRoman, "Times New Roman" !important; 
 }
 
 .resumeDates{
@@ -558,6 +575,12 @@ th{
 .projectCard:hover{
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.09);
 	background-color: rgba(0,0,0,0.1);
+}
+
+.projectCardHeader{
+	padding-top: 10px;
+	font-size: 110%;
+	padding-bottom: 5px;
 }
 
 .projectCardText{
@@ -702,4 +725,8 @@ hr.paragraphDivider{
 .zoomImage{
 	height: auto;
 	width: 100%;
+}
+
+input.search-query {
+	font-family: 'Open Sans',sans-serif !important; 
 }
