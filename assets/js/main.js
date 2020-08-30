@@ -257,22 +257,8 @@ const projects = [
         ]
     },
     {
-        title:"4th Down Expected Value",
-        description:"When does the data say you have a positive expected value when going for it on 4th down? Does that vary by team? Let's find out",
-        image:"/assets/images/comingsoon.png",
-        imageFooter:"",
-        date: "",
-        projectParagraphs: [
-            {
-                sectionheader: "",
-                paragraph: "",
-                smallImage: ""
-            }
-        ]
-    },
-    {
-        title:"Tax Money Allocation",
-        description:"Let's look at where our tax money is allocated and see whether or not it deviates from public perception. Is it even close?",
+        title:"<i>The Office </i> Characters",
+        description:"Which characters in the TV series <i>The Office</i> have the most lines in each episode and how does that correlate with that episode's rating?",
         image:"/assets/images/comingsoon.png",
         dashboardImage:"",
         imageFooter:"",
