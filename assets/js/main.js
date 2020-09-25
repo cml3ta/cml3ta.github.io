@@ -97,7 +97,7 @@ const workExpItems = [
         position:"Consultant | Internal SEMOSS Product Advancement",
         date:"",
         bullets:[
-            "Accelerated the business development and product growth of SEMOSS by performing to 50+ product demos to a range of potential clients, including federal agencies, non-profit organizations, and commercial businesses",
+            "Accelerated the business development and product growth of SEMOSS by performing 50+ product demos to a range of potential clients, including federal agencies, non-profit organizations, and commercial businesses",
             "Lead the development of marketing content, having produced 10+ user videos with over 1500+ views on YouTube, standardized style guides for videos, presentations, and documentation",
             "Advance usability of SEMOSS by holding feature ideation discussions with frequent product users, guiding UI design with front end developers, and establishing user tracking analytics to refine the user experience",
             "Selected to represent SEMOSS on at three national conferences including the Strata O’Reilly Data & AI Conference in New York in September 2019",
