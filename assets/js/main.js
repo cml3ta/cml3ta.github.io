@@ -88,7 +88,7 @@ const workExpItems = [
             "Develop analyses, custom visualizations, and operational strategic plans that drive business decision-making for a major public healthcare provider as they transition to a new electronic health record",
             "Build and maintain a financial model in R and SQL to calculate and visualize the cost savings associated with retiring legacy IT systems, resulting in the discovery of $500M+ in savings for the provider over the next five years",
             "Lead the ideation, design, technical development, and launch of a user-friendly “Executive View” website for clients that highlights the key reports, dashboards, and improved user experience; ultimately generating an increase in site traffic",
-            "Develop data-science process and solution to identify mismatched patient health documents using natural language processing and clustering to reduce data leakage of patient health files",
+            "Develop data science process and solution to identify mismatched patient health documents using natural language processing and clustering to reduce data leakage of patient health files",
             "Awarded an <i>Applause Award</i> and <i>Outstanding Performance Award</i> for my individual contribution"
         ]
     },
@@ -98,7 +98,7 @@ const workExpItems = [
         date:"",
         bullets:[
             "Assist in the growth of an open-source, web-based, end-to-end analytics platform called SEMOSS with 1000+ users across 15+ clients and ~$20M+ in annual revenue",
-            "Advance usability of SEMOSS by holding feature ideation discussions with frequent product users, guiding UI design with front end and back end developers, and establishing user tracking analytics to refine the user experience",
+            "Advance usability of SEMOSS by holding feature ideation discussions with frequent product users, guiding UI design with front-end and back-end developers, and establishing user tracking analytics to refine the user experience",
             "Accelerate the business development and product growth of SEMOSS by performing 50+ product demos to a range of potential clients, including federal agencies, non-profit organizations, and commercial businesses",
             "Presented on behalf of SEMOSS at multiple national conferences and in an annual Deloitte series entitled “Deloitte Disrupt” to discuss the innovation surrounding SEMOSS, resulting in 200+ views across the firm"
         ]
@@ -109,7 +109,7 @@ const workExpItems = [
         date:"",
         bullets:[
             "Develop back-end algorithms for SEMOSS in R and Java to solve client needs, accelerate project performance and SEMOSS advancement such as natural language database querying, document summarization, sentiment analysis, and more",
-            "Develop the front-end of a custom client application using an angular framework to collect and update client data, including the implementation of a mass-update feature to reduce data update time by as much as 20x"
+            "Develop the front-end of a custom client application using an angular framework to collect and update client data, including the implementation of a mass update feature to reduce data update time by as much as 20x"
         ]
     }
 ];
