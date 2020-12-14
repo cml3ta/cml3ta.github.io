@@ -67,7 +67,7 @@ const resumeInfoDeets = [
 const homePageParagraphs = [
     {
         sectionheader: "Mission Statement",
-        paragraph: "I am passionate about using the intersection of business, technology, and design to create applications that solve client challenges. Professionally, I enjoy using my technical proficiencies and business education to serve as a liaison between the development team and the end-users. I have worked as a back end software developer, led the delivery of client applications, advanced the growth of an open-source, web-based, end-to-end analytics platform called <a class=\"links\" href=\"https://play.semoss.org\" target=\"_blank\">SEMOSS</a>, developed this website from the ground up, and more. I am eager to learn, and I hope to continue to learn as I advance in my career. Ultimately, I hope to use my strong client management skills, technology fluency, and business instincts to advance consumer facing products and applications."
+        paragraph: "I am passionate about using the intersection of business, technology, and design to create applications that solve client challenges. Professionally, I enjoy using my technical proficiencies and business education to serve as a liaison between the development team and the end-users. I have worked as a back end software developer, led the delivery of client applications, advanced the growth of an open-source, web-based, end-to-end analytics platform called <a class=\"links\" href=\"https://www.semoss.org\" target=\"_blank\">SEMOSS</a>, developed this website from the ground up, and more. I am eager to learn, and I hope to continue to learn as I advance in my career. Ultimately, I hope to use my strong client management skills, technology fluency, and business instincts to advance consumer facing products and applications."
     },
     {
         sectionheader: "Background",
@@ -82,35 +82,34 @@ const homePageParagraphs = [
 const workExpItems = [
     {
         employer:"Deloitte Consulting LLP",
-        position:"Consultant | Supporting Public Healthcare Provider",
+        position:"Consultant | Primary Client: Public Healthcare Provider",
         date:"July 2018 – Pres.",
         bullets:[
-            "Develop analyses and custom visualizations within an end-to-end data analytics platform called Semantic Open Source Software (SEMOSS) that helps the provider's leadership and 250+ users drive decision making surrounding the transition to a new electronic health record",
-            "Lead the development of an internally award-winning financial model in R, SQL, and SEMOSS to calculate and visualize the cost savings associated with retiring legacy IT systems, resulting in the discovery of $500M+ in savings which was directly inputted into the provider’s 5-year budget",
-            "Proactively designed, developed, and launched a user-friendly “Executive View” website for clients that highlights the key reports, dashboards, and improved user experience; ultimately generating an increase in site traffic ",
-            "Developed a client reporting tool to monitor the progress of 150+ IT procurement contracts across the provider’s portfolio that is now briefed monthly to client leadership",
+            "Develop analyses, custom visualizations, and operational strategic plans that drive business decision-making for a major public healthcare provider as they transition to a new electronic health record",
+            "Build and maintain a financial model in R and SQL to calculate and visualize the cost savings associated with retiring legacy IT systems, resulting in the discovery of $500M+ in savings for the provider over the next five years",
+            "Lead the ideation, design, technical development, and launch of a user-friendly “Executive View” website for clients that highlights the key reports, dashboards, and improved user experience; ultimately generating an increase in site traffic",
+            "Develop data-science process and solution to identify mismatched patient health documents using natural language processing and clustering to reduce data leakage of patient health files",
             "Awarded an <i>Applause Award</i> and <i>Outstanding Performance Award</i> for my individual contribution"
         ]
     },
     {
         employer:"",
-        position:"Consultant | Internal SEMOSS Product Advancement",
+        position:"Consultant | Product Management: SEMOSS",
         date:"",
         bullets:[
-            "Accelerated the business development and product growth of SEMOSS by performing 50+ product demos to a range of potential clients, including federal agencies, non-profit organizations, and commercial businesses",
-            "Lead the development of marketing content, having produced 10+ user videos with over 1500+ views on YouTube, standardized style guides for videos, presentations, and documentation",
-            "Advance usability of SEMOSS by holding feature ideation discussions with frequent product users, guiding UI design with front end developers, and establishing user tracking analytics to refine the user experience",
-            "Selected to represent SEMOSS on at three national conferences including the Strata O’Reilly Data & AI Conference in New York in September 2019",
-            "Presented on behalf of SEMOSS in an annual Deloitte series entitled “Deloitte Disrupt” to discuss the innovation surrounding SEMOSS, resulting in 200+ views across the firm"
+            "Assist in the growth of an open-source, web-based, end-to-end analytics platform called SEMOSS with 1000+ users across 15+ clients and ~$20M+ in annual revenue",
+            "Advance usability of SEMOSS by holding feature ideation discussions with frequent product users, guiding UI design with front end and back end developers, and establishing user tracking analytics to refine the user experience",
+            "Accelerate the business development and product growth of SEMOSS by performing 50+ product demos to a range of potential clients, including federal agencies, non-profit organizations, and commercial businesses",
+            "Presented on behalf of SEMOSS at multiple national conferences and in an annual Deloitte series entitled “Deloitte Disrupt” to discuss the innovation surrounding SEMOSS, resulting in 200+ views across the firm"
         ]
     },
     {
         employer:"",
-        position:"Consultant | Internal SEMOSS Back-End Developer",
+        position:"Consultant | Full Stack Software Development: SEMOSS",
         date:"",
         bullets:[
-            "Develop Back-End algorithms for SEMOSS in R and Java to solve client needs, accelerate project performance and SEMOSS product advancement such as Document Summarization, Sentiment Analysis, and more",
-            "Led the development of Natural Language Database Querying which allows users to query databases in plain text rather than SQL (Ex. “What movies are dramas?”)"
+            "Develop back-end algorithms for SEMOSS in R and Java to solve client needs, accelerate project performance and SEMOSS advancement such as natural language database querying, document summarization, sentiment analysis, and more",
+            "Develop the front-end of a custom client application using an angular framework to collect and update client data, including the implementation of a mass-update feature to reduce data update time by as much as 20x"
         ]
     }
 ];
@@ -121,10 +120,9 @@ const addProjectsItems = [
         position:"Firm Initiative Lead",
         date:"Feb. 2019 – Pres.",
         bullets:[
-            "Lead a team of 4 in a firm initiative sponsored by the Deloitte Consulting CTO of the Government and Public Sector (GPS), ultimately increasing GeekOut attendance by 10x in the last 18 months",
-            "Plan and execute 10 hands-on training events each year on emerging technologies (Blockchain, IoT, AR/VR etc.), reaching between 750 and 1,000 Deloitte junior practitioners across the US GPS consulting practice",
+            "Lead a team of 4 that plans and executes 10 hands-on training events each year on emerging technologies (Blockchain, IoT, AR/VR etc.), reaching between 750 and 1,000 Deloitte junior practitioners across the US GPS consulting practice",
             "Led the expansion of the GeekOut target audience from VA-based GPS Technology Analysts (~800 practitioners) to US-Wide Analysts and Consultants (~3,000 practitioners)",
-            "Spearheaded the development of a GeekOut webpage within the Deloitte-network to serve as a repository of resources from previous sessions, collaborating with both UI Designers and Web Developers"
+            "Spearheaded the development of a GeekOut webpage within the Deloitte-network to serve as a repository of resources from previous sessions, collaborating with both UI designers and web developers"
         ]
     },
     {
@@ -132,7 +130,7 @@ const addProjectsItems = [
         position:"Tech. Consultant for Winery in Argentina",
         date:"Dec. 2016 – Jan. 2017",
         bullets:[
-            "Developed in JavaScript to link Google Calendar to Google Sheets, thus minimizing double data entry and generating consistent information within Bodega Dante Robino’s tourism reservation platform",
+            "Built a JavaScript application to link Google Calendar to Google Sheets, thus minimizing double data entry and generating consistent information within Bodega Dante Robino’s tourism reservation platform",
             "Created an enhanced spreadsheet tool that automatically generates profitability analyses and customer demographic analyses"
         ]
     }
