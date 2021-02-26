@@ -36,12 +36,12 @@ const bioCardDeets = [
     },
     {
         bolded: "Work as",
-        regular: "Consultant at Deloitte Consulting LLP",
+        regular: "Business Operations Associate at LinkedIn",
         image: "./../assets/images/briefcase.png"
     },
     {
         bolded: "Proficient in",
-        regular: "Java, JavaScript, HTML/CSS, R, SQL, Tableau, C++, VBA",
+        regular: "Java, R, SQL, Tableau, JavaScript, HTML/CSS, C++, VBA",
         image: "./../assets/images/skills.png"
     }  
 ]
@@ -67,11 +67,11 @@ const resumeInfoDeets = [
 const homePageParagraphs = [
     {
         sectionheader: "Mission Statement",
-        paragraph: "I am passionate about using the intersection of business, technology, and design to create applications that solve client challenges. Professionally, I enjoy using my technical proficiencies and business education to serve as a liaison between the development team and the end-users. I have worked as a back end software developer, led the delivery of client applications, advanced the growth of an open-source, web-based, end-to-end analytics platform called <a class=\"links\" href=\"https://www.semoss.org\" target=\"_blank\">SEMOSS</a>, developed this website from the ground up, and more. I am eager to learn, and I hope to continue to learn as I advance in my career. Ultimately, I hope to use my strong client management skills, technology fluency, and business instincts to advance consumer facing products and applications."
+        paragraph: "I am passionate about using the intersection of business, technology, and design to create applications that solve user challenges. Professionally, I enjoy using my technical proficiencies and business education to serve as a liaison between the development team and the end-users. I have led the delivery of client products, advanced the growth of user applications, worked as a back end software developer, developed my own personal website from the ground up, and more. I am eager to learn, and I hope to continue to learn as I advance in my career. Ultimately, I hope to use my strong client management skills, technology fluency, and business instincts to advance consumer facing products and applications."
     },
     {
         sectionheader: "Background",
-        paragraph: "I chose to attend the University of Virginia to study Computer Science, but quickly found myself much more passionate about using technology to solve problems, rather than developing the technology itself. Therefore, I instead pursued a business degree from the McIntire School of Commerce with concentrations in Finance and Business Analytics, with a minor in Computer Science. Upon graduation, I began working as a Business Technology Analyst at Deloitte Consulting LLP to continue pushing the envelope of technology and business. At Deloitte, I have been heavily involved with an end-to-end data analytics platform called Semantic Open Source Software (SEMOSS). I have developed SEMOSS analytics capabilities, have led the UI/UX design of a client facing SEMOSS wrapper, and have led the development of an interactive financial model. Outside of client work, I also lead an internal training curriculum that provides hands-on trainings on emerging technologies to 750-1,000 Deloitte practitioners each year."
+        paragraph: "I chose to attend the University of Virginia to study Computer Science, but quickly found myself much more passionate about using technology to solve problems, rather than developing the technology itself. Therefore, I instead pursued a business degree from the McIntire School of Commerce with concentrations in Finance and Business Analytics, with a minor in Computer Science. Upon graduation, I began working as a Consultant at Deloitte Consulting LLP to continue pushing the envelope of technology and business. I was heavily involved at Deloitte with an end-to-end data analytics platform called <a class=\"links\" href=\"https://www.semoss.org\" target=\"_blank\">SEMOSS</a>, where I developed analytics capabilities, led the UI/UX design of a client facing webpage, and led the development of an interactive financial model. After 2.5 years at Deloitte, I transitioned to the Business Operations team at LinkedIn - focusing on digital trust and safety. This role allows me to partner with a wide range of cross functional teams from Product, Engineering and Artificial Intelligence to Ops, Policy and Legal to ensure that LinkedIn is a safe and trusted platform for our members and customers."
     },
     {
         sectionheader: "Get to Know Me",
@@ -81,15 +81,28 @@ const homePageParagraphs = [
 
 const workExpItems = [
     {
+        employer:"LinkedIn",
+        position:"Business Operations Associate | Trust",
+        date:"Mar. 2021 – Pres.",
+        bullets:[
+            "Serve as the connective tissue of the cross-functional team, working to share knowledge, frame/synthesize opportunities and drive people towards a common goal",
+            "Manage Trust operational performance; identify, diagnose and resolve performance issues",
+            "Define goals and key performance metrics for key Trust areas",
+            "Serve as the ongoing strategy & operations partner for our cross-functional Trust team, delivering strategic projects for leadership in high priority areas",
+            "Conduct in-depth analysis and develop deep understanding of key value drivers to identify improvement areas and opportunities",
+            "Proactively flag risks or bottlenecks, and recommend course-corrections as appropriate"
+        ]
+    },
+    {
         employer:"Deloitte Consulting LLP",
         position:"Consultant | Primary Client: Public Healthcare Provider",
-        date:"July 2018 – Pres.",
+        date:"July 2018 – Feb. 2021",
         bullets:[
             "Develop analyses, custom visualizations, and operational strategic plans that drive business decision-making for a major public healthcare provider as they transition to a new electronic health record",
             "Build and maintain a financial model in R and SQL to calculate and visualize the cost savings associated with retiring legacy IT systems, resulting in the discovery of $500M+ in savings for the provider over the next five years",
             "Lead the ideation, design, technical development, and launch of a user-friendly “Executive View” website for clients that highlights the key reports, dashboards, and improved user experience; ultimately generating an increase in site traffic",
             "Develop data science process and solution to identify mismatched patient health documents using natural language processing and clustering to reduce data leakage of patient health files",
-            "Awarded an <i>Applause Award</i> and <i>Outstanding Performance Award</i> for my individual contribution"
+            "Awarded multiple <i>Applause Awards</i> and <i>Outstanding Performance Award</i> for my individual contribution"
         ]
     },
     {
@@ -99,17 +112,8 @@ const workExpItems = [
         bullets:[
             "Assist in the growth of an open-source, web-based, end-to-end analytics platform called SEMOSS with 1000+ users across 15+ clients and ~$20M+ in annual revenue",
             "Advance usability of SEMOSS by holding feature ideation discussions with frequent product users, guiding UI design with front-end and back-end developers, and establishing user tracking analytics to refine the user experience",
-            "Accelerate the business development and product growth of SEMOSS by performing 50+ product demos to a range of potential clients, including federal agencies, non-profit organizations, and commercial businesses",
-            "Presented on behalf of SEMOSS at multiple national conferences and in an annual Deloitte series entitled “Deloitte Disrupt” to discuss the innovation surrounding SEMOSS, resulting in 200+ views across the firm"
-        ]
-    },
-    {
-        employer:"",
-        position:"Consultant | Full Stack Software Development: SEMOSS",
-        date:"",
-        bullets:[
             "Develop back-end algorithms for SEMOSS in R and Java to solve client needs, accelerate project performance and SEMOSS advancement such as natural language database querying, document summarization, sentiment analysis, and more",
-            "Develop the front-end of a custom client application using an angular framework to collect and update client data, including the implementation of a mass update feature to reduce data update time by as much as 20x"
+            "Accelerate the business development and product growth of SEMOSS by performing 50+ product demos to a range of potential clients, including federal agencies, non-profit organizations, commercial businesses, and at multiple national conferences"
         ]
     }
 ];
@@ -125,6 +129,7 @@ const addProjectsItems = [
             "Spearheaded the development of a GeekOut webpage within the Deloitte-network to serve as a repository of resources from previous sessions, collaborating with both UI designers and web developers"
         ]
     },
+    /*
     {
         employer:"Bodega Dante Robino",
         position:"Tech. Consultant for Winery in Argentina",
@@ -134,6 +139,7 @@ const addProjectsItems = [
             "Created an enhanced spreadsheet tool that automatically generates profitability analyses and customer demographic analyses"
         ]
     }
+    */
 ];
 
 const projects = [
@@ -463,7 +469,7 @@ function loadHomePage(){
     // pageHTML += "<div class=\"" + rightClass + "\"> ";
     pageHTML += "<div class=\"hero-inner\">";
     pageHTML += "<div class=\"nameText "+ addDisplay + "\">Hi, I'm Chris.</div>";
-    pageHTML += " <div class=\"titleText\"><b> Consultant</b> | Deloitte Consulting LLP</div>";
+    pageHTML += " <div class=\"titleText\"><b>LinkedIn</b> | Business Operations Associate</div>";
     pageHTML += "<center><div class=\"button emailButton\" id=\"button-4\" data-toggle=\"modal\" data-target=\"#sendEmailModal\">Email Me</div></center> ";
     pageHTML += "</div>";
     // pageHTML +=  "</div> ";
@@ -533,7 +539,7 @@ function loadResumePage(){
         pageHTML += "<center><h1 class=\"resumeName\">Chris Long</h1></center>";
         pageHTML += " <ul class=\"list-group\"> ";
 
-        pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"><p class=\"resumeQuote\">I am currently a Consultant at Deloitte focused on the intersection between business and technology. I am passionate about data analytics, emerging technologies, and product development. I am also an avid NFL fan, movie watcher, and runner.</p></li>";
+        pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"><p class=\"resumeQuote\">I am currently a Business Operations Associate at LinkedIn focused on the intersection between business, product, and engineering. I am passionate about data analytics, emerging technologies, and product development. I am also an avid NFL fan, movie watcher, and runner.</p></li>";
         for (var i = 0; i < resumeInfoDeets.length; i++){
             pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"> <div><img class=\"cardIcons\" src=\"" + resumeInfoDeets[i]['image'] +"\"> <b>" + resumeInfoDeets[i]['bolded'] + "</b> " + resumeInfoDeets[i]['regular'] + "</div> </li> ";
         }
@@ -573,8 +579,9 @@ function loadResumePage(){
     pageHTML += "<span class=\"resumeSkillDeets\">Golf, Running, Data Analytics (esp. Sports Analytics), UI/UX, Data Visualization, Product Demos</span>";
     pageHTML += "<br><br><br><br>";
 
+    /*
     pageHTML += "<div><center><a class=\"button\" style=\"max-width:50%;background-color:#0b1e35;font-family:\" href=\"./../assets/Resume_ChrisLong.pdf\" download>Download Resume</a></center></div> ";
-    
+    */
 
     // wrap it up
     pageHTML += "</div>";

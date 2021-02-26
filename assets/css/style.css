@@ -146,6 +146,7 @@ html div{
 .titleText{
 	color: rgba(218,224,230,1);	
 	padding-bottom: 10px;
+	letter-spacing: 0.5px;
 }
 
 .contactCardImage{
