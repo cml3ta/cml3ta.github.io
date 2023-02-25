@@ -830,6 +830,7 @@ function loadModals(){
     modalHTML += "Email Me</div>";
     modalHTML += "<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden=\"true\">&times;</span></button>";
     modalHTML += "</div>";
+    modalHTML += "<div class=\"modal-disclaimer\">Please check your default email application if send button does not work as intended</div>";
 
     // body
     modalHTML += "<div class=\"modal-body\">";

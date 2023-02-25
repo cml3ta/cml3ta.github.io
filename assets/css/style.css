@@ -300,6 +300,12 @@ th{
 	border: none !important;
 }
 
+.modal-disclaimer{
+	border: none !important;
+	padding-left: 15px;
+	font-style: italic;
+}
+
 .navbar-dark{
 	background-color: rgba(0, 0, 0, 0) !important;
 	padding-top: 0 !important;
