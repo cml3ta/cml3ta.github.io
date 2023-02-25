@@ -21,8 +21,13 @@ if(screenWidth < 950){
 const bioCardDeets = [
     {
         bolded: "Interested in",
-        regular: "advancing technology solutions to address consumer challenges",
+        regular: "using technology and strategic thinking to solve complex problems",
         image: "./../assets/images/star.png"
+    },
+    {
+        bolded: "Work as",
+        regular: "Business Operations Senior Associate at LinkedIn",
+        image: "./../assets/images/briefcase.png"
     },
     {
         bolded: "Studied at",
@@ -33,11 +38,6 @@ const bioCardDeets = [
         bolded: "Degree in",
         regular: "Commerce (Finance and Business Analytics) and Computer Science",
         image: "./../assets/images/books.png"
-    },
-    {
-        bolded: "Work as",
-        regular: "Business Operations Associate at LinkedIn",
-        image: "./../assets/images/briefcase.png"
     },
     {
         bolded: "Proficient in",
@@ -59,7 +59,7 @@ const resumeInfoDeets = [
     },
     {
         bolded: "Residence:",
-        regular: "Washington D.C.",
+        regular: "San Francisco",
         image: "./../assets/images/location.png"
     }
 ]
@@ -67,41 +67,37 @@ const resumeInfoDeets = [
 const homePageParagraphs = [
     {
         sectionheader: "Mission Statement",
-        paragraph: "I am passionate about using the intersection of business, technology, and design to create applications that solve user challenges. Professionally, I enjoy using my technical proficiencies and business education to serve as a liaison between the development team and the end-users. I have led the delivery of client products, advanced the growth of user applications, worked as a back end software developer, developed my own personal website from the ground up, and more. I am eager to learn, and I hope to continue to learn as I advance in my career. Ultimately, I hope to use my strong client management skills, technology fluency, and business instincts to advance consumer facing products and applications."
+        paragraph: "I am passionate about using technology and strategic thinking to solve complex problems. I enjoy using my technical and analytical proficiencies with my business education to identify growth opportunities, resolve member pain points, and execute strategic projects from end-to-end. Throughout my career so far, I have helped grow user applications, developed data-backed recommendations to improve business operating models, and even spent some time working as a back end software developer. I am eager to learn and develop new skills (e.g., designing and coding my own website from scratch) as I advance in my career. Ultimately, I hope to use my strong communication skills, technology fluency, and business instincts to advance consumer facing products."
     },
     {
         sectionheader: "Background",
-        paragraph: "I chose to attend the University of Virginia to study Computer Science, but quickly found myself much more passionate about using technology to solve problems, rather than developing the technology itself. Therefore, I instead pursued a business degree from the McIntire School of Commerce with concentrations in Finance and Business Analytics, with a minor in Computer Science. Upon graduation, I began working as a Consultant at Deloitte Consulting LLP to continue pushing the envelope of technology and business. I was heavily involved at Deloitte with an end-to-end data analytics platform called <a class=\"links\" href=\"https://www.semoss.org\" target=\"_blank\">SEMOSS</a>, where I developed analytics capabilities, led the UI/UX design of a client facing webpage, and led the development of an interactive financial model. After 2.5 years at Deloitte, I transitioned to the Business Operations team at LinkedIn - focusing on digital trust and safety. This role allows me to partner with a wide range of cross functional teams from Product, Engineering and Artificial Intelligence to Ops, Policy and Legal to ensure that LinkedIn is a safe and trusted platform for our members and customers."
+        paragraph: "I chose to attend the University of Virginia to study Computer Science, but quickly found myself much more passionate about using technology to solve problems, rather than developing the technology itself. Therefore, I instead pursued a business degree from the McIntire School of Commerce with concentrations in Finance and Business Analytics, with a minor in Computer Science. Upon graduation, I began working as a Consultant at Deloitte to continue pushing the boundary of technology and business. At Deloitte, I was heavily involved with an end-to-end data analytics platform called <a class=\"links\" href=\"https://www.semoss.org\" target=\"_blank\">SEMOSS</a>, where I developed analytics capabilities, led the UI/UX design of a client facing application, and led the development of an interactive financial model. After 2.5 years at Deloitte, I transitioned to the Business Operations (BizOps) team at <a class=\"links\" href=\"https://www.linkedin.com\" target=\"_blank\">LinkedIn</a> where I focus on (1) amplifying high-quality feed and messenger member experiences and (2) reducing harmful experiences for members. This role allows me to partner with cross functional teams such as Product, Engineering, Artificial Intelligence, and Legal to ensure that LinkedIn is a safe and trusted platform for our members."
     },
     {
         sectionheader: "Get to Know Me",
-        paragraph: "Analytical. Hardworking. Eager to Learn. I enjoy watching the NFL (Go Bills!), staying up to date with the latest movies, and going for long runs. I love talking and meeting new people, so feel free to contact me and I would love to discuss anything from the latest tech trend to whether Coco is the best Disney movie of all time. Looking forward to talking!"
+        paragraph: "Analytical. Hardworking. Eager to Learn. Outside of work, I enjoy watching the NFL and Premier League Soccer, staying up to date with the latest movies, and going for long runs. I love talking and meeting new people, so feel free to contact me to discuss anything from the latest tech trend to whether Toy Story is the best Disney movie of all time. Looking forward to talking!"
     }
 ]
 
 const workExpItems = [
     {
         employer:"LinkedIn",
-        position:"Business Operations Associate | Trust",
+        position:"Business Operations Senior Associate ",
         date:"Mar. 2021 – Pres.",
         bullets:[
-            "Serve as the connective tissue of the cross-functional team, working to share knowledge, frame/synthesize opportunities and drive people towards a common goal",
-            "Manage Trust operational performance; identify, diagnose and resolve performance issues",
-            "Define goals and key performance metrics for key Trust areas",
-            "Serve as the ongoing strategy & operations partner for our cross-functional Trust team, delivering strategic projects for leadership in high priority areas",
-            "Conduct in-depth analysis and develop deep understanding of key value drivers to identify improvement areas and opportunities",
-            "Proactively flag risks or bottlenecks, and recommend course-corrections as appropriate"
+            "Manage operational performance of Trust ecosystem from end-to-end: establishing key metrics that align with business objectives, creating automated dashboards to quickly diagnose metric trends, and developing metric targets that assess the team's performance against its strategy",
+            "Serve as the ongoing strategy & operations partner for our cross-functional team: delivering data-backed recommendations for new product features (e.g., messenger kindness reminders), recommeding new processes to resolve risks (e.g., re-reviewing risky content), and ensuring strategic rigor throughout the quarterly and annual planning processes",
+            "Serve as the connective tissue within the cross-functional Trust team and within the broader LinkedIn organization: working to share knowledge, synthesize opportunities and drive teams towards a common goal",
         ]
     },
     {
-        employer:"Deloitte Consulting LLP",
+        employer:"Deloitte Consulting",
         position:"Consultant | Primary Client: Public Healthcare Provider",
         date:"July 2018 – Feb. 2021",
         bullets:[
             "Develop analyses, custom visualizations, and operational strategic plans that drive business decision-making for a major public healthcare provider as they transition to a new electronic health record",
             "Build and maintain a financial model in R and SQL to calculate and visualize the cost savings associated with retiring legacy IT systems, resulting in the discovery of $500M+ in savings for the provider over the next five years",
             "Lead the ideation, design, technical development, and launch of a user-friendly “Executive View” website for clients that highlights the key reports, dashboards, and improved user experience; ultimately generating an increase in site traffic",
-            "Develop data science process and solution to identify mismatched patient health documents using natural language processing and clustering to reduce data leakage of patient health files",
             "Awarded multiple <i>Applause Awards</i> and <i>Outstanding Performance Award</i> for my individual contribution"
         ]
     },
@@ -122,7 +118,7 @@ const addProjectsItems = [
     {
         employer:"GeekOut Technology Training at Deloitte",
         position:"Firm Initiative Lead",
-        date:"Feb. 2019 – Pres.",
+        date:"Feb. 2019 – Feb. 2021",
         bullets:[
             "Lead a team of 4 that plans and executes 10 hands-on training events each year on emerging technologies (Blockchain, IoT, AR/VR etc.), reaching between 750 and 1,000 Deloitte junior practitioners across the US GPS consulting practice",
             "Led the expansion of the GeekOut target audience from VA-based GPS Technology Analysts (~800 practitioners) to US-Wide Analysts and Consultants (~3,000 practitioners)",
@@ -145,7 +141,7 @@ const addProjectsItems = [
 const projects = [
     {
         title:"Oscar for Best Picture",
-        description:"What does it take to win the covetted award for Best Picture at the Oscars? A big budget? High critic ratings? Let's find out",
+        description:"What does it take to win the coveted award for Best Picture at the Oscars? A big budget? High critic ratings? Let's find out",
         image:"./../../assets/images/oscarsdashboard.png",
         hash: "oscarbestpicture",
         date: "July 2020",
@@ -413,11 +409,11 @@ function loadNavBar(urlTarget){
     if(urlTarget.startsWith("projects")){
         textColor = "whiteText_active";
     }
-    navHTML += "<li class=\"nav-item pointer navText\" " + paddingToAdd + "> <div class=\"nav-link pointer " + textColor + "\"  onclick=\"changePage('projects')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Projects</div></li>";
+    navHTML += "<li class=\"nav-item pointer navText\" " + paddingToAdd + "> <div class=\"nav-link pointer " + textColor + "\"  onclick=\"changePage('projects')\" data-toggle=\"collapse\" data-target=\".navbar-collapse.show\">Data Projects</div></li>";
 
     if(navCollapsed) { 
         navHTML += "<li class=\"contactInfoText nav-link whiteText navText\" " + paddingToAdd + " data-toggle=\"modal\" data-target=\"#contactInfoModal\">Contact</li>";
-        navHTML += "<li class=\"nav-item pointer whiteText navText\" " + paddingToAdd + "> <a class=\"nav-link whiteText\" href=\"https://www.linkedin.com/in/christopher-long-039b77b6/\" target=\"_blank\">LinkedIn</a> </li>";
+        navHTML += "<li class=\"nav-item pointer whiteText navText\" " + paddingToAdd + "> <a class=\"nav-link whiteText\" href=\"https://www.linkedin.com/in/chris-long-039b77b6/\" target=\"_blank\">LinkedIn</a> </li>";
     } else {
         // close up  list
         navHTML += "</ul>";
@@ -427,7 +423,7 @@ function loadNavBar(urlTarget){
         navHTML += "src=\"./../" + extraFolderBack + "assets/images/email_white.png\" alt=\"Christopher Long\" data-toggle=\"modal\" data-target=\"#contactInfoModal\"></a>";
         
         // linkedin with icon
-        navHTML += "<a style=\"padding-right:10px;\" href=\"https://www.linkedin.com/in/christopher-long-039b77b6/\" target=\"_blank\"><img class=\"navImageCircle pointer\"";
+        navHTML += "<a style=\"padding-right:10px;\" href=\"https://www.linkedin.com/in/chris-long-039b77b6/\" target=\"_blank\"><img class=\"navImageCircle pointer\"";
         navHTML += "src=\"./../" + extraFolderBack + "assets/images/linkedin_white.png\"></a>";
     }
     
@@ -469,7 +465,7 @@ function loadHomePage(){
     // pageHTML += "<div class=\"" + rightClass + "\"> ";
     pageHTML += "<div class=\"hero-inner\">";
     pageHTML += "<div class=\"nameText "+ addDisplay + "\">Hi, I'm Chris.</div>";
-    pageHTML += " <div class=\"titleText\"><b>LinkedIn</b> | Business Operations Associate</div>";
+    pageHTML += " <div class=\"titleText\"><b>LinkedIn</b> | Business Operations Senior Associate</div>";
     pageHTML += "<center><div class=\"button emailButton\" id=\"button-4\" data-toggle=\"modal\" data-target=\"#sendEmailModal\">Email Me</div></center> ";
     pageHTML += "</div>";
     // pageHTML +=  "</div> ";
@@ -539,7 +535,7 @@ function loadResumePage(){
         pageHTML += "<center><h1 class=\"resumeName\">Chris Long</h1></center>";
         pageHTML += " <ul class=\"list-group\"> ";
 
-        pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"><p class=\"resumeQuote\">I am currently a Business Operations Associate at LinkedIn focused on the intersection between business, product, and engineering. I am passionate about data analytics, emerging technologies, and product development. I am also an avid NFL fan, movie watcher, and runner.</p></li>";
+        pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"><p class=\"resumeQuote\">Business Operations Senior Associate at LinkedIn with a focus on business strategy, data analytics, and product development. I am also an avid NFL fan, movie watcher, and runner.</p></li>";
         for (var i = 0; i < resumeInfoDeets.length; i++){
             pageHTML += "<li class=\" list-group-item\" style=\"border:none;\"> <div><img class=\"cardIcons\" src=\"" + resumeInfoDeets[i]['image'] +"\"> <b>" + resumeInfoDeets[i]['bolded'] + "</b> " + resumeInfoDeets[i]['regular'] + "</div> </li> ";
         }
@@ -576,7 +572,7 @@ function loadResumePage(){
     pageHTML += "<div class=\"resumeEmployer\">Software Development Skills: ";
     pageHTML += "<span class=\"resumeSkillDeets\">Java, JavaScript, HTML/CSS, R, SQL, Tableau, C++, VBA</span></div>";
     pageHTML += "<div class=\"resumeEmployer\">Interests: ";
-    pageHTML += "<span class=\"resumeSkillDeets\">Golf, Running, Data Analytics (esp. Sports Analytics), UI/UX, Data Visualization, Product Demos</span>";
+    pageHTML += "<span class=\"resumeSkillDeets\">Golf, Running, Nutrition, Non-Fiction Reading, SF Park-Sitting</span>";
     pageHTML += "<br><br><br><br>";
 
     /*
@@ -607,7 +603,7 @@ function loadProjectsPage(){
     pageHTML += "<div class=\"hero-inner\">";
     pageHTML += "<br>";
     pageHTML += "<div class=\"projectsTitleText " + addDisplay + "\">Projects</div>";
-    pageHTML += "<div class=\"projectsHeaderText\">I bring an analytical and fact-focused approach to all my stances when it comes to sports, movies, politics, and everything else</div><br></div>";
+    pageHTML += "<div class=\"projectsHeaderText\">I bring an analytical and fact-focused approach to all my stances when it comes to sports, movies, and everything else</div><br></div>";
     pageHTML += "</div></div>";
 
     // start bottom of page
@@ -823,7 +819,7 @@ function loadModals(){
     modalHTML += "<p>(540) 808-3354</p>";
     modalHTML += "<br>";
     modalHTML += "<div>Area of Residence</div>";
-    modalHTML += "<p>Washington DC</p>";
+    modalHTML += "<p>San Francisco</p>";
     modalHTML += "</div></div></div></div>";
 
     // email me modal
@@ -870,7 +866,7 @@ function fillImageModal(smallImage){
 }
 
 function loadFooter(){
-    footerHTML = "Chris Long | Washington DC | 540.808.3354 | <span class=\"pointer\" onclick=\"sendEmail()\">cml3ta@gmail.com</span>";
+    footerHTML = "Chris Long | San Francisco | 540.808.3354 | <span class=\"pointer\" onclick=\"sendEmail()\">cml3ta@gmail.com</span>";
     footerContainer.innerHTML = footerHTML;
 }
 
